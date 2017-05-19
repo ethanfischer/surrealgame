@@ -14,7 +14,7 @@ public class SkyboxManager : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-	
+		SetInitialReferences ();
 	}
 	
 	// Update is called once per frame
@@ -27,11 +27,13 @@ public class SkyboxManager : MonoBehaviour
 	{
 //		eventMasterScript = GameObject.Find ("GameManager").GetComponent<GameManager_EventMaster> (); no longer needed because events are static
 		GameManager_EventMaster.NextLevelEvent += NextLevel; //Subcribe NextLevel() to the NextLevelEvent
+//		eventMasterScript.DropCeiling += DropCeiling;
 
 	}
 
 	void NextLevel ()
 	{
+		Debug.Log ("NextLevel");
 		Material m = GetSkyboxMaterial (0);
 		SetSkyboxMaterial (m);
 	}

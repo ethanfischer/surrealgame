@@ -50,11 +50,11 @@ public class GameManager_EventMaster : MonoBehaviour
 //		Debug.Log ("CallNextLevelEvent");
 
 		if (NextLevelEvent != null) {
-			Debug.Log ("NextLevelEvent != null");
+//			Debug.Log ("NextLevelEvent != null");
 			NextLevelEvent ();
 			// //debug.log("myGeneralEvent()");
 		} else {
-			Debug.Log (NextLevelEvent);
+			Debug.Log ("NextLevelEvent: " + NextLevelEvent);
 		}
 	}
 

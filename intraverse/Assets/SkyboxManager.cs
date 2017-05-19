@@ -7,8 +7,8 @@ public class SkyboxManager : MonoBehaviour
 	public Camera cameraLeft;
 	private Skybox skyboxRight;
 	private Skybox skyboxLeft;
-	//	private GameManager_EventMaster eventMasterScript; no longer needed because events are static :)
 
+	public LevelManager levelManager;
 	public Material[] materials;
 
 	// Use this for initialization
@@ -33,9 +33,11 @@ public class SkyboxManager : MonoBehaviour
 
 	void NextLevel ()
 	{
-		Debug.Log ("NextLevel");
-		Material m = GetSkyboxMaterial (0);
+//		Debug.Log ("NextLevel");
+		Material m = GetSkyboxMaterial ();
+//		Debug.Log ("Material t:" + t);
 		SetSkyboxMaterial (m);
+
 	}
 
 
@@ -45,11 +47,16 @@ public class SkyboxManager : MonoBehaviour
 		if (cameraRight != null && cameraLeft != null) {
 			skyboxRight = cameraRight.GetComponent<Skybox> ();
 			skyboxLeft = cameraLeft.GetComponent<Skybox> ();
-		}
+			Debug.Log ("skyboxRIght.material" + skyboxRight.material);
+			// set skyboxes' material
+			skyboxRight.material = m;
+			skyboxLeft.material = m;
 
-		// set skyboxes' material
-		skyboxRight.material = m;
-		skyboxLeft.material = m;
+//			Debug.Log ("skyboxRIght.material" + skyboxRight.material);
+		} else {
+			Debug.Log ("no cameras");
+		}
+	
 	}
 
 	//	Material GetRandomSkyboxMaterial ()
@@ -59,9 +66,11 @@ public class SkyboxManager : MonoBehaviour
 	//		Material m =
 	//	}
 
-	Material GetSkyboxMaterial (int i)
+	Material GetSkyboxMaterial ()
 	{
-		Debug.Log (materials [i].name);
-		return materials [i];
+//		Debug.Log (materials [i].name);
+		int lc = levelManager.GetLevelCount ();
+//		Debug.Log ("lc: " + lc);
+		return materials [lc - 1]; //Level 1 corresponds with materials[0], Level2 with materials[1], etc. 
 	}
 }

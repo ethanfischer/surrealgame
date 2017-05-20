@@ -3,7 +3,7 @@ using System.Collections;
 
 public class LevelManager : MonoBehaviour
 {
-	int levelCount;
+	static int levelCount;
 
 	// Use this for initialization
 	void Start ()
@@ -23,7 +23,7 @@ public class LevelManager : MonoBehaviour
 		GameManager_EventMaster.NextLevelEvent += IncrementLevelCount;//Subscribe to NextLevelEvent
 	}
 
-	public int GetLevelCount ()
+	public static int GetLevelCount ()
 	{
 		return levelCount;
 	}

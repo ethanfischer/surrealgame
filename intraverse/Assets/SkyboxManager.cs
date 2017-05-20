@@ -69,7 +69,7 @@ public class SkyboxManager : MonoBehaviour
 	Material GetSkyboxMaterial ()
 	{
 //		Debug.Log (materials [i].name);
-		int lc = levelManager.GetLevelCount ();
+		int lc = LevelManager.GetLevelCount ();
 //		Debug.Log ("lc: " + lc);
 		return materials [lc - 1]; //Level 1 corresponds with materials[0], Level2 with materials[1], etc. 
 	}

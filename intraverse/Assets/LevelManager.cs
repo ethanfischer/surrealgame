@@ -20,7 +20,7 @@ public class LevelManager : MonoBehaviour
 	void SetInitialReferences ()
 	{
 		SetLevelCount (0); //Start at level 0 (Main Menu)
-		GameManager_EventMaster.NextLevelEvent += IncrementLevelCount;//Subscribe to NextLevelEvent
+//		GameManager_EventMaster.NextLevelEvent += IncrementLevelCount;//Subscribe to NextLevelEvent
 	}
 
 	public static int GetLevelCount ()

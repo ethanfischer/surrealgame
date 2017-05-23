@@ -25,6 +25,8 @@ public class SkyboxManager : MonoBehaviour
 
 	void SetInitialReferences ()
 	{
+		skyboxLeft = GameObject.FindGameObjectWithTag ("MainCameraLeft").GetComponent<Skybox> ();
+		skyboxRight = GameObject.FindGameObjectWithTag ("MainCameraRight").GetComponent<Skybox> ();
 //		eventMasterScript = GameObject.Find ("GameManager").GetComponent<GameManager_EventMaster> (); no longer needed because events are static
 		GameManager_EventMaster.NextLevelEvent += NextLevel; //Subcribe NextLevel() to the NextLevelEvent
 //		eventMasterScript.DropCeiling += DropCeiling;
@@ -34,27 +36,27 @@ public class SkyboxManager : MonoBehaviour
 	void NextLevel ()
 	{
 //		Debug.Log ("NextLevel");
-		Material m = GetSkyboxMaterial ();
+//		Material m = GetSkyboxMaterial ();
 //		Debug.Log ("Material t:" + t);
-		SetSkyboxMaterial (m);
+//		SetSkyboxMaterial (m);
 
 	}
 
 
-	void SetSkyboxMaterial (Material m)
+	public void SetSkyboxMaterial (Material m)
 	{
 		// Get each skybox
-		if (cameraRight != null && cameraLeft != null) {
-			skyboxRight = cameraRight.GetComponent<Skybox> ();
-			skyboxLeft = cameraLeft.GetComponent<Skybox> ();
-			Debug.Log ("skyboxRIght.material" + skyboxRight.material);
+		if (skyboxRight != null && skyboxLeft != null) {
+//			skyboxRight = cameraRight.GetComponent<Skybox> ();
+//			skyboxLeft = cameraLeft.GetComponent<Skybox> ();
+//			Debug.Log ("skyboxRIght.material" + skyboxRight.material);
 			// set skyboxes' material
 			skyboxRight.material = m;
 			skyboxLeft.material = m;
 
 //			Debug.Log ("skyboxRIght.material" + skyboxRight.material);
 		} else {
-			Debug.Log ("no cameras");
+			Debug.Log ("no skyboxes");
 		}
 	
 	}
@@ -66,11 +68,11 @@ public class SkyboxManager : MonoBehaviour
 	//		Material m =
 	//	}
 
-	Material GetSkyboxMaterial ()
-	{
-//		Debug.Log (materials [i].name);
-		int lc = LevelManager.GetLevelCount ();
-//		Debug.Log ("lc: " + lc);
-		return materials [lc - 1]; //Level 1 corresponds with materials[0], Level2 with materials[1], etc. 
-	}
+	//	Material GetSkyboxMaterial ()
+	//	{
+	////		Debug.Log (materials [i].name);
+	////		int lc = LevelManager.GetLevelCount ();
+	//////		Debug.Log ("lc: " + lc);
+	////		return materials [lc - 1]; //Level 1 corresponds with materials[0], Level2 with materials[1], etc.
+	//	}
 }

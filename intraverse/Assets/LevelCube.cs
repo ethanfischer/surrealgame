@@ -5,7 +5,12 @@ public class LevelCube : MonoBehaviour
 {
 
 	//load all the level position data into this
-	public Vector3[] levelPositions;
+	public ArrayList adjacentNodes;
+	public Material material;
+	private SkyboxManager skyboxManager;
+	//	public SkyboxManager skyboxManager;
+
+	//	public
 
 	// Use this for initialization
 	void Start ()
@@ -23,6 +28,8 @@ public class LevelCube : MonoBehaviour
 	void SetInitialReferences ()
 	{
 		GameManager_EventMaster.NextLevelEvent += NextLevel;
+		skyboxManager = GameObject.FindGameObjectWithTag ("SkyboxManager").GetComponent<SkyboxManager> ();
+
 	}
 
 	void Reset ()
@@ -40,25 +47,35 @@ public class LevelCube : MonoBehaviour
 		return this.gameObject.transform.position;
 	}
 
+	public void PickCube ()
+	{
+		//If this cube is picked, set players location to this cube.
+		Player p = GameObject.FindGameObjectWithTag ("Player").GetComponent<Player> ();
+		p.SetPosition (this.transform.position); //put the player at this cube
+		skyboxManager.SetSkyboxMaterial (material);
+		Debug.Log ("picked cube:" + this.name);
+	}
+
 	void NextLevel ()
 	{
-		int lc = LevelManager.GetLevelCount ();
-		if (lc != null) {
+//		int lc = LevelManager.GetLevelCount ();
+//		if (lc != null) {
 
-			if (lc == 0) {
-				SetVisibility (false);
-			}
-
-			Vector3 lp = levelPositions [lc];
-
-			if (lp != null) {
-				SetLevelCubePosition (lp);
-			} else {
-				Debug.Log ("lp == NULL!!!!!!!!!!!!!");
-			}
-		} else {
-			Debug.Log ("lc == NULL!!!!!!!!!!!!");
-		}
+//		skyboxManager.SetSkyboxMaterial (material);
+//			if (lc == 0) {
+//				SetVisibility (false);
+//			}
+//
+////			Vector3 lp = levelPositions [lc];
+//
+//			if (lp != null) {
+//				SetLevelCubePosition (lp);
+//			} else {
+//				Debug.Log ("lp == NULL!!!!!!!!!!!!!");
+//			}
+//		} else {
+//			Debug.Log ("lc == NULL!!!!!!!!!!!!");
+//		}
 
 	}
 

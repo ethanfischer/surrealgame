@@ -6,6 +6,7 @@ public class Item : MonoBehaviour
 
 	//load all the level position data into this
 	public ArrayList adjacentNodes;
+	public AudioSource sfx1;
 	//	public Material material;
 	//	private SkyboxManager skyboxManager;
 	//	public SkyboxManager skyboxManager;
@@ -51,6 +52,7 @@ public class Item : MonoBehaviour
 	{
 //		SetVisibility (true);
 		Debug.Log (gameObject.name);
+		sfx1.Play ();
 		//If this cube is picked, set players location to this cube.
 //		Player p = GameObject.FindGameObjectWithTag ("Player").GetComponent<Player> ();
 //		p.SetPosition (this.gameObject.transform.position); //put the player at this cube

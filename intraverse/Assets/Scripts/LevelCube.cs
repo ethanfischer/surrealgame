@@ -28,7 +28,7 @@ public class LevelCube : MonoBehaviour
 	void SetInitialReferences ()
 	{
 		
-//		GameManager_EventMaster.NextLevelEvent += NextLevel;
+		GameManager_EventMaster.NextLevelEvent += NextLevel;
 //		skyboxManager = GameObject.FindGameObjectWithTag ("SkyboxManager").GetComponent<SkyboxManager> ();
 	}
 
@@ -49,6 +49,7 @@ public class LevelCube : MonoBehaviour
 
 	public void PickCube ()
 	{
+//		SetVisibility (true);
 		Debug.Log (gameObject);
 		//If this cube is picked, set players location to this cube.
 		Player p = GameObject.FindGameObjectWithTag ("Player").GetComponent<Player> ();
@@ -57,6 +58,7 @@ public class LevelCube : MonoBehaviour
 
 	void NextLevel ()
 	{
+//		SetVisibility (false);
 //		int lc = LevelManager.GetLevelCount ();
 //		if (lc != null) {
 

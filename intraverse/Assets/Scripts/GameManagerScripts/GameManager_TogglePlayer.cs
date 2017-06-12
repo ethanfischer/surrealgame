@@ -39,7 +39,7 @@ namespace S3
         {
             if(head != null)
             {
-                head.GetComponent<GvrHead>().enabled = !head.GetComponent<GvrHead>().enabled;
+                //head.GetComponent<GvrHead>().enabled = !head.GetComponent<GvrHead>().enabled;
             }
         }
     }

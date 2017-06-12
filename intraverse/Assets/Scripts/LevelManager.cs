@@ -30,7 +30,7 @@ public class LevelManager : MonoBehaviour
 
 	public void SetLevelCount (int i)
 	{
-		Debug.Log ("SetLevelCount()");
+		//Debug.Log ("SetLevelCount()");
 		levelCount = i;
 	}
 

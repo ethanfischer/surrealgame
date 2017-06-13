@@ -11,7 +11,7 @@ namespace VRStandardAssets.Utils
         [SerializeField] private bool m_LookatCamera = true;    // Whether the UI element should rotate to face the camera.
         [SerializeField] private Transform m_UIElement;         // The transform of the UI to be affected.
         [SerializeField] private Transform m_Camera;            // The transform of the camera.
-        [SerializeField] private bool m_RotateWithCamera;       // Whether the UI should rotate with the camera so it is always in front.
+        public bool m_RotateWithCamera;       // Whether the UI should rotate with the camera so it is always in front.
         [SerializeField] private float m_FollowSpeed = 10f;     // The speed with which the UI should follow the camera.
 
 
@@ -48,7 +48,7 @@ namespace VRStandardAssets.Utils
 
                 // Set the UI's position to the calculated target position.
                 m_UIElement.position = targetPosition;
-            }
+			}
         }
     }
 }

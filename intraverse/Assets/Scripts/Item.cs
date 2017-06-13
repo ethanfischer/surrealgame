@@ -50,35 +50,12 @@ public class Item : MonoBehaviour
 
 	public void PickItem ()
 	{
-//		SetVisibility (true);
-		Debug.Log (gameObject.name);
+		//Debug.Log (gameObject.name);
 		sfx1.Play ();
-		//If this cube is picked, set players location to this cube.
-//		Player p = GameObject.FindGameObjectWithTag ("Player").GetComponent<Player> ();
-//		p.SetPosition (this.gameObject.transform.position); //put the player at this cube
 	}
 
 	void NextLevel ()
 	{
-//		SetVisibility (false);
-//		int lc = LevelManager.GetLevelCount ();
-//		if (lc != null) {
-
-//		skyboxManager.SetSkyboxMaterial (material);
-//			if (lc == 0) {
-//				SetVisibility (false);
-//			}
-//
-////			Vector3 lp = levelPositions [lc];
-//
-//			if (lp != null) {
-//				SetLevelCubePosition (lp);
-//			} else {
-//				Debug.Log ("lp == NULL!!!!!!!!!!!!!");
-//			}
-//		} else {
-//			Debug.Log ("lc == NULL!!!!!!!!!!!!");
-//		}
 
 	}
 

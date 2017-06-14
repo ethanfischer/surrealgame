@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Item : MonoBehaviour
+public class ItemSoundEffect : MonoBehaviour
 {
 
 	//load all the level position data into this
-	public ArrayList adjacentNodes;
+	//public ArrayList adjacentNodes;
 	public AudioSource sfx1;
 	//	public Material material;
 	//	private SkyboxManager skyboxManager;
@@ -29,7 +29,7 @@ public class Item : MonoBehaviour
 	void SetInitialReferences ()
 	{
 		
-		GameManager_EventMaster.NextLevelEvent += NextLevel;
+		//GameManager_EventMaster.NextLevelEvent += NextLevel;
 //		skyboxManager = GameObject.FindGameObjectWithTag ("SkyboxManager").GetComponent<SkyboxManager> ();
 	}
 
@@ -38,32 +38,21 @@ public class Item : MonoBehaviour
 		//Reset the level
 	}
 
-	void SetLevelCubePosition (Vector3 lp)
-	{
-		this.gameObject.transform.position = lp;
-	}
+	//void SetLevelCubePosition (Vector3 lp)
+	//{
+	//	this.gameObject.transform.position = lp;
+	//}
 
-	Vector3 GetLevelCubePosition ()
-	{
-		return this.gameObject.transform.position;
-	}
+	//Vector3 GetLevelCubePosition ()
+	//{
+	//	return this.gameObject.transform.position;
+	//}
 
-	public void PickItem ()
+	public void PlaySoundEffect ()
 	{
 		//Debug.Log (gameObject.name);
 		sfx1.Play ();
 	}
-
-	void NextLevel ()
-	{
-
-	}
-
-	void SetVisibility (bool isVisible)
-	{
-		Debug.Log ("SetVisible");
-		this.GetComponent<MeshRenderer> ().enabled = isVisible;
-	}
-
+	
 
 }

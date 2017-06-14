@@ -14,7 +14,8 @@ namespace S3
 
 		public delegate void PickupActionEventHandler(Transform item);
 		public event PickupActionEventHandler EventPickupAction;
-		
+
+
 		public void CallEventObjectThrow()
 		{
 			if(EventObjectThrow != null)

@@ -23,10 +23,10 @@ namespace S3
 		{
 			SetInitialReferences();
 			UpdateInventoryListAndUI();
-			CheckIfHandsEmpty();
+			//CheckIfHandsEmpty();
 
 			playerMaster.EventInventoryChanged += UpdateInventoryListAndUI;
-			playerMaster.EventInventoryChanged += CheckIfHandsEmpty;
+			//playerMaster.EventInventoryChanged += CheckIfHandsEmpty;
 			playerMaster.EventHandsEmpty += ClearHands;
 
 		}
@@ -34,7 +34,7 @@ namespace S3
 		void OnDisable ()
 		{
 			playerMaster.EventInventoryChanged -= UpdateInventoryListAndUI;
-			playerMaster.EventInventoryChanged -= CheckIfHandsEmpty;
+			//playerMaster.EventInventoryChanged -= CheckIfHandsEmpty;
 			playerMaster.EventHandsEmpty -= ClearHands;
 
 		}
@@ -143,6 +143,11 @@ namespace S3
 			currentlyHeldItem = itemTransform;
 			currentlyHeldItem.gameObject.SetActive(true);
 		}
+
+		//public GetKeys()
+		//{
+		//	this.GetComponentsInChildren<Item_Tag>().
+		//}
 	}
 	
 }

@@ -19,6 +19,8 @@ namespace S3
 		public event PlayerHealthEventHandler EventPlayerHealthDeduction;
 		public event PlayerHealthEventHandler EventPlayerHealthIncrease;
 
+		
+
 		public void CallEventInventoryChanged()
 		{
 			if (EventInventoryChanged != null)
@@ -64,6 +66,12 @@ namespace S3
 			{
 				EventPlayerHealthIncrease(increase);
 			}
+		}
+
+		public void GetKeys()
+		{
+			//GetComponent<Player_Inventory>().A
+			//this.CompareTag("Key");
 		}
 	}
 	

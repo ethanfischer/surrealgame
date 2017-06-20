@@ -37,15 +37,17 @@ namespace S3
 
 		}
 
-		public void Unlock()
+		public bool Unlock()
 		{
 			//TODO check if hastherightkey
 			if (CheckIfPlayerHasKey())
 			{
 				//isLocked = false;
 				gameObject.SetActive(false);
+				return true;
 				Debug.Log("Unlocked: " + this.name);
 			}
+			return false;
 		}
 
 		bool CheckIfPlayerHasKey()

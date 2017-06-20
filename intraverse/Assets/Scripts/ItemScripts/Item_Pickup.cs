@@ -47,7 +47,10 @@ namespace S3
 					{
 						//Debug.Log(this.name + " has a lock");
 						//attempt to lock any locked items (Item Lock checks if player has the key)
-						child.GetComponent<Item_Lock>().Unlock();
+						if(child.GetComponent<Item_Lock>().Unlock())
+						{
+							return false; //We want to carry out the pickup action simultaneously with the items being unlocked. 
+						}
 						return true;
 					}
 					//Debug.Log(child.name + "a in h: " + child.gameObject.activeInHierarchy);

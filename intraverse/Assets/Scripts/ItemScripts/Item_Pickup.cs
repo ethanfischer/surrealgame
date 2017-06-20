@@ -31,6 +31,7 @@ namespace S3
 				transform.SetParent(tParent);
 				itemMaster.CallEventObjectPickup();
 				transform.gameObject.SetActive(false);
+				GameManager_Audio.PlaySFX("sfx_item_pickup");
 				Debug.Log("picking up item");
 			}
 

@@ -8,6 +8,7 @@ namespace S3
 	{
 		//private bool isLocked;
 		public string keyName;
+		private string unlockSFX = "tinker6";
 
 		void OnEnable()
 		{
@@ -22,7 +23,6 @@ namespace S3
 		void SetInitialReferences()
 		{
 			//isLocked = true;
-
 		}
 
 		// Use this for initialization
@@ -44,6 +44,7 @@ namespace S3
 			{
 				//isLocked = false;
 				gameObject.SetActive(false);
+				GameManager_Audio.PlaySFX("sfx_unlock");
 				return true;
 				Debug.Log("Unlocked: " + this.name);
 			}
@@ -66,5 +67,5 @@ namespace S3
 			return false;
 		}
 	}
-	
+
 }

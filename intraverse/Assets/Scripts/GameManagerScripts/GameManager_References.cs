@@ -13,7 +13,11 @@ namespace S3
 		public string enemyTag;
 		public static string _enemyTag;
 
+		public string audioTag;
+		public static string _audioTag;
+
 		public static GameObject _player;
+		public static GameObject _audio;
 
 		private void OnEnable()
 		{
@@ -27,10 +31,17 @@ namespace S3
 				Debug.LogWarning("Please type in a enemyTag in the GameManager_References inspector slot");
 			}
 
+			if (audioTag == "")
+			{
+				Debug.LogWarning("Please type in a audioTag in the GameManager_References inspector slot");
+			}
+
 			_playerTag = playerTag;
 			_enemyTag = enemyTag;
+			_audioTag = audioTag;
 
 			_player = GameObject.FindGameObjectWithTag(_playerTag);
+			_audio = GameObject.FindGameObjectWithTag(_audioTag);
 		}
 	}
 }

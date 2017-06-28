@@ -60,6 +60,8 @@ namespace S3
 			//If this cube is picked, set players location to this cube.
 			Player p = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 			p.SetPosition(levelBubble.transform.position); //put the player at this cube
+			levelBubble.SetActive(true);
+			this.transform.parent.gameObject.SetActive(false);
 		}
 
 		void NextLevel()

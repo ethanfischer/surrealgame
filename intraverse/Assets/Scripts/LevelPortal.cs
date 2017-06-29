@@ -54,13 +54,42 @@ namespace S3
 		public void PickBubble()
 		{
 			//		SetVisibility (true);
-			Debug.Log(gameObject);
-			GameManager_Audio.PlaySFX("sfx_owl");
-			//If this cube is picked, set players location to this cube.
-			Player p = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-			p.SetPosition(levelBubble.transform.position); //put the player at this cube
-			levelBubble.SetActive(true);
-			this.transform.parent.gameObject.SetActive(false);
+			if (!CheckIfLocked())
+			{
+				Debug.Log("picking: " + gameObject);
+				GameManager_Audio.PlaySFX("sfx_owl");
+				//If this cube is picked, set players location to this cube.
+				Player p = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+				p.SetPosition(levelBubble.transform.position); //put the player at this cube
+				levelBubble.SetActive(true);
+				this.transform.parent.gameObject.SetActive(false);
+			}
+
+		}
+
+		bool CheckIfLocked()
+		{
+			foreach (Transform child in gameObject.transform)
+			{
+				//Debug.Log(gameObject.name + " has children");
+				if (child.gameObject.CompareTag("Lock"))
+				{
+					if (child.gameObject.activeInHierarchy)
+					{
+						//Debug.Log(this.name + " has a lock");
+						//attempt to lock any locked items (Item Lock checks if player has the key)
+						if (child.GetComponent<Item_Lock>().Unlock())
+						{
+							this.GetComponent<MeshRenderer>().enabled = true; //show the LevelPortal once you unlock it
+							return false; //We want to carry out the pickup action simultaneously with the items being unlocked. 
+						}
+						return true;
+					}
+					//Debug.Log(child.name + "a in h: " + child.gameObject.activeInHierarchy);
+				}
+				//Debug.Log(gameObject.name + " child doesn't have Lock tag");
+			}
+			return false;
 		}
 
 		void NextLevel()

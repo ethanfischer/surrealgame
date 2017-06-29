@@ -7,6 +7,7 @@ namespace S3
 	{
 
 		private Item_Master itemMaster;
+		public string pickupSFX = "sfx_item_pickup";
 
 		void OnEnable()
 		{
@@ -31,7 +32,7 @@ namespace S3
 				transform.SetParent(tParent);
 				itemMaster.CallEventObjectPickup();
 				transform.gameObject.SetActive(false);
-				GameManager_Audio.PlaySFX("sfx_item_pickup");
+				GameManager_Audio.PlaySFX(pickupSFX);
 				Debug.Log("picking up item");
 			}
 

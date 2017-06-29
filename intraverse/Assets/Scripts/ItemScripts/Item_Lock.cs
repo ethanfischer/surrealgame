@@ -64,6 +64,7 @@ namespace S3
 					return true;
 				}
 			}
+			GameManager_Audio.PlaySFX("sfx_lock");
 			return false;
 		}
 	}

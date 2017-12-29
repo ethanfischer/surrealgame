@@ -13,13 +13,13 @@ namespace S3
         {
             SetInitialReferences();
             gameManager_Master.MenuToggleEvent += TogglePause;
-            //gameManager_Master.InventoryUIToggleEvent += TogglePause;
+            gameManager_Master.InventoryUIToggleEvent += TogglePause;
         }
 
         private void OnDisable()
         {
             gameManager_Master.MenuToggleEvent -= TogglePause;
-            //gameManager_Master.InventoryUIToggleEvent -= TogglePause;
+            gameManager_Master.InventoryUIToggleEvent -= TogglePause;
         }
 
         void SetInitialReferences()

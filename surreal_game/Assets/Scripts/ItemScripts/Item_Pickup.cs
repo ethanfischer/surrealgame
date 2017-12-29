@@ -27,7 +27,7 @@ namespace S3
 
 		void CarryOutPickupActions(Transform tParent)
 		{
-			if (!CheckIfLocked())
+			if (!IsLocked())
 			{
 				transform.SetParent(tParent);
 				itemMaster.CallEventObjectPickup();
@@ -38,7 +38,7 @@ namespace S3
 
 		}
 
-		bool CheckIfLocked()
+		bool IsLocked()
 		{
 			foreach (Transform child in gameObject.transform)
 			{

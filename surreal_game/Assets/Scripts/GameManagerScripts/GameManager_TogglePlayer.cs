@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
 
 namespace S3
 {
@@ -8,7 +9,7 @@ namespace S3
 
     public class GameManager_TogglePlayer : MonoBehaviour
     {
-        public GameObject head;
+        public GameObject fpsController;
         private GameManager_Master gameManagerMaster;
 
         private void OnEnable()
@@ -37,9 +38,9 @@ namespace S3
 
         private void TogglePlayerController()
         {
-            if(head != null)
+            if(fpsController != null)
             {
-                //head.GetComponent<GvrHead>().enabled = !head.GetComponent<GvrHead>().enabled;
+                fpsController.GetComponent<FirstPersonController>().enabled = !fpsController.GetComponent<FirstPersonController>().enabled;
             }
         }
     }

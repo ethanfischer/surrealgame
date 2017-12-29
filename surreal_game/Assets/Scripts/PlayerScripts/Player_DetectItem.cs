@@ -12,6 +12,8 @@ namespace S3
 		[Tooltip("The editor input button that will be used for picking up items")]
 		public string buttonPickup;
 
+        public Transform inventory;
+
 		private Transform itemAvailableForPickup;
 		private RaycastHit hit;
 		private float detectRange = 3f;
@@ -47,7 +49,7 @@ namespace S3
 			if(Input.GetButtonDown(buttonPickup) && Time.timeScale > 0 && itemInRange && itemAvailableForPickup.root.tag != GameManager_References._playerTag)
 			{
 				Debug.Log("Pickup Attempted");
-				itemAvailableForPickup.GetComponent<Item_Master>().CallEventPickupAction(rayTransformPivot);
+				itemAvailableForPickup.GetComponent<Item_Master>().CallEventPickupAction(inventory);
 			}
 
 		}

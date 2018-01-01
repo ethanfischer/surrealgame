@@ -58,7 +58,7 @@ namespace S3
 		{
 			if(itemInRange && itemAvailableForPickup != null)
 			{
-				GUI.Label(new Rect(Screen.width / 2 - labelWidth/2, Screen.height / 2, labelWidth, labelHeight), itemAvailableForPickup.name);
+				//GUI.Label(new Rect(Screen.width / 2 - labelWidth/2, Screen.height / 2, labelWidth, labelHeight), itemAvailableForPickup.name);
 			}
 		}
 	}

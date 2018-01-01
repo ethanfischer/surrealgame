@@ -33,7 +33,7 @@ namespace S3
 				itemMaster.CallEventObjectPickup();
 				transform.gameObject.SetActive(false);
 				GameManager_Audio.PlaySFX(pickupSFX);
-				Debug.Log("picking up item");
+				//Debug.Log("picking up item");
 			}
 
 		}

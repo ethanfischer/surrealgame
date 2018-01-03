@@ -41,7 +41,7 @@
 
 			fixed4 frag (v2f i) : SV_Target
 			{
-				fixed4 color = tex2D(_MainTex, i.uv + float2(0, sin(i.vertex.x /100 + (_Time[1]*20))/300));
+				fixed4 color = tex2D(_MainTex, i.uv + float2(0, sin(i.vertex.x /(_Time[1]%15)*2)/300));
 
 				// just invert the colorors
 				return color;

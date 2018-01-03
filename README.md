@@ -17,11 +17,22 @@ Some potential scenes:
 
 **Mechanics**
 
-Scenes have a time limit that corresponds to their associated song. 
-	--Con:this could potentially make it less fun, since it takes control away from the player. Have to experiment with this
-	--Pro: players don't get stuck in one scene for too long and get bored if they can't make sense of it.
+Standard first person controls.
+
+Ability to pick up objects and view them/use them later on
 
 Players are free to explore scenes and interact with the objects and characters within them
+
+Interacting with characters through multiple choice dialoge and freeform/type what you want (at least for the mute character)
+
+(?)Scenes have a time limit. It usually corresponds to the scene's song. 
+
+	--Con:this could potentially make it less fun, since it takes control away from the player. Have to experiment with this
+	
+	--Pro: players don't get stuck in one scene for too long and get bored if they can't make sense of it.
+	
+(?) Some interactions take away the player's control in a subtle, imperceptable way. If pulled off, it should feel like you unconsciously performed the action, but it still seems like it came about through your own free will. Example: you are asked to put syrup on the pancakes, and can basically draw whatever you want onto them. However, the final product ends up looking like a predetermined symbol that later becomes significant. (Idk if this is possible to pull off, gonna have to see).
+
 
 
 **Possible sub-goals**

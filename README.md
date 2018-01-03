@@ -1,6 +1,6 @@
 This is a game, I guess, but hopefully it feels more like a weird dream in the end.
 
-***Rough Ideas:***
+***ROUGH IDEAS BELOW***
 
 **Overarching goal:**
 

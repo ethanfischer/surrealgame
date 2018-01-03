@@ -9,7 +9,7 @@ Your goal is to get them speak again, by saying the 'magic words'. The challenge
 
 **Setting**
 
-There are numerous, seemingly unconnected scenes the player explores. Each one has a surreal feel to it. Almost like, a dream. The scenes should be free to break laws of physics and logic.
+There are numerous, seemingly unconnected, scenes the player explores. Each one has a surreal feel to it. Almost like, a dream. The scenes should be free to break laws of physics and logic.
 
 Some potential scenes:
 
@@ -42,7 +42,7 @@ Interacting with characters through multiple choice dialoge and freeform/type wh
 --finding out a recurring character's name
 
 
-**Miscellanious details**
+**Miscellaneous details**
 
 There should be some recurring symbols/themes, in order to give more of a sense of wholeness and kind of fuck with players' minds a bit. Who doesn't love a mindfuck?
 

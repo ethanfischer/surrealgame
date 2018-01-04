@@ -22,9 +22,9 @@ public class LayoutShortCuts : EditorWindow
 		EditorApplication.ExecuteMenuItem ("Window/Layouts/2 by 3");
 	}
 
-	//[MenuItem ("Window/LayoutShortcuts/3 %1", false, 999)]
-	//static void AlignViewWithSelected ()
-	//{
-	//	Ali ("Window/Layouts/2 by 3");
-	//}
+    [MenuItem("Window/LayoutShortcuts/AlignViewToSelected %;", false, 999)]
+    static void AlignViewWithSelected()
+    {
+        EditorApplication.ExecuteMenuItem("GameObject/Align View to Selected");
+    }
 }

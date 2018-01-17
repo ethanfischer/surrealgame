@@ -17,12 +17,14 @@ namespace S3
            SetInitialReferences();
            gameManagerMaster.MenuToggleEvent += TogglePlayerController;
            gameManagerMaster.InventoryUIToggleEvent += TogglePlayerController;
+            gameManagerMaster.CutsceneTerminatedEvent += TogglePlayerController;
         }
 
         private void OnDisable()
         {
            gameManagerMaster.MenuToggleEvent -= TogglePlayerController;
            gameManagerMaster.InventoryUIToggleEvent -= TogglePlayerController;
+            gameManagerMaster.CutsceneTerminatedEvent -= TogglePlayerController;
         }
 
         private void OnMouseEnter()

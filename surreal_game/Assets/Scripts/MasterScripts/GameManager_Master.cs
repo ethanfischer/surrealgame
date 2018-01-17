@@ -13,6 +13,7 @@ namespace S3
 		public event GameManagerEventHandler RestartLevelEvent;
 		public event GameManagerEventHandler GoToMenuSceneEvent;
 		public event GameManagerEventHandler GameOverEvent;
+		public event GameManagerEventHandler CutsceneTerminatedEvent;
 
 		public bool isGameOver;
 		public bool isInventoryUIOn;
@@ -54,6 +55,13 @@ namespace S3
 			if (GameOverEvent != null) {
                 isGameOver = true;
                 GameOverEvent();
+			}
+		}
+
+        public void CallCutsceneTerminatedEvent ()
+		{
+			if (CutsceneTerminatedEvent != null) {
+				CutsceneTerminatedEvent ();
 			}
 		}
 	}

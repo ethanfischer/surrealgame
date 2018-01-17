@@ -16,8 +16,12 @@ namespace S3
 		public string audioTag;
 		public static string _audioTag;
 
+        public string mainCameraTag;
+		public static string _mainCameraTag;
+
 		public static GameObject _player;
 		public static GameObject _audio;
+        public static GameObject _mainCamera;
 
 		private void OnEnable()
 		{
@@ -36,12 +40,19 @@ namespace S3
 				Debug.LogWarning("Please type in a audioTag in the GameManager_References inspector slot");
 			}
 
+            if (mainCameraTag == "")
+			{
+				Debug.LogWarning("Please type in a cameraTag in the GameManager_References inspector slot");
+			}
+
 			_playerTag = playerTag;
 			_enemyTag = enemyTag;
 			_audioTag = audioTag;
+            _mainCameraTag = mainCameraTag;
 
 			_player = GameObject.FindGameObjectWithTag(_playerTag);
 			_audio = GameObject.FindGameObjectWithTag(_audioTag);
+			_mainCamera= GameObject.FindGameObjectWithTag(_mainCameraTag);
 		}
 	}
 }

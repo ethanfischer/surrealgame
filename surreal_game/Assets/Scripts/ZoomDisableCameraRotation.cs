@@ -22,7 +22,8 @@ public class ZoomDisableCameraRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        fov = GameManager_References._mainCamera.GetComponent<CameraFOV>().fov;
+        //fov = GameManager_References._mainCamera.GetComponent<CameraFOV>().fov;
+        fov = GameManager_References._mainCamera.GetComponent<SmoothZoom>().fov;
         if (IsCameraZoomedOut())
         {
             GivePlayerControl();
@@ -36,13 +37,14 @@ public class ZoomDisableCameraRotation : MonoBehaviour
         {
             return fov >= maxFOV;
         }
-        else return false;
+        return false;
     }
 
     private void SetInitialReferences()
     {
         player = GameManager_References._player;
-        maxFOV = GameManager_References._mainCamera.GetComponent<CameraFOV>().maxFOV;
+        //maxFOV = GameManager_References._mainCamera.GetComponent<CameraFOV>().maxFOV;
+        maxFOV = GameManager_References._mainCamera.GetComponent<SmoothZoom>().maxFOV;
         gameManagerMaster = GetComponent<GameManager_Master>();
         hasCutsceneTerminatedEventBeenCalled = false;
     }

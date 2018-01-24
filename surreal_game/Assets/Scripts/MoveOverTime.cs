@@ -4,7 +4,7 @@ using UnityEngine;
 namespace S3
 {
 
-    public class MoveCloserOverTime : MonoBehaviour
+    public class MoveOverTime : MonoBehaviour
     {
         public float CreepSpeed = .1f;
         public float MaxX = -50f;

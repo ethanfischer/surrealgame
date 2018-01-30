@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace S3
+namespace SurrealGame
 {
 
 	public class GameManager_References : MonoBehaviour

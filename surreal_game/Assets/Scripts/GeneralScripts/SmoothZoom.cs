@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace S3
+namespace SurrealGame
 {
 
     public class SmoothZoom : MonoBehaviour

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace S3
+namespace SurrealGame
 {
 	public class Item_Lock : MonoBehaviour
 	{
@@ -45,8 +45,8 @@ namespace S3
 				//isLocked = false;
 				gameObject.SetActive(false);
 				GameManager_Audio.PlaySFX("sfx_unlock");
-				return true;
 				Debug.Log("Unlocked: " + this.name);
+				return true;
 			}
 			return false;
 		}

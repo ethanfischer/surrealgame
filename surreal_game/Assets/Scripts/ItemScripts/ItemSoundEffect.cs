@@ -1,58 +1,37 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ItemSoundEffect : MonoBehaviour
+namespace SurrealGame
 {
 
-	//load all the level position data into this
-	//public ArrayList adjacentNodes;
-	public AudioSource sfx1;
-	//	public Material material;
-	//	private SkyboxManager skyboxManager;
-	//	public SkyboxManager skyboxManager;
+    public class ItemSoundEffect : MonoBehaviour
+    {
+        public AudioSource sfx1;
 
-	//	public
+        // Use this for initialization
+        void Start()
+        {
+            SetInitialReferences();
 
-	// Use this for initialization
-	void Start ()
-	{
-		SetInitialReferences ();
+        }
 
-	}
-	
-	// Update is called once per frame
-	void Update ()
-	{
-	
-	}
+        // Update is called once per frame
+        void Update()
+        {
 
-	void SetInitialReferences ()
-	{
-		
-		//GameManager_EventMaster.NextLevelEvent += NextLevel;
-//		skyboxManager = GameObject.FindGameObjectWithTag ("SkyboxManager").GetComponent<SkyboxManager> ();
-	}
+        }
 
-	void Reset ()
-	{
-		//Reset the level
-	}
+        void SetInitialReferences()
+        {
+        }
 
-	//void SetLevelCubePosition (Vector3 lp)
-	//{
-	//	this.gameObject.transform.position = lp;
-	//}
+        public void PlaySoundEffect()
+        {
+            //Debug.Log (gameObject.name);
+            sfx1.Play();
+        }
 
-	//Vector3 GetLevelCubePosition ()
-	//{
-	//	return this.gameObject.transform.position;
-	//}
 
-	public void PlaySoundEffect ()
-	{
-		//Debug.Log (gameObject.name);
-		sfx1.Play ();
-	}
-	
-
+    }
 }
+

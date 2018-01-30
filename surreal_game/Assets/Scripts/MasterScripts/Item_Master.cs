@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace S3
+namespace SurrealGame
 {
 	public class Item_Master : MonoBehaviour {
 		private Player_Master playerMaster;

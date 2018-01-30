@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace S3
+namespace SurrealGame
 {
 	public class Item_Name : MonoBehaviour {
 		public string itemName;

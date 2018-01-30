@@ -4,7 +4,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
-namespace S3
+namespace SurrealGame
 {
 	public class Player_Inventory : MonoBehaviour {
 		public Transform inventoryPlayerParent;

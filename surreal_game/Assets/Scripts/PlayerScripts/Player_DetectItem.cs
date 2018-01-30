@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace S3
+namespace SurrealGame
 {
 	public class Player_DetectItem : MonoBehaviour {
 		[Tooltip("What layer is being used for items")]
@@ -23,8 +23,9 @@ namespace S3
 		private float labelWidth = 200;
 		private float labelHeight = 50;
 
-		// Update is called once per frame
-		void Update () 
+
+        // Update is called once per frame
+        void Update () 
 		{
 			CastRayForDetectingItems();
 			CheckItemForPickupAttempt();
@@ -46,7 +47,7 @@ namespace S3
 		
 		void CheckItemForPickupAttempt()
 		{
-			if(Input.GetButtonDown(buttonPickup) && Time.timeScale > 0 && itemInRange && itemAvailableForPickup.root.tag != GameManager_References._playerTag)
+			if(Input.GetButtonDown(buttonPickup) && Time.timeScale > 0 && itemInRange && itemAvailableForPickup.root.tag != GameManager_References._playerTag && !IsItemPickedUp())
 			{
 				Debug.Log("Pickup Attempted");
 				itemAvailableForPickup.GetComponent<Item_Master>().CallEventPickupAction(inventory);
@@ -54,11 +55,15 @@ namespace S3
 
 		}
 
+        bool IsItemPickedUp()
+        {
+            return itemAvailableForPickup.GetComponent<Item_Pickup>().isPickedUp;
+        }
+
 		void OnGUI()
 		{
 			if(itemInRange && itemAvailableForPickup != null)
 			{
-				//GUI.Label(new Rect(Screen.width / 2 - labelWidth/2, Screen.height / 2, labelWidth, labelHeight), itemAvailableForPickup.name);
 			}
 		}
 	}

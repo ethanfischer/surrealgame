@@ -1,15 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace S3
+namespace SurrealGame
 {
 	public class Item_Pickup : MonoBehaviour
 	{
 
 		private Item_Master itemMaster;
 		public string pickupSFX = "sfx_item_pickup";
+        public bool isPickedUp = false;
 
-		void OnEnable()
+        void OnEnable()
 		{
 			SetInitialReferences();
 			itemMaster.EventPickupAction += CarryOutPickupActions;
@@ -33,10 +34,12 @@ namespace S3
 				itemMaster.CallEventObjectPickup();
 				transform.gameObject.SetActive(false);
 				GameManager_Audio.PlaySFX(pickupSFX);
+                isPickedUp = true;
 				//Debug.Log("picking up item");
 			}
 
 		}
+
 
 		bool IsLocked()
 		{

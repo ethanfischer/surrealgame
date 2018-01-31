@@ -7,14 +7,14 @@ namespace SurrealGame
     public class PutDownItem : MonoBehaviour
     {
 
-        public GameObject gameObject;
+        public GameObject item;
 
         // Use this for initialization
         void Start()
         {
-            if (gameObject == null)
+            if (item == null)
             {
-                Debug.LogWarning("gameObject not set");
+                Debug.LogWarning("item not set");
             }
 
         }
@@ -22,23 +22,43 @@ namespace SurrealGame
         // Update is called once per frame
         void Update()
         {
-            if (GetComponent<DetectClick>().WasClicked())
+            if (Utilities.WasObjectClicked(this.gameObject))
             {
-                //put down object
-                if (IsItemPickedUp())
-                {
-                    gameObject.transform.SetParent(this.transform);
-                    gameObject.transform.position = this.transform.position;
-                    gameObject.transform.localPosition = new Vector3(-.15f, .19f, 0);
-                    gameObject.SetActive(true);
-                }
+                PutDown();
             }
 
         }
 
         bool IsItemPickedUp()
         {
-            return gameObject.GetComponent<Item_Pickup>().isPickedUp;
+            return item.GetComponent<Item_Pickup>().isPickedUp;
+        }
+
+        private void PutDown()
+        {
+            //put down object
+            if (IsItemPickedUp())
+            {
+                SetParent(item);
+                SetPosition(item);
+                SetRotation(item);
+                item.SetActive(true);
+            }
+        }
+
+        private void SetPosition(GameObject item)
+        {
+            item.transform.position = this.transform.position;
+        }
+
+        private void SetRotation(GameObject item)
+        {
+            item.transform.rotation = this.transform.rotation;
+        }
+
+        private void SetParent(GameObject item)
+        {
+            item.transform.SetParent(this.transform);
         }
     }
 }

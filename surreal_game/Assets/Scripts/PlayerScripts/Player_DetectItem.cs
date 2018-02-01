@@ -16,9 +16,9 @@ namespace SurrealGame
 
 		private Transform itemAvailableForPickup;
 		private RaycastHit hit;
-		private float detectRange = 3f;
-		private float detectRadius = 0.7f;
-		private bool itemInRange;
+		public float detectRange = 3f;
+		public float detectRadius = 0.7f;
+		public bool itemInRange;
 
 		private float labelWidth = 200;
 		private float labelHeight = 50;

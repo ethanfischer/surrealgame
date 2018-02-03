@@ -3,68 +3,91 @@ using System.Collections;
 
 namespace SurrealGame
 {
-	public class Item_Pickup : MonoBehaviour
-	{
+    public class Item_Pickup : MonoBehaviour
+    {
 
-		private Item_Master itemMaster;
-		public string pickupSFX = "sfx_item_pickup";
-        public bool isPickedUp = false;
+        private Item_Master itemMaster;
+        public string pickupSFX = "sfx_item_pickup";
+        public bool hasBeenPickedUp = false;
+        private Transform playerInventory;
+
+        private void Update()
+        {
+            CheckForPickupAttempt();
+        }
 
         void OnEnable()
-		{
-			SetInitialReferences();
-			itemMaster.EventPickupAction += CarryOutPickupActions;
-		}
+        {
+            SetInitialReferences();
+            itemMaster.EventPickupAction += CarryOutPickupActions;
+        }
 
-		void OnDisable()
-		{
-			itemMaster.EventPickupAction -= CarryOutPickupActions;
-		}
+        void OnDisable()
+        {
+            itemMaster.EventPickupAction -= CarryOutPickupActions;
+        }
 
-		void SetInitialReferences()
-		{
-			itemMaster = GetComponent<Item_Master>();
-		}
+        void SetInitialReferences()
+        {
+            itemMaster = GetComponent<Item_Master>();
+            playerInventory = GameManager_References._playerInventory;
+        }
 
-		void CarryOutPickupActions(Transform tParent)
-		{
-			if (!IsLocked())
-			{
-				transform.SetParent(tParent);
-				itemMaster.CallEventObjectPickup();
-				transform.gameObject.SetActive(false);
-				GameManager_Audio.PlaySFX(pickupSFX);
-                isPickedUp = true;
-				//Debug.Log("picking up item");
-			}
+        void CarryOutPickupActions(Transform tParent)
+        {
+            transform.SetParent(tParent);
+            itemMaster.CallEventObjectPickup();
+            transform.gameObject.SetActive(false);
+            GameManager_Audio.PlaySFX(pickupSFX);
+            hasBeenPickedUp = true;
+            //Debug.Log("picking up item");
 
-		}
+        }
 
 
-		bool IsLocked()
-		{
-			foreach (Transform child in gameObject.transform)
-			{
-				//Debug.Log(gameObject.name + " has children");
-				if (child.gameObject.CompareTag("Lock"))
-				{
-					if (child.gameObject.activeInHierarchy)
-					{
-						//Debug.Log(this.name + " has a lock");
-						//attempt to lock any locked items (Item Lock checks if player has the key)
-						if(child.GetComponent<Item_Lock>().Unlock())
-						{
-							return false; //We want to carry out the pickup action simultaneously with the items being unlocked. 
-						}
-						return true;
-					}
-					//Debug.Log(child.name + "a in h: " + child.gameObject.activeInHierarchy);
-				}
-				//Debug.Log(gameObject.name + " child doesn't have Lock tag");
-			}
-			return false;
-		}
-	}
+        bool IsLocked()
+        {
+            foreach (Transform child in gameObject.transform)
+            {
+                //Debug.Log(gameObject.name + " has children");
+                if (child.gameObject.CompareTag("Lock"))
+                {
+                    if (child.gameObject.activeInHierarchy)
+                    {
+                        //Debug.Log(this.name + " has a lock");
+                        //attempt to lock any locked items (Item Lock checks if player has the key)
+                        if (child.GetComponent<Item_Lock>().Unlock())
+                        {
+                            return false; //We want to carry out the pickup action simultaneously with the items being unlocked. 
+                        }
+                        return true;
+                    }
+                    //Debug.Log(child.name + "a in h: " + child.gameObject.activeInHierarchy);
+                }
+                //Debug.Log(gameObject.name + " child doesn't have Lock tag");
+            }
+            return false;
+        }
+
+        private void CheckForPickupAttempt()
+        {
+            if (IsDetected() && WasClicked() && !IsLocked() && !hasBeenPickedUp)
+            {
+                GetComponent<Item_Master>().CallEventPickupAction(playerInventory);
+            }
+
+        }
+
+        private bool IsDetected()
+        {
+            return GameManager_References._player.GetComponent<Player_Detect_Item>().IsItemDetected(this.gameObject);
+        }
+
+        private bool WasClicked()
+        {
+            return Input.GetButton(GameManager_References._pickupButton);
+        }
+    }
 }
 
 

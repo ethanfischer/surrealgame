@@ -31,7 +31,7 @@ namespace SurrealGame
 
         bool IsItemPickedUp()
         {
-            return item.GetComponent<Item_Pickup>().isPickedUp;
+            return item.GetComponent<Item_Pickup>().hasBeenPickedUp;
         }
 
         private void PutDown()

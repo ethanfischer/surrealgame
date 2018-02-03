@@ -40,8 +40,6 @@ namespace SurrealGame
             transform.gameObject.SetActive(false);
             GameManager_Audio.PlaySFX(pickupSFX);
             hasBeenPickedUp = true;
-            //Debug.Log("picking up item");
-
         }
 
 
@@ -49,12 +47,10 @@ namespace SurrealGame
         {
             foreach (Transform child in gameObject.transform)
             {
-                //Debug.Log(gameObject.name + " has children");
                 if (child.gameObject.CompareTag("Lock"))
                 {
                     if (child.gameObject.activeInHierarchy)
                     {
-                        //Debug.Log(this.name + " has a lock");
                         //attempt to lock any locked items (Item Lock checks if player has the key)
                         if (child.GetComponent<Item_Lock>().Unlock())
                         {
@@ -62,9 +58,7 @@ namespace SurrealGame
                         }
                         return true;
                     }
-                    //Debug.Log(child.name + "a in h: " + child.gameObject.activeInHierarchy);
                 }
-                //Debug.Log(gameObject.name + " child doesn't have Lock tag");
             }
             return false;
         }

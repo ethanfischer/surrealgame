@@ -40,10 +40,9 @@ namespace SurrealGame
             }
         }
 
-
-        public string GetDetectedItemName()
+        public GameObject GetDetectedItem()
         {
-            return detectedItemName;
+            return detectedItem.gameObject;
         }
 
         public bool IsItemDetected(GameObject item)

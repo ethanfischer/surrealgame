@@ -65,22 +65,13 @@ namespace SurrealGame
 
         private void CheckForPickupAttempt()
         {
-            if (IsDetected() && WasClicked() && !IsLocked() && !hasBeenPickedUp)
+            if (Utilities.WasItemClicked(gameObject) && !IsLocked() && !hasBeenPickedUp)
             {
                 GetComponent<Item_Master>().CallEventPickupAction(playerInventory);
             }
 
         }
 
-        private bool IsDetected()
-        {
-            return GameManager_References._player.GetComponent<Player_Detect_Item>().IsItemDetected(this.gameObject);
-        }
-
-        private bool WasClicked()
-        {
-            return Input.GetButton(GameManager_References._pickupButton);
-        }
     }
 }
 

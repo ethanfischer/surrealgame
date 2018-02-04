@@ -4,24 +4,19 @@ namespace SurrealGame
 {
     public static class Utilities
     {
-        public static string ClickButton = "Interact";
-
-        public static bool WasObjectClicked(GameObject gameObject)
+        public static bool WasItemClicked(GameObject item)
         {
-            if (Input.GetButtonDown(ClickButton))
-            {
-                RaycastHit hit;
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            return IsItemDetected(item) && WasClicked();
+        }
 
-                if (Physics.Raycast(ray, out hit))
-                {
-                    if (hit.transform.name == gameObject.name)
-                    {
-                        return true;
-                    }
-                }
-            }
-            return false;
+        private static bool IsItemDetected(GameObject item)
+        {
+            return GameManager_References._player.GetComponent<Player_Detect_Item>().IsItemDetected(item);
+        }
+
+        private static bool WasClicked()
+        {
+            return Input.GetButtonUp(GameManager_References._interactButton);
         }
     }
 }

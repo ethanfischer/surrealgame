@@ -22,7 +22,7 @@ namespace SurrealGame
         // Update is called once per frame
         void Update()
         {
-            if (Utilities.WasObjectClicked(this.gameObject))
+            if (Utilities.WasItemClicked(this.gameObject))
             {
                 PutDown();
             }

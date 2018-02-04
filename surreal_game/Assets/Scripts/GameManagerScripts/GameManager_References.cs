@@ -19,8 +19,8 @@ namespace SurrealGame
         public string mainCameraTag;
 		public static string _mainCameraTag;
 
-        public string pickupButton;
-        public static string _pickupButton;
+        public string interactButton;
+        public static string _interactButton;
 
 		public static GameObject _player;
 		public static GameObject _audio;
@@ -50,14 +50,14 @@ namespace SurrealGame
 				Debug.LogWarning("Please type in a cameraTag in the GameManager_References inspector slot");
 			}
 
-            if (pickupButton == "")
+            if (interactButton == "")
 			{
-				Debug.LogWarning("Please type in a pikcupButton in the GameManager_References inspector slot");
+				Debug.LogWarning("Please type in a interactButton in the GameManager_References inspector slot");
 			}
 
             if (_playerInventory == null)
 			{
-				Debug.LogWarning("Please type in a plaerInventory in the GameManager_References inspector slot");
+				Debug.LogWarning("Please type in a playerInventory in the GameManager_References inspector slot");
 			}
 
 
@@ -65,7 +65,7 @@ namespace SurrealGame
 			_enemyTag = enemyTag;
 			_audioTag = audioTag;
             _mainCameraTag = mainCameraTag;
-            _pickupButton = pickupButton;
+            _interactButton = interactButton;
             _playerInventory = playerInventory;
 
 			_player = GameObject.FindGameObjectWithTag(_playerTag);

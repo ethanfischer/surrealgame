@@ -28,7 +28,6 @@ namespace SurrealGame
             {
                 image.color = defaultColor;
             }
-            Debug.Log(image.color);
         }
 
         private void SetInitialReferences()

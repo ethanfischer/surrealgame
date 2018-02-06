@@ -132,25 +132,25 @@ public class QuestChartDemo : MonoBehaviour
 
     public static void SaveProgress()
     {
-        List<string> items = GameObject.Find("UIManager").GetComponent<exampleUI>().example_ItemInventory;
-        PlayerPrefs.SetInt("interactedWith", interactedWith.Count);
-        PlayerPrefs.SetInt("cylinderGuyInteractions", cylinderGuyInteractions.Count);
-        PlayerPrefs.SetInt("example_ItemInventory", items.Count);
+        //List<string> items = GameObject.Find("UIManager").GetComponent<exampleUI>().example_ItemInventory;
+        //PlayerPrefs.SetInt("interactedWith", interactedWith.Count);
+        //PlayerPrefs.SetInt("cylinderGuyInteractions", cylinderGuyInteractions.Count);
+        //PlayerPrefs.SetInt("example_ItemInventory", items.Count);
 
-        for (int i = 0; i < interactedWith.Count; i++)
-        {
-            PlayerPrefs.SetString("interWith" + i.ToString(), interactedWith[i]);
-        }
+        //for (int i = 0; i < interactedWith.Count; i++)
+        //{
+        //    PlayerPrefs.SetString("interWith" + i.ToString(), interactedWith[i]);
+        //}
 
-        for (int i = 0; i < cylinderGuyInteractions.Count; i++)
-        {
-            PlayerPrefs.SetInt("cylGuyInt" + i.ToString(), cylinderGuyInteractions[i]);
-        }
+        //for (int i = 0; i < cylinderGuyInteractions.Count; i++)
+        //{
+        //    PlayerPrefs.SetInt("cylGuyInt" + i.ToString(), cylinderGuyInteractions[i]);
+        //}
 
-        for (int i = 0; i < items.Count; i++)
-        {
-            PlayerPrefs.SetString("item" + i.ToString(), items[i]);
-        }
+        //for (int i = 0; i < items.Count; i++)
+        //{
+        //    PlayerPrefs.SetString("item" + i.ToString(), items[i]);
+        //}
     }
 
     public static void LoadProgress()

@@ -43,6 +43,8 @@ namespace SurrealGame
         private List<Text> currentOptions = new List<Text>();
 
         IEnumerator npcTextAnimator;
+        public string dialogueUpKey;
+        public string dialogueDownKey;
 
         void Start()
         {
@@ -120,12 +122,12 @@ namespace SurrealGame
                 //Scroll through Player dialogue options
                 if (!data.pausedAction && data.isPlayer)
                 {
-                    if (Input.GetKeyDown(KeyCode.S))
+                    if (Input.GetButtonDown(dialogueDownKey))
                     {
                         if (data.commentIndex < currentOptions.Count - 1)
                             data.commentIndex++;
                     }
-                    if (Input.GetKeyDown(KeyCode.W))
+                    if (Input.GetButtonDown(dialogueUpKey))
                     {
                         if (data.commentIndex > 0)
                             data.commentIndex--;

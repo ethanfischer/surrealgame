@@ -55,7 +55,7 @@ namespace SurrealGame
 				Debug.LogWarning("Please type in a interactButton in the GameManager_References inspector slot");
 			}
 
-            if (_playerInventory == null)
+            if (playerInventory == null)
 			{
 				Debug.LogWarning("Please type in a playerInventory in the GameManager_References inspector slot");
 			}

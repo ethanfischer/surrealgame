@@ -48,7 +48,6 @@ namespace SurrealGame
         {
             VD.LoadDialogues(); //Load all dialogues to memory so that we dont spend time doing so later
             VD.LoadState("VIDEDEMOScene1", true);
-            QuestChartDemo.LoadProgress();
         }
 
         //Just so we know when we finished loading all dialogues, then we unsubscribe

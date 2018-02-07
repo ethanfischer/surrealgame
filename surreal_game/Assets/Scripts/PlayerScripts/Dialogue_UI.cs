@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine.UI;
 using VIDE_Data; //<--- Import to use easily call VD class
+using System;
 
 namespace SurrealGame
 {
@@ -43,8 +44,6 @@ namespace SurrealGame
         private List<Text> currentOptions = new List<Text>();
 
         IEnumerator npcTextAnimator;
-        public string dialogueUpKey;
-        public string dialogueDownKey;
 
         void Start()
         {
@@ -98,36 +97,36 @@ namespace SurrealGame
             //Lets just store the Node Data variable for the sake of fewer words
             var data = VD.nodeData;
 
-//            if (QuestChartDemo.go.GetComponent<QuestChartDemo>().questChartContainer.activeSelf)
-//            {
-//                if (Input.GetKeyDown(KeyCode.X))
-//                {
-//                    PlayerPrefs.DeleteAll();
-//                    if (System.IO.Directory.Exists(Application.dataPath + "/VIDE/saves"))
-//                    {
-//                        System.IO.Directory.Delete(Application.dataPath + "/VIDE/saves", true);
-//#if UNITY_EDITOR
-//                        UnityEditor.AssetDatabase.Refresh();
-//#endif
-//                    }
+            //            if (QuestChartDemo.go.GetComponent<QuestChartDemo>().questChartContainer.activeSelf)
+            //            {
+            //                if (Input.GetKeyDown(KeyCode.X))
+            //                {
+            //                    PlayerPrefs.DeleteAll();
+            //                    if (System.IO.Directory.Exists(Application.dataPath + "/VIDE/saves"))
+            //                    {
+            //                        System.IO.Directory.Delete(Application.dataPath + "/VIDE/saves", true);
+            //#if UNITY_EDITOR
+            //                        UnityEditor.AssetDatabase.Refresh();
+            //#endif
+            //                    }
 
-//#if UNITY_EDITOR
-//                    UnityEditor.EditorApplication.isPlaying = false;
-//#endif
-//                }
-//            }
+            //#if UNITY_EDITOR
+            //                    UnityEditor.EditorApplication.isPlaying = false;
+            //#endif
+            //                }
+            //            }
 
             if (VD.isActive) //Only if
             {
                 //Scroll through Player dialogue options
                 if (!data.pausedAction && data.isPlayer)
                 {
-                    if (Input.GetButtonDown(dialogueDownKey))
+                    if (ScrollUp())
                     {
                         if (data.commentIndex < currentOptions.Count - 1)
                             data.commentIndex++;
                     }
-                    if (Input.GetButtonDown(dialogueUpKey))
+                    if (ScrollDown())
                     {
                         if (data.commentIndex > 0)
                             data.commentIndex--;
@@ -141,6 +140,16 @@ namespace SurrealGame
                     }
                 }
             }
+        }
+
+        private bool ScrollUp()
+        {
+            return Input.GetAxis("Mouse ScrollWheel") < 0f;
+        }
+
+        private bool ScrollDown()
+        {
+            return Input.GetAxis("Mouse ScrollWheel") > 0f;
         }
 
         //examplePlayer.cs calls this one to move forward in the conversation

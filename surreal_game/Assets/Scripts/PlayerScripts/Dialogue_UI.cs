@@ -28,9 +28,10 @@ namespace SurrealGame
         //These are just references to UI components and objects in the scene
         public Text npcText;
         public Text npcName;
-        public Text playerText;
+        public GameObject playerComments;
         public GameObject itemPopUp;
         public GameObject uiContainer;
+        public List<Text> options;
 
         //We'll use these later
         bool dialoguePaused = false;
@@ -190,12 +191,15 @@ namespace SurrealGame
             //Reset some variables
             npcText.text = "";
             npcText.transform.parent.gameObject.SetActive(false);
-            playerText.transform.parent.gameObject.SetActive(false);
+            playerComments.transform.parent.gameObject.SetActive(false);
             //PlayerSprite.sprite = null;
             //NPCSprite.sprite = null;
 
             //Look for dynamic text change in extraData
             PostCheckExtraVariables(data);
+
+            DestroyCurrentOptions();
+            RefreshCurrentOptions();
 
             //If this new Node is a Player Node, set the player choices offered by the node
             if (data.isPlayer)
@@ -207,7 +211,7 @@ namespace SurrealGame
                 //    PlayerSprite.sprite = VD.assigned.defaultPlayerSprite;
 
                 SetOptions(data.comments);
-                playerText.transform.parent.gameObject.SetActive(true);
+                playerComments.transform.parent.gameObject.SetActive(true);
 
             }
             else  //If it's an NPC Node, let's just update NPC's text and sprite
@@ -345,25 +349,32 @@ namespace SurrealGame
         //This uses the returned string[] from nodeData.comments to create the UIs for each comment
         //It first cleans, then it instantiates new options
         //This is for demo only, you shouldn´t instantiate/destroy so constantly
-        public void SetOptions(string[] opts)
+        public void SetOptions(string[] options)
+        {
+            for (int i = 0; i < options.Length; i++)
+            {
+                SetOptionText(i, options[i]);
+            }
+        }
+
+        private void SetOptionText(int i, string text)
+        {
+            options[i].text = text;
+        }
+
+        private void RefreshCurrentOptions()
+        {
+            foreach (Text option in options)
+            {
+                option.text = "";
+            }
+        }
+
+        private void DestroyCurrentOptions()
         {
             //Destroy the current options
             foreach (UnityEngine.UI.Text op in currentOptions)
                 Destroy(op.gameObject);
-
-            //Clean the variable
-            currentOptions = new List<UnityEngine.UI.Text>();
-
-            //Create the options
-            for (int i = 0; i < opts.Length; i++)
-            {
-                GameObject newOp = Instantiate(playerText.gameObject, playerText.transform.position, Quaternion.identity) as GameObject;
-                newOp.SetActive(true);
-                newOp.transform.SetParent(playerText.transform.parent, true);
-                newOp.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 20 - (20 * i));
-                newOp.GetComponent<UnityEngine.UI.Text>().text = opts[i];
-                currentOptions.Add(newOp.GetComponent<UnityEngine.UI.Text>());
-            }
         }
 
         //This will replace any "[NAME]" with the name of the gameobject holding the VIDE_Assign

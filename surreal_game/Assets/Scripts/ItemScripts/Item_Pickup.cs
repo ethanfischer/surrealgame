@@ -16,9 +16,14 @@ namespace SurrealGame
             CheckForPickupAttempt();
         }
 
-        void OnEnable()
+        private void Start()
         {
             SetInitialReferences();
+        }
+
+        void OnEnable()
+        {
+            itemMaster = GetComponent<Item_Master>();
             itemMaster.EventPickupAction += CarryOutPickupActions;
         }
 
@@ -29,7 +34,6 @@ namespace SurrealGame
 
         void SetInitialReferences()
         {
-            itemMaster = GetComponent<Item_Master>();
             playerInventory = GameManager_References._playerInventory;
         }
 

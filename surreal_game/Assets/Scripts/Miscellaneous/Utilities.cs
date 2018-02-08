@@ -18,5 +18,10 @@ namespace SurrealGame
         {
             return Input.GetButtonUp(GameManager_References._interactButton);
         }
+
+        public static bool DoesPlayerHaveItem(string itenName)
+        {
+            return GameManager_References._playerInventory.Find(itenName);
+        }
     }
 }

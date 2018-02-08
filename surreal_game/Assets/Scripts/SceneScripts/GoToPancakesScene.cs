@@ -9,7 +9,12 @@ namespace SurrealGame
 
         public override bool ArePrerequisitesMet()
         {
-            return true;
+            var hasBeenPickedUp = GetComponent<Item_Pickup>().hasBeenPickedUp;
+            var doesPlayerHaveItem = Utilities.DoesPlayerHaveItem("PancakeMix");
+
+            var arePrerequesitesMet = hasBeenPickedUp && doesPlayerHaveItem;
+            return arePrerequesitesMet;
+
         }
 
     }

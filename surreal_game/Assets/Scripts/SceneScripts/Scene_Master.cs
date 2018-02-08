@@ -9,20 +9,29 @@ namespace SurrealGame
     public class Scene_Master : MonoBehaviour
     {
         private Player_Master playerMaster;
+        private SceneManager sceneManager;
 
         public delegate void GoToSceneEventHandler(string scene);
         public event GoToSceneEventHandler GoToSceneEvent;
 
-        public void CallGoToSceneEvent(string scene)
+        public void CallGoToSceneEvent(string sceneName)
         {
             if (GoToSceneEvent != null)
             {
-                GoToSceneEvent(scene);
+                GoToSceneEvent(sceneName);
+            }
+
+            var scene = SceneManager.GetSceneByName(sceneName);
+            SceneManager.LoadScene(sceneName);
+            if(scene.isLoaded)
+            {
+                SceneManager.SetActiveScene(scene);
             }
         }
 
         void SetInitialReferences()
         {
+            sceneManager = new SceneManager();
 
         }
 

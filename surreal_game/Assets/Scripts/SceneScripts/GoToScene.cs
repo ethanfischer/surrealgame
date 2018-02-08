@@ -7,6 +7,14 @@ namespace SurrealGame
     {
         public string sceneName;
 
+        public void Update()
+        {
+            if (Utilities.WasItemClicked(gameObject))
+            {
+                CallGoToSceneEvent();
+            }
+        }
+
         public void CallGoToSceneEvent()
         {
             if (ArePrerequisitesMet())

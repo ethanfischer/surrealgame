@@ -98,57 +98,44 @@ namespace SurrealGame
             //Lets just store the Node Data variable for the sake of fewer words
             var data = VD.nodeData;
 
-            //            if (QuestChartDemo.go.GetComponent<QuestChartDemo>().questChartContainer.activeSelf)
-            //            {
-            //                if (Input.GetKeyDown(KeyCode.X))
-            //                {
-            //                    PlayerPrefs.DeleteAll();
-            //                    if (System.IO.Directory.Exists(Application.dataPath + "/VIDE/saves"))
-            //                    {
-            //                        System.IO.Directory.Delete(Application.dataPath + "/VIDE/saves", true);
-            //#if UNITY_EDITOR
-            //                        UnityEditor.AssetDatabase.Refresh();
-            //#endif
-            //                    }
+            HandleOptionSelection(data);
 
-            //#if UNITY_EDITOR
-            //                    UnityEditor.EditorApplication.isPlaying = false;
-            //#endif
-            //                }
-            //            }
+        }
 
-            if (VD.isActive) //Only if
+        private void HandleOptionSelection(VD.NodeData data)
+        {
+            if (VD.isActive) 
             {
                 //Scroll through Player dialogue options
                 if (!data.pausedAction && data.isPlayer)
                 {
-                    if (ScrollUp())
+                    if (ScrollDown())
                     {
-                        if (data.commentIndex < currentOptions.Count - 1)
+                        if (data.commentIndex < data.comments.Length - 1)
                             data.commentIndex++;
                     }
-                    if (ScrollDown())
+                    if (ScrollUp())
                     {
                         if (data.commentIndex > 0)
                             data.commentIndex--;
                     }
 
                     //Color the Player options. Blue for the selected one
-                    for (int i = 0; i < currentOptions.Count; i++)
+                    for (int i = 0; i < options.Count; i++)
                     {
-                        currentOptions[i].color = Color.white;
-                        if (i == data.commentIndex) currentOptions[i].color = Color.yellow;
+                        options[i].color = Color.white;
+                        if (i == data.commentIndex) options[i].color = Color.yellow;
                     }
                 }
             }
         }
 
-        private bool ScrollUp()
+        private bool ScrollDown()
         {
             return Input.GetAxis("Mouse ScrollWheel") < 0f;
         }
 
-        private bool ScrollDown()
+        private bool ScrollUp()
         {
             return Input.GetAxis("Mouse ScrollWheel") > 0f;
         }
@@ -351,6 +338,8 @@ namespace SurrealGame
         //This is for demo only, you shouldn´t instantiate/destroy so constantly
         public void SetOptions(string[] options)
         {
+            List<Text> newOptions = new List<Text>();
+
             for (int i = 0; i < options.Length; i++)
             {
                 SetOptionText(i, options[i]);
@@ -364,17 +353,23 @@ namespace SurrealGame
 
         private void RefreshCurrentOptions()
         {
-            foreach (Text option in options)
+            if (options != null)
             {
-                option.text = "";
+                foreach (Text option in options)
+                {
+                    option.text = "";
+                }
             }
         }
 
         private void DestroyCurrentOptions()
         {
             //Destroy the current options
-            foreach (UnityEngine.UI.Text op in currentOptions)
-                Destroy(op.gameObject);
+            if (currentOptions != null)
+            {
+                foreach (UnityEngine.UI.Text op in currentOptions)
+                    Destroy(op.gameObject);
+            }
         }
 
         //This will replace any "[NAME]" with the name of the gameobject holding the VIDE_Assign

@@ -178,7 +178,7 @@ namespace SurrealGame
             //Reset some variables
             npcText.text = "";
             npcText.transform.parent.gameObject.SetActive(false);
-            playerComments.transform.parent.gameObject.SetActive(false);
+            //playerComments.transform.parent.gameObject.SetActive(false);
             //PlayerSprite.sprite = null;
             //NPCSprite.sprite = null;
 

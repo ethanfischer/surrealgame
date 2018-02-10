@@ -17,14 +17,14 @@ namespace SurrealGame
            SetInitialReferences();
            gameManagerMaster.MenuToggleEvent += TogglePlayerController;
            gameManagerMaster.InventoryUIToggleEvent += TogglePlayerController;
-            gameManagerMaster.CutsceneTerminatedEvent += TogglePlayerController;
+            gameManagerMaster.CutsceneTerminatedEvent += EnablePlayerControl;
         }
 
         private void OnDisable()
         {
            gameManagerMaster.MenuToggleEvent -= TogglePlayerController;
            gameManagerMaster.InventoryUIToggleEvent -= TogglePlayerController;
-            gameManagerMaster.CutsceneTerminatedEvent -= TogglePlayerController;
+            gameManagerMaster.CutsceneTerminatedEvent -= EnablePlayerControl;
         }
 
         private void OnMouseEnter()
@@ -43,6 +43,15 @@ namespace SurrealGame
             if(fpsController != null)
             {
                 fpsController.GetComponent<FirstPersonController>().enabled = !fpsController.GetComponent<FirstPersonController>().enabled;
+            }
+        }
+
+        private void EnablePlayerControl()
+        {
+            if(fpsController != null)
+            {
+                fpsController.GetComponent<FirstPersonController>().enabled = true;
+                fpsController.GetComponent<CharacterController>().enabled = true;
             }
         }
     }

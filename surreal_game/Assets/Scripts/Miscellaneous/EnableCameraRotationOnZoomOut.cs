@@ -6,7 +6,7 @@ namespace SurrealGame
 {
 
 
-    public class ZoomDisableCameraRotation : MonoBehaviour
+    public class EnableCameraRotationOnZoomOut : MonoBehaviour
     {
 
         private float fov;

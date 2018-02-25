@@ -7,11 +7,6 @@ namespace SurrealGame
 {
     public class  SwapKitchen : MonoBehaviour
     {
-        void Start()
-        {
-            SetInitialReferences();
-        }
-
         void Update()
         {
             if(Utilities.WasItemClicked(gameObject))
@@ -22,14 +17,14 @@ namespace SurrealGame
 
         private void TrySwapKitchen()
         {
-            if(ArePrerequisitesMet())
+            if(CanSwapKitchen())
             {
                 GameManager_References._sceneMaster.AddScene("Kitchen_David");
                 GameManager_References._sceneMaster.RemoveScene("Kitchen");
             }
         }
 
-        private bool ArePrerequisitesMet()
+        private bool CanSwapKitchen()
         {
             var hasBeenPickedUp = GetComponent<Item_Pickup>().hasBeenPickedUp;
             var doesPlayerHaveItem = Utilities.DoesPlayerHaveItem("PancakeMix");
@@ -37,10 +32,6 @@ namespace SurrealGame
             var arePrerequesitesMet = hasBeenPickedUp && doesPlayerHaveItem;
             return arePrerequesitesMet;
 
-        }
-
-        private void SetInitialReferences()
-        {
         }
     }
 }

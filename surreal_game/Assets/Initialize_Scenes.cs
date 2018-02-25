@@ -8,11 +8,15 @@ namespace SurrealGame
 {
     public class Initialize_Scenes : MonoBehaviour
     {
-        public string initialLocation = "Kitchen";
+        public string scene;
 
         void Awake()
         {
-            LoadSceneAdditively(initialLocation);
+            if(scene == null)
+            {
+                throw new Exception("No scene to initialize");
+            }
+            LoadSceneAdditively(scene);
         }
 
         private static void LoadSceneAdditively(string sceneName)

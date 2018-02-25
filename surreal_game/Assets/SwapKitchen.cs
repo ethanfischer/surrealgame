@@ -7,6 +7,7 @@ namespace SurrealGame
 {
     public class  SwapKitchen : MonoBehaviour
     {
+        public string doorbellSFX;
         void Update()
         {
             if(Utilities.WasItemClicked(gameObject))
@@ -21,6 +22,7 @@ namespace SurrealGame
             {
                 GameManager_References._sceneMaster.AddScene("Kitchen_David");
                 GameManager_References._sceneMaster.RemoveScene("Kitchen");
+                GameManager_Audio.PlaySFX(doorbellSFX);
             }
         }
 

@@ -25,8 +25,12 @@ namespace SurrealGame
 		public static GameObject _player;
 		public static GameObject _audio;
         public static GameObject _mainCamera;
+
         public Transform playerInventory;
         public static Transform _playerInventory;
+
+        public Scene_Master sceneMaster;
+        public static Scene_Master _sceneMaster;
 
         private void OnEnable()
 		{
@@ -60,6 +64,11 @@ namespace SurrealGame
 				Debug.LogWarning("Please type in a playerInventory in the GameManager_References inspector slot");
 			}
 
+            if (sceneMaster == null)
+			{
+				Debug.LogWarning("Please type in a sceneMaster in the GameManager_References inspector slot");
+			}
+
 
 			_playerTag = playerTag;
 			_enemyTag = enemyTag;
@@ -67,6 +76,7 @@ namespace SurrealGame
             _mainCameraTag = mainCameraTag;
             _interactButton = interactButton;
             _playerInventory = playerInventory;
+            _sceneMaster = sceneMaster;
 
 			_player = GameObject.FindGameObjectWithTag(_playerTag);
 			_audio = GameObject.FindGameObjectWithTag(_audioTag);

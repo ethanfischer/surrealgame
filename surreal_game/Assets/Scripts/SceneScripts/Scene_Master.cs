@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,22 +12,32 @@ namespace SurrealGame
         private Player_Master playerMaster;
         private SceneManager sceneManager;
 
-        public delegate void GoToSceneEventHandler(string scene);
-        public event GoToSceneEventHandler GoToSceneEvent;
+        public delegate void AddSceneEventHandler(string scene);
+        public event AddSceneEventHandler AddSceneEvent;
 
-        public void CallGoToSceneEvent(string sceneName)
+        public delegate void RemoveSceneEventHandler(string scene);
+        public event RemoveSceneEventHandler RemoveSceneEvent;
+
+        public void AddScene(string sceneName)
         {
-            if (GoToSceneEvent != null)
+            if (AddSceneEvent != null)
             {
-                GoToSceneEvent(sceneName);
+                AddSceneEvent(sceneName);
             }
 
             var scene = SceneManager.GetSceneByName(sceneName);
-            SceneManager.LoadScene(sceneName);
-            if(scene.isLoaded)
+            SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
+        }
+
+        internal void RemoveScene(string sceneName)
+        {
+            if (RemoveSceneEvent != null)
             {
-                SceneManager.SetActiveScene(scene);
+                RemoveSceneEvent(sceneName);
             }
+
+            var scene = SceneManager.GetSceneByName(sceneName);
+            SceneManager.UnloadSceneAsync(scene);
         }
 
         void SetInitialReferences()

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 namespace SurrealGame
 {
-    public class  SwitchSceneOnClick : MonoBehaviour
+    public abstract class SwitchSceneOnClick : MonoBehaviour
     {
         public string sfx;
         public string nextScene;
@@ -20,7 +20,7 @@ namespace SurrealGame
 
         void Update()
         {
-            if(Utilities.WasItemClicked(gameObject))
+            if (Utilities.WasItemClicked(gameObject))
             {
                 TrySwitchScene();
             }
@@ -28,7 +28,7 @@ namespace SurrealGame
 
         private void TrySwitchScene()
         {
-            if(CanSwitchScene())
+            if (CanSwitchScene())
             {
                 sceneMaster.AddScene(nextScene);
                 sceneMaster.RemoveScene(currentScene);
@@ -36,15 +36,7 @@ namespace SurrealGame
             }
         }
 
-        private bool CanSwitchScene()
-        {
-            var hasBeenPickedUp = GetComponent<Item_Pickup>().hasBeenPickedUp;
-            var doesPlayerHaveItem = Utilities.DoesPlayerHaveItem("PancakeMix");
-
-            var arePrerequesitesMet = hasBeenPickedUp && doesPlayerHaveItem;
-            return arePrerequesitesMet;
-
-        }
+        protected abstract bool CanSwitchScene();
 
         private void SetInitialReferences()
         {

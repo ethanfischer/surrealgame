@@ -1,0 +1,12 @@
+Quill Model to Unity Pipeline
+
+1. Create model in quill
+2. Export it
+3. Blender:
+	a. reposition to origin. 
+		I. select all by pressing a
+		II. ctrl + shift + alt + c
+				Geometry to origin
+		III. adjust rotation as close as you can with 'R', X, Y, and Z
+		IV. Reset origin rotation using Ctrl + a
+			https://blender.stackexchange.com/questions/38970/reset-object-origin-without-moving-object

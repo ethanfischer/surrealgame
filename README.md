@@ -1,19 +1,20 @@
-This is a game, I guess, but hopefully it feels more like a weird dream in the end.
+This is a game about meaning. More specifically, it's about how images, sounds, and various other symbols derive meaning.
 
-***ROUGH IDEAS BELOW***
+As you might guess, it will involve puzzles. The player must figure out the meaning of various symbols in order to complete tasks. The answers to these puzzles
+are given throughout the game, and the player should feel encouraged to pay close attention to their environment for clues.
 
-**Overarching goal:**
-
-Throughout the game, this recurring character keeps appearing in the scenes you visit. But for whatever reason, they will not talk to you.
-Your goal is to get them speak again, by saying the 'magic words'. The challenge is to figure out what you have to say to them, based on the context clues given throughout the game.
+Not coincidentally, the story also centers around meaning. One theme I hope to tease out is that the mental process that allows us to give abstract symbols meaning
+is the same mental process that we use to give our own lives meaning
 
 **Setting**
 
-There are numerous, seemingly unconnected, scenes the player explores. Each one has a surreal feel to it. Almost like, a dream. The scenes should be free to break laws of physics and logic.
+There are numerous, seemingly unconnected scenes the player explores. Each one has a surreal feel to it. Almost like a dream. The scenes 
+are not limited by normal, waking logic. Objects can appear and disappear at random, people can forget and know things they shouldn't be able to.
 
 Some potential scenes:
 
--You are in a kitchen and are told to make some pancakes. After you finish frying them, you turn around and may or may not notice that the room has changed in a subtle way (there's a door there that wasn't there before, maybe the character's face changes slightly).
+-You are in a kitchen and your wife asks you to make some pancakes. However, all the ingredients in the kitchen are
+unknown to you. You must figure out the correct combination of ingredients, based on clues given in other scenes.
 
 **Mechanics**
 
@@ -23,7 +24,7 @@ Ability to pick up objects and view them/use them later on
 
 Players are free to explore scenes and interact with the objects and characters within them
 
-Interacting with characters through multiple choice dialoge and freeform/type what you want (at least for the mute character)
+Interacting with characters through dialogue -- possibly multiple choice
 
 (?)Scenes have a time limit. It usually corresponds to the scene's song. 
 
@@ -35,14 +36,23 @@ Interacting with characters through multiple choice dialoge and freeform/type wh
 
 
 
-**Possible sub-goals**
+**Possible puzzles**
 
---piecing together a ripped apart picture or map that is somehow significant
+--
 
 --finding out a recurring character's name
 
+--getting your wife some 'pancakes', by figuring out what pancakes means to her
+
+
+
 
 **Miscellaneous details**
+
+I don't want this to feel too analytical or challenging. Consider throwing in some 'fake puzzles' based on how well the player is doing. Getting stuck is never fun,
+and as long as the player doesn't realize they being given a free pass, it should work (although, on second thought, solving a puzzle at random is arguably even
+less satisfying than getting stuck.. hmmm).
+--consider just sprinkling in easy puzzles then
 
 There should be some recurring symbols/themes, in order to give more of a sense of wholeness and kind of fuck with players' minds a bit. Who doesn't love a mindfuck?
 

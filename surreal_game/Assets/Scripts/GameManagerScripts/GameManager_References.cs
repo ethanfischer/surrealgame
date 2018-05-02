@@ -32,6 +32,9 @@ namespace SurrealGame
         public GameObject sceneManager;
         public static GameObject _sceneManager;
 
+        public GameObject gameManager;
+		public static GameObject _gameManager;
+
         private void OnEnable()
 		{
 			if (playerTag == "")
@@ -69,6 +72,11 @@ namespace SurrealGame
 				Debug.LogWarning("Please type in a sceneManager in the GameManager_References inspector slot");
 			}
 
+            if (gameManager == null)
+			{
+				Debug.LogWarning("Please type in a gameManager in the GameManager_References inspector slot");
+			}
+
 
 			_playerTag = playerTag;
 			_enemyTag = enemyTag;
@@ -77,6 +85,7 @@ namespace SurrealGame
             _interactButton = interactButton;
             _playerInventory = playerInventory;
             _sceneManager = sceneManager;
+            _gameManager = gameManager;
 
 			_player = GameObject.FindGameObjectWithTag(_playerTag);
 			_audio = GameObject.FindGameObjectWithTag(_audioTag);

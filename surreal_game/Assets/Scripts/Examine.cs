@@ -26,6 +26,8 @@ namespace SurrealGame
         {
             if (Utilities.WasItemClicked(gameObject))
             {
+                var gameManagerMaster = GameManager_References._gameManager.GetComponent<GameManager_Master>();
+                gameManagerMaster.CallExamineObjectEvent();
                 MoveToExamineZone();
             }
 

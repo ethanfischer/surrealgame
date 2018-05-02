@@ -5,7 +5,7 @@ using UnityStandardAssets.Characters.FirstPerson;
 
 namespace SurrealGame
 {
-    
+
 
     public class GameManager_TogglePlayer : MonoBehaviour
     {
@@ -14,22 +14,24 @@ namespace SurrealGame
 
         private void OnEnable()
         {
-           SetInitialReferences();
-           gameManagerMaster.MenuToggleEvent += TogglePlayerController;
-           gameManagerMaster.InventoryUIToggleEvent += TogglePlayerController;
+            SetInitialReferences();
+            gameManagerMaster.MenuToggleEvent += TogglePlayerController;
+            gameManagerMaster.InventoryUIToggleEvent += TogglePlayerController;
+            gameManagerMaster.ExamineObjectEvent += TogglePlayerController;
             gameManagerMaster.CutsceneTerminatedEvent += EnablePlayerControl;
         }
 
         private void OnDisable()
         {
-           gameManagerMaster.MenuToggleEvent -= TogglePlayerController;
-           gameManagerMaster.InventoryUIToggleEvent -= TogglePlayerController;
+            gameManagerMaster.MenuToggleEvent -= TogglePlayerController;
+            gameManagerMaster.InventoryUIToggleEvent -= TogglePlayerController;
+            gameManagerMaster.ExamineObjectEvent -= TogglePlayerController;
             gameManagerMaster.CutsceneTerminatedEvent -= EnablePlayerControl;
         }
 
         private void OnMouseEnter()
         {
-            
+
         }
 
 
@@ -40,7 +42,7 @@ namespace SurrealGame
 
         private void TogglePlayerController()
         {
-            if(fpsController != null)
+            if (fpsController != null)
             {
                 fpsController.GetComponent<FirstPersonController>().enabled = !fpsController.GetComponent<FirstPersonController>().enabled;
             }
@@ -48,7 +50,7 @@ namespace SurrealGame
 
         private void EnablePlayerControl()
         {
-            if(fpsController != null)
+            if (fpsController != null)
             {
                 fpsController.GetComponent<FirstPersonController>().enabled = true;
                 fpsController.GetComponent<CharacterController>().enabled = true;

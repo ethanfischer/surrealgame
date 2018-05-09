@@ -9,6 +9,7 @@ namespace SurrealGame
     {
         Transform initialParent;
         Vector3 initialPosition;
+        Quaternion initialRotation;
 
         public static float DISTANCE_FROM_CAMERA = 1;
         public static float ROTATION_SPEED = 500;
@@ -25,6 +26,7 @@ namespace SurrealGame
 
             gameManagerMaster = GameManager_References._gameManager.GetComponent<GameManager_Master>();
             initialPosition = transform.localPosition;
+            initialRotation = transform.rotation;
             var size = GetComponent<Collider>().bounds.size;
         }
 
@@ -64,7 +66,7 @@ namespace SurrealGame
         {
             var horizontal = Input.GetAxis("Mouse X");
             var rotateFactor = ROTATION_SPEED * Time.deltaTime;
-            transform.Rotate(new Vector3(0, horizontal, 0) * rotateFactor);
+            transform.Rotate(new Vector3(0, horizontal, 0) * rotateFactor, Space.World);
         }
 
         private void MoveToExamineZone()
@@ -76,7 +78,9 @@ namespace SurrealGame
         private void PutBack()
         {
             transform.parent = initialParent;
-            transform.position = initialPosition;
+            transform.localPosition = initialPosition;
+            transform.rotation = initialRotation;
+
             isExamining = false;
             gameManagerMaster.CallExamineObjectEvent(); //unfreezes player
         }

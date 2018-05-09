@@ -7,19 +7,23 @@ namespace SurrealGame
 {
     public class Examine : MonoBehaviour
     {
-        GameObject initialParent;
+        Transform initialParent;
         Vector3 initialPosition;
 
         public static float DISTANCE_FROM_CAMERA = 1;
         public static float ROTATION_SPEED = 500;
         private bool isExamining = false;
 
+        GameManager_Master gameManagerMaster;
+
         void Start()
         {
-            //if (transform.parent.gameObject)
-            //{
-            //    initialParent = transform.parent.gameObject;
-            //}
+            if (transform.parent)
+            {
+                initialParent = transform.parent.gameObject.transform;
+            }
+
+            gameManagerMaster = GameManager_References._gameManager.GetComponent<GameManager_Master>();
             initialPosition = transform.localPosition;
             var size = GetComponent<Collider>().bounds.size;
         }
@@ -28,32 +32,53 @@ namespace SurrealGame
         {
             if (Utilities.WasItemClicked(gameObject))
             {
-                var gameManagerMaster = GameManager_References._gameManager.GetComponent<GameManager_Master>();
-                gameManagerMaster.CallExamineObjectEvent(); //freezes player
-                MoveToExamineZone();
-                isExamining = true;
+                ToggleExamine();
             }
 
             if (isExamining)
             {
                 RotateObjectWithMouse();
             }
+        }
 
+        private void ToggleExamine()
+        {
+            if (isExamining)
+            {
+                PutBack();
+            }
+            else
+            {
+                PickUp();
+            }
+        }
+
+        private void PickUp()
+        {
+            gameManagerMaster.CallExamineObjectEvent(); //freezes player
+            MoveToExamineZone();
+            isExamining = true;
         }
 
         private void RotateObjectWithMouse()
         {
-            float horizontal = Input.GetAxis("Mouse X");
-            float vertical = Input.GetAxis("Mouse Y");
-            vertical = Mathf.Clamp(vertical, -1, 1);
+            var horizontal = Input.GetAxis("Mouse X");
             var rotateFactor = ROTATION_SPEED * Time.deltaTime;
-            transform.Rotate(new Vector3(vertical, horizontal, 0) * rotateFactor);
+            transform.Rotate(new Vector3(0, horizontal, 0) * rotateFactor);
         }
 
         private void MoveToExamineZone()
         {
             transform.parent = GameManager_References._mainCamera.transform;
             transform.localPosition = new Vector3(0, 0, DISTANCE_FROM_CAMERA);
+        }
+
+        private void PutBack()
+        {
+            transform.parent = initialParent;
+            transform.position = initialPosition;
+            isExamining = false;
+            gameManagerMaster.CallExamineObjectEvent(); //unfreezes player
         }
     }
 }

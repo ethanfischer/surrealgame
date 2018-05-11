@@ -1,0 +1,210 @@
+fileFormatVersion: 2
+guid: 337bfa5c63ca0634fae15f4cfb46e734
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: BakedMesh
+    100002: HomeViewpoint
+    100004: HomeViewpoint.001
+    100006: NewLayer2
+    100008: NewLayer2.001
+    100010: NewLayer2_0000
+    100012: NewLayer2_0000.001
+    100014: Root
+    100016: Root.001
+    100018: //RootNode
+    100020: SourceData
+    100022: BakedMesh.001
+    100024: BakedMesh.002
+    100026: BakedMesh.003
+    100028: BakedMesh.004
+    100030: HomeViewpoint.002
+    100032: HomeViewpoint.003
+    100034: HomeViewpoint.004
+    100036: HomeViewpoint.005
+    100038: HomeViewpoint.006
+    100040: HomeViewpoint.007
+    100042: HomeViewpoint.008
+    100044: HomeViewpoint.009
+    100046: NewLayer2.002
+    100048: NewLayer2.003
+    100050: NewLayer2.004
+    100052: NewLayer2.005
+    100054: NewLayer2.006
+    100056: NewLayer2.007
+    100058: NewLayer2.008
+    100060: NewLayer2.009
+    100062: NewLayer2_0000.002
+    100064: NewLayer2_0000.003
+    100066: NewLayer2_0000.004
+    100068: NewLayer2_0000.005
+    100070: NewLayer2_0000.006
+    100072: NewLayer2_0000.007
+    100074: NewLayer2_0000.008
+    100076: NewLayer2_0000.009
+    100078: Root.002
+    100080: Root.003
+    100082: Root.004
+    100084: Root.005
+    100086: Root.006
+    100088: Root.007
+    100090: Root.008
+    100092: Root.009
+    100094: SourceData.001
+    100096: SourceData.002
+    100098: SourceData.003
+    100100: SourceData.004
+    400000: BakedMesh
+    400002: HomeViewpoint
+    400004: HomeViewpoint.001
+    400006: NewLayer2
+    400008: NewLayer2.001
+    400010: NewLayer2_0000
+    400012: NewLayer2_0000.001
+    400014: Root
+    400016: Root.001
+    400018: //RootNode
+    400020: SourceData
+    400022: BakedMesh.001
+    400024: BakedMesh.002
+    400026: BakedMesh.003
+    400028: BakedMesh.004
+    400030: HomeViewpoint.002
+    400032: HomeViewpoint.003
+    400034: HomeViewpoint.004
+    400036: HomeViewpoint.005
+    400038: HomeViewpoint.006
+    400040: HomeViewpoint.007
+    400042: HomeViewpoint.008
+    400044: HomeViewpoint.009
+    400046: NewLayer2.002
+    400048: NewLayer2.003
+    400050: NewLayer2.004
+    400052: NewLayer2.005
+    400054: NewLayer2.006
+    400056: NewLayer2.007
+    400058: NewLayer2.008
+    400060: NewLayer2.009
+    400062: NewLayer2_0000.002
+    400064: NewLayer2_0000.003
+    400066: NewLayer2_0000.004
+    400068: NewLayer2_0000.005
+    400070: NewLayer2_0000.006
+    400072: NewLayer2_0000.007
+    400074: NewLayer2_0000.008
+    400076: NewLayer2_0000.009
+    400078: Root.002
+    400080: Root.003
+    400082: Root.004
+    400084: Root.005
+    400086: Root.006
+    400088: Root.007
+    400090: Root.008
+    400092: Root.009
+    400094: SourceData.001
+    400096: SourceData.002
+    400098: SourceData.003
+    400100: SourceData.004
+    2100000: No Name
+    2300000: NewLayer2_0000.001
+    2300002: NewLayer2_0000.003
+    2300004: NewLayer2_0000.004
+    2300006: NewLayer2_0000.006
+    2300008: NewLayer2_0000.008
+    3300000: NewLayer2_0000.001
+    3300002: NewLayer2_0000.003
+    3300004: NewLayer2_0000.004
+    3300006: NewLayer2_0000.006
+    3300008: NewLayer2_0000.008
+    4300000: NewLayer2_0000.001
+    4300002: NewLayer2_0000.008
+    4300004: NewLayer2_0000.006
+    4300006: NewLayer2_0000.004
+    4300008: NewLayer2_0000.003
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 801fcb90889ec2648b23948f53acbc1c, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -27,7 +27,25 @@ namespace SurrealGame
             gameManagerMaster = GameManager_References._gameManager.GetComponent<GameManager_Master>();
             initialPosition = transform.localPosition;
             initialRotation = transform.rotation;
+
+            SetLayerToItem();
+            AddCollider();
             var size = GetComponent<Collider>().bounds.size;
+
+        }
+
+        private void AddCollider()
+        {
+            var collider = GetComponent<Collider>();
+            if(collider == null)
+            {
+                gameObject.AddComponent<BoxCollider>();
+            }
+        }
+
+        private void SetLayerToItem()
+        {
+                gameObject.layer = LayerMask.NameToLayer("Item");
         }
 
         void Update()

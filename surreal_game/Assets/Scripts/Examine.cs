@@ -40,7 +40,6 @@ namespace SurrealGame
             if(collider == null)
             {
                 gameObject.AddComponent<BoxCollider>();
-                gameObject.GetComponent<BoxCollider>().size = new Vector3(.3f, .3f, .3f);
             }
         }
 

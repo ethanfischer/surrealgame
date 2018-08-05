@@ -1,0 +1,13 @@
+This project uses the following items from Poly (http://poly.google.com):
+
+Title: Backpack
+Author: Alex “SAFFY” Safayan
+URL: https://poly.google.com/view/5UQVd1Agl11
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Remote
+Author: Alex “SAFFY” Safayan
+URL: https://poly.google.com/view/9veo7sZrcBZ
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode

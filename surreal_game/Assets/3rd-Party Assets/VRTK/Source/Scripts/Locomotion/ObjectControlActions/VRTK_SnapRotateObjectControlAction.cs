@@ -26,6 +26,7 @@ namespace VRTK
     [AddComponentMenu("VRTK/Scripts/Locomotion/Object Control Actions/VRTK_SnapRotateObjectControlAction")]
     public class VRTK_SnapRotateObjectControlAction : VRTK_BaseObjectControlAction
     {
+        public VRTK_ControllerEvents controllerEvents;
         [Tooltip("The angle to rotate for each snap.")]
         public float anglePerSnap = 30f;
         [Tooltip("The snap angle multiplier to be applied when the modifier button is pressed.")]
@@ -37,43 +38,48 @@ namespace VRTK
         [Range(-1f, 1f)]
         [Tooltip("The threshold the listened axis needs to exceed before the action occurs. This can be used to limit the snap rotate to a single axis direction (e.g. pull down to flip rotate). The threshold is ignored if it is 0.")]
         public float axisThreshold = 0f;
-
         protected float snapDelayTimer = 0f;
+        bool didReleaseJoystick = true;
 
-        bool canSnap = true;
-        float previousAxis = 0f;
+        void Update()
+        {
+            UpdateDidReleaseJoystick();
+        }
 
         protected override void Process(GameObject controlledGameObject, Transform directionDevice, Vector3 axisDirection, float axis, float deadzone, bool currentlyFalling, bool modifierActive)
         {
             CheckForPlayerBeforeRotation(controlledGameObject);
-            Debug.Log("axis: " + Mathf.Abs(axis));
-            Debug.Log("pAxis: " + previousAxis);
 
-            if(Mathf.Abs(axis) < Mathf.Abs(previousAxis))
-            {
-                canSnap = true;
-                previousAxis = axis;
-                return;
-            }
-
-            if (snapDelayTimer < Time.time && ValidThreshold(axis) && canSnap)
+            if (CanRotate(axis))
             {
                 float angle = Rotate(axis, modifierActive);
                 if (angle != 0f)
                 {
                     Blink(blinkTransitionSpeed);
                     RotateAroundPlayer(controlledGameObject, angle);
-                    canSnap = false;
                 }
             }
 
             CheckForPlayerAfterRotation(controlledGameObject);
-            previousAxis = axis;
+        }
+
+        private bool CanRotate(float axis)
+        {
+            return snapDelayTimer < Time.time && ValidThreshold(axis);
         }
 
         protected virtual bool ValidThreshold(float axis)
         {
-            return (axisThreshold == 0f || ((axisThreshold > 0f && axis >= axisThreshold) || (axisThreshold < 0f && axis <= axisThreshold)));
+            var axis_Abs = Mathf.Abs(axis); //absolute value
+            var axisThreshold_Abs = Mathf.Abs(axisThreshold);
+
+            if (axis_Abs > axisThreshold_Abs && didReleaseJoystick)
+            {
+                didReleaseJoystick = false;
+                return true;
+            }
+
+            return false;
         }
 
         protected virtual float Rotate(float axis, bool modifierActive)
@@ -81,6 +87,19 @@ namespace VRTK
             snapDelayTimer = Time.time + snapDelay;
             int directionMultiplier = GetAxisDirection(axis);
             return (anglePerSnap * (modifierActive ? angleMultiplier : 1)) * directionMultiplier;
+        }
+
+        private void UpdateDidReleaseJoystick()
+        {
+            if(didReleaseJoystick)
+            {
+                return;
+            }
+
+            if (Mathf.RoundToInt(controllerEvents.GetTouchpadAxis().x) == 0)
+            {
+                didReleaseJoystick = true;
+            }
         }
     }
 }

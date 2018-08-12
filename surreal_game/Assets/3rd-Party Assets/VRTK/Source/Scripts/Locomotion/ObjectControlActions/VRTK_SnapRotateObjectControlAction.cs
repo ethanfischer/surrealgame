@@ -1,6 +1,7 @@
 ﻿// Snap Rotate Object Control Action|ObjectControlActions|25030
 namespace VRTK
 {
+    using System;
     using UnityEngine;
 
     /// <summary>
@@ -39,21 +40,35 @@ namespace VRTK
 
         protected float snapDelayTimer = 0f;
 
+        bool canSnap = true;
+        float previousAxis = 0f;
+
         protected override void Process(GameObject controlledGameObject, Transform directionDevice, Vector3 axisDirection, float axis, float deadzone, bool currentlyFalling, bool modifierActive)
         {
             CheckForPlayerBeforeRotation(controlledGameObject);
+            Debug.Log("axis: " + Mathf.Abs(axis));
+            Debug.Log("pAxis: " + previousAxis);
 
-            if (snapDelayTimer < Time.time && ValidThreshold(axis))
+            if(Mathf.Abs(axis) < Mathf.Abs(previousAxis))
+            {
+                canSnap = true;
+                previousAxis = axis;
+                return;
+            }
+
+            if (snapDelayTimer < Time.time && ValidThreshold(axis) && canSnap)
             {
                 float angle = Rotate(axis, modifierActive);
                 if (angle != 0f)
                 {
                     Blink(blinkTransitionSpeed);
                     RotateAroundPlayer(controlledGameObject, angle);
+                    canSnap = false;
                 }
             }
 
             CheckForPlayerAfterRotation(controlledGameObject);
+            previousAxis = axis;
         }
 
         protected virtual bool ValidThreshold(float axis)

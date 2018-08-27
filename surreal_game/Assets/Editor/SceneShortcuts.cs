@@ -15,4 +15,10 @@ class SceneShortcuts : EditorWindow
     {
         EditorSceneManager.OpenScene("Assets/Scenes/House/House_Kitchen.unity");
     }
+
+    [MenuItem("Scenes/Base_House _%6")]
+    public static void Base_House()
+    {
+        EditorSceneManager.OpenScene("Assets/Scenes/House/Base_House.unity");
+    }
 }

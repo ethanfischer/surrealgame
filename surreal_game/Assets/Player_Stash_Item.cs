@@ -9,7 +9,8 @@ public class Player_Stash_Item : MonoBehaviour
 {
 
     private IPlayerInventoryVR InventoryGameObject { get; set; }
-    public VRTK_AvatarHandController VRTK_AvatarHandController;
+    public VRTK_AvatarHandController Right_VRTK_AvatarHandController;
+    public VRTK_AvatarHandController Left_VRTK_AvatarHandController;
 
     // Use this for initialization
     void Start()
@@ -17,9 +18,11 @@ public class Player_Stash_Item : MonoBehaviour
         SetInitialReferences(); //TODO figure out way to make this more like a constructor
 
         if (InventoryGameObject == null) Debug.LogError("InventoryGameObject is null");
-        if (VRTK_AvatarHandController == null) Debug.LogError("VRTK_ControllerEvents is null");
+        if (Right_VRTK_AvatarHandController == null) Debug.LogError("Right_VRTK_AvatarHandController  is null");
+        if (Left_VRTK_AvatarHandController == null) Debug.LogError("Left_VRTK_AvatarHandController is null");
 
-        VRTK_AvatarHandController.interactUse.ControllerStartUseInteractableObject += StashItem;
+        Left_VRTK_AvatarHandController.interactUse.ControllerStartUseInteractableObject += StashItem;
+        Right_VRTK_AvatarHandController.interactUse.ControllerStartUseInteractableObject += StashItem;
     }
 
     private void SetInitialReferences()

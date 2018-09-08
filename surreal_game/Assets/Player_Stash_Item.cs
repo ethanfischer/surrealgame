@@ -37,6 +37,6 @@ public class Player_Stash_Item : MonoBehaviour
     void StashItem(object o, ObjectInteractEventArgs e)
     {
         var target = e.target;
-        Debug.Log("target " + target);
+        target.gameObject.SetActive(false);
     }
 }

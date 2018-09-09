@@ -20,6 +20,7 @@ namespace Assets.Scripts.PlayerScripts
         {
             Items.Add(itemToAdd);
             AddItemAsChildAndResetTransform(itemToAdd);
+            itemToAdd.gameObject.SetActive(false);
         }
 
         public void SelectItem(GameObject itemToSelect)

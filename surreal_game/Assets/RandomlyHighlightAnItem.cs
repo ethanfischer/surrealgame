@@ -9,7 +9,7 @@ public class RandomlyHighlightAnItem : MonoBehaviour {
 
 	void Start () {
 		SetInitialReferences();
-		InvokeRepeating("TurnUpsideDown", 5, 5);
+		StartCoroutine(TurnUpsideDown());
 	}
 
 	void SetInitialReferences()
@@ -20,11 +20,13 @@ public class RandomlyHighlightAnItem : MonoBehaviour {
 		}
 	}
 
-    void TurnUpsideDown()
+    IEnumerator TurnUpsideDown()
 	{
+		yield return new WaitForSeconds(5);
 		var i = Random.Range(0, Items.Count);
         ChosenItem = Items[i].gameObject;
         ChosenItem.transform.localRotation = Quaternion.Euler(180, 0, 0);
+		Debug.Log("TurnUpsideDown");
 	}
 }
 

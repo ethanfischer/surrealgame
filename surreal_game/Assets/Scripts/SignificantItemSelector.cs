@@ -12,7 +12,7 @@ public class SignificantItemSelector : MonoBehaviour {
 
 	void Start () {
 		SetInitialReferences();
-	    Pacemaker.Heartbeat += PerformActionOnItem;
+	    Pacemaker.OnHeartbeat += PerformActionOnItem;
 	}
 
 	void SetInitialReferences()

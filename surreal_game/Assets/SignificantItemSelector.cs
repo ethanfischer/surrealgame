@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using SurrealGame;
 using UnityEngine;
 
 public class SignificantItemSelector : MonoBehaviour {
@@ -7,18 +8,20 @@ public class SignificantItemSelector : MonoBehaviour {
 	List<Transform> Items = new List<Transform>();
 	GameObject ChosenItem;
     private const string PERFORM_ACTION_ON_ITEM_METHOD_NAME = "PerformActionOnItem";
+    private Pacemaker Pacemaker;
 
 	void Start () {
 		SetInitialReferences();
-        InvokeRepeating(PERFORM_ACTION_ON_ITEM_METHOD_NAME, 0, Pacemaker.Pace);
+	    Pacemaker.Heartbeat += PerformActionOnItem;
 	}
 
 	void SetInitialReferences()
     {
         InitializeItems();
+        Pacemaker = Pacemaker.Instance;
     }
 
-    void PerformActionOnItem()
+    void PerformActionOnItem(object sender, HeartbeatArgs e)
     {
         TurnItemUpsideDown();
     }

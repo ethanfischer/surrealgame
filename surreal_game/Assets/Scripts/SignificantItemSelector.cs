@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts.Miscellaneous;
 using SurrealGame;
 using UnityEngine;
 
-public class SignificantItemSelector : MonoBehaviour {
-
+public class SignificantItemSelector : MonoBehaviour
+{
+    private GameObject Collectables;
 	List<Transform> Items = new List<Transform>();
 	GameObject ChosenItem;
     private const string PERFORM_ACTION_ON_ITEM_METHOD_NAME = "PerformActionOnItem";
@@ -12,16 +14,19 @@ public class SignificantItemSelector : MonoBehaviour {
 
 	void Start () {
 		SetInitialReferences();
-	    Pacemaker.OnHeartbeat += PerformActionOnItem;
-	}
+        Pacemaker.OnHeartbeat += PerformActionOnItem;
+    }
 
 	void SetInitialReferences()
-    {
+	{
+	    Collectables = GameObject.FindGameObjectWithTag(Tags.COLLECTABLES);
+        if(Collectables  == null) Debug.LogError("Collectables  null");
+
         InitializeItems();
         Pacemaker = Pacemaker.Instance;
     }
 
-    void PerformActionOnItem(object sender, HeartbeatArgs e)
+    void PerformActionOnItem(object sender, HeartbeatEventArgs e)
     {
         TurnItemUpsideDown();
     }
@@ -36,7 +41,7 @@ public class SignificantItemSelector : MonoBehaviour {
 
     void InitializeItems()
     {
-        foreach (Transform child in transform)
+        foreach (Transform child in Collectables.transform)
         {
             Items.Add(child);
         }

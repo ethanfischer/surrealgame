@@ -4,8 +4,8 @@ public class Pacemaker : MonoBehaviour
 {
     private const float PACE = 1;
 
-    public event Heartbeat OnHeartbeat;
-    public event Heartbeat OnSongOver;
+    public event HeartbeatEvent OnHeartbeat;
+    public event HeartbeatEvent OnSongOver;
 
     //SINGLETON Pattern. TODO: Look up the dangers. See if theres a cleaner way of doing this. Or creating a class for creating singeltons
     private static Pacemaker _instance = null;
@@ -30,11 +30,11 @@ public class Pacemaker : MonoBehaviour
 
     void CallHeartbeat()
     {
-        OnHeartbeat.Invoke(this, new HeartbeatArgs());
+        OnHeartbeat?.Invoke(this, new HeartbeatEventArgs());
     }
 
     void CallSongOver()
     {
-        OnSongOver.Invoke(this, new HeartbeatArgs());
+        OnSongOver?.Invoke(this, new HeartbeatEventArgs());
     }
 }

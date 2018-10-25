@@ -17,10 +17,10 @@ public class SceneScheduler : MonoBehaviour
         Pacemaker.OnSongOver += TrySwitchScene;
     }
 
-    private void TrySwitchScene(object sender, HeartbeatArgs args)
+    private void TrySwitchScene(object sender, HeartbeatEventArgs eventArgs)
     {
-        SceneMaster.AddScene(NextScene);
         SceneMaster.RemoveScene(CurrentScene);
+        SceneMaster.AddScene(NextScene);
     }
 
     private void SetInitialReferences()

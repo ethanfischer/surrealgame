@@ -1,1 +1,0 @@
-﻿public delegate void Heartbeat(object sender, HeartbeatArgs args);

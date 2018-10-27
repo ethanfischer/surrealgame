@@ -1,0 +1,1 @@
+﻿public delegate void HeartbeatEvent(object sender, HeartbeatEventArgs eventArgs);

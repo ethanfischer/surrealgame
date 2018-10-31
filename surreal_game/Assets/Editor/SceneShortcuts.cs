@@ -23,6 +23,12 @@ class SceneShortcuts : EditorWindow
         SwitchToScene("Assets/Scenes/House/Base_House.unity");
     }
 
+    [MenuItem("Scenes/WeirdPlace _%;6")]
+    public static void WeirdPlace()
+    {
+        SwitchToScene("Assets/Scenes/WeirdPlace.unity");
+    }
+
 
     private static void SwitchToScene(string scene)
     {

@@ -5,25 +5,25 @@ using UnityEngine;
 class SceneShortcuts : EditorWindow
 {
 
-    [MenuItem("Scenes/Application.Launch _%;4")]
+    [MenuItem("Scenes/Application.Launch")]
     public static void Main()
     {
         SwitchToScene("Assets/Scenes/Application.Launch.unity");
     }
 
-    [MenuItem("Scenes/House_Kitchen _%;5")]
-    public static void House_Kitchen()
-    {
-        SwitchToScene("Assets/Scenes/House/House_Kitchen.unity");
-    }
+    //[MenuItem("Scenes/House_Kitchen _%;5")]
+    //public static void House_Kitchen()
+    //{
+    //    SwitchToScene("Assets/Scenes/House/House_Kitchen.unity");
+    //}
 
-    [MenuItem("Scenes/Base_House _%;6")]
-    public static void Base_House()
-    {
-        SwitchToScene("Assets/Scenes/House/Base_House.unity");
-    }
+    //[MenuItem("Scenes/Base_House _%;6")]
+    //public static void Base_House()
+    //{
+    //    SwitchToScene("Assets/Scenes/House/Base_House.unity");
+    //}
 
-    [MenuItem("Scenes/WeirdPlace _%;6")]
+    [MenuItem("Scenes/WeirdPlace")]
     public static void WeirdPlace()
     {
         SwitchToScene("Assets/Scenes/WeirdPlace.unity");

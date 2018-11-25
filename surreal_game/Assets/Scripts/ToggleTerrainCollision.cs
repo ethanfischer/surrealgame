@@ -17,8 +17,6 @@ public class ToggleTerrainCollision : MonoBehaviour
     {
         PlayerLayer = LayerMask.NameToLayer("Ignore Raycast");
         TerrainLayer  = LayerMask.NameToLayer("Terrain");
-        //if(PlayerCollider == null) Debug.LogError("player collider is null");
-        //if(TerrainCollider == null) Debug.LogError("terrain collider is null");
     }
 
     void OnTriggerEnter()

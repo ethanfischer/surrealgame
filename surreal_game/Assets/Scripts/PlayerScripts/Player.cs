@@ -3,7 +3,6 @@ using System.Collections;
 
 public class Player : MonoBehaviour
 {
-
     private static Player _instance = null;
     public static Player Instance
     {

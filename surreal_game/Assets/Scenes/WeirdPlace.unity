@@ -35,10 +35,10 @@ RenderSettings:
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 0.322
+  m_ReflectionIntensity: 0.098
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.39982364, g: 0.1319521, b: 0.59159935, a: 0.322}
+  m_IndirectSpecularColor: {r: 0.22206429, g: 0.058885366, b: 0.33888808, a: 0.098}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 296876337}
   - component: {fileID: 296876336}
   m_Layer: 0
-  m_Name: TerreriumFloor
+  m_Name: UpperRing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2339,10 +2339,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 296876335}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.501, z: -0}
+  m_LocalPosition: {x: 0, y: 0.491, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1010318299}
+  m_Father: {fileID: 589541796}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &434740598
@@ -2757,7 +2757,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 535022372}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: 6}
+  m_LocalPosition: {x: -5, y: -15, z: 17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2801,6 +2801,8 @@ Transform:
   m_Children:
   - {fileID: 1256053533}
   - {fileID: 2116715182}
+  - {fileID: 1570986467}
+  - {fileID: 296876340}
   m_Father: {fileID: 1010318299}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2884,7 +2886,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh92268
+  m_Name: pb_Mesh25450
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -12696,7 +12698,6 @@ Transform:
   - {fileID: 994789791}
   - {fileID: 1056377273}
   - {fileID: 589541796}
-  - {fileID: 296876340}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14170,7 +14171,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh193198
+  m_Name: pb_Mesh45570
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -16100,11 +16101,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1570986462}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5, y: 0.5, z: 16}
+  m_LocalPosition: {x: 0, y: 0.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 589541796}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1634154310
 Mesh:
@@ -16452,7 +16453,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh170316
+  m_Name: pb_Mesh25362
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2

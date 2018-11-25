@@ -22,6 +22,7 @@ public class ToggleTerrainCollision : MonoBehaviour
     void OnTriggerEnter()
     {
         Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Terrain"), true);
+        Debug.Log("Disable player terrain collisions");
     }
 
     void OnTriggerExit()

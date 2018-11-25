@@ -11,7 +11,7 @@ namespace SurrealGame
 
         private static bool IsItemDetected(GameObject item)
         {
-            return GameManager_References._player.GetComponent<Player_Detect_Item>().IsItemDetected(item);
+            return GameManager_References._playerGameObject.GetComponent<Player_Detect_Item>().IsItemDetected(item);
         }
 
         private static bool WasClicked()

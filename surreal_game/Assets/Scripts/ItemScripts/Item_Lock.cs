@@ -55,7 +55,7 @@ namespace SurrealGame
 		{
 			Debug.Log("checkifplayerhaskey");
 			//player.GetComponent<Player_Master>().GetHasKey();
-			Transform inventoryPlayerParent = GameManager_References._player.GetComponent<Player_Inventory_NonVR>().inventoryPlayerParent;
+			Transform inventoryPlayerParent = GameManager_References._playerGameObject.GetComponent<Player_Inventory_NonVR>().inventoryPlayerParent;
 			foreach (Transform child in inventoryPlayerParent)
 			{
 				Debug.Log("child in inventoryPlayerParent: " + child);

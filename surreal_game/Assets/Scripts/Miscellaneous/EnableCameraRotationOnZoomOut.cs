@@ -45,7 +45,7 @@ namespace SurrealGame
 
         private void SetInitialReferences()
         {
-            player = GameManager_References._player;
+            player = GameManager_References._playerGameObject;
             //maxFOV = GameManager_References._mainCamera.GetComponent<CameraFOV>().maxFOV;
             maxFOV = GameManager_References._mainCamera.GetComponent<SmoothZoom>().maxFOV;
             gameManagerMaster = GetComponent<GameManager_Master>();

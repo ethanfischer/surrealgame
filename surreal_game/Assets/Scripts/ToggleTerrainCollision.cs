@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class ToggleTerrainCollision : MonoBehaviour
 {
-    public TerrainCollider TerrainCollider;
-    public Collider PlayerCollider;
+    private LayerMask PlayerLayer; 
+    private LayerMask TerrainLayer; 
 
     void Start()
     {
@@ -15,18 +15,21 @@ public class ToggleTerrainCollision : MonoBehaviour
 
     private void SetInitialReferences()
     {
+        PlayerLayer = LayerMask.NameToLayer("Ignore Raycast");
+        TerrainLayer  = LayerMask.NameToLayer("Terrain");
         //if(PlayerCollider == null) Debug.LogError("player collider is null");
         //if(TerrainCollider == null) Debug.LogError("terrain collider is null");
     }
 
     void OnTriggerEnter()
     {
-        Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Terrain"), true);
+        Physics.IgnoreLayerCollision(PlayerLayer, TerrainLayer, true);
         Debug.Log("Disable player terrain collisions");
     }
 
     void OnTriggerExit()
     {
-        Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Terrain"), false);
+        Physics.IgnoreLayerCollision(PlayerLayer, TerrainLayer, false);
+        Debug.Log("Enable player terrain collisions");
     }
 }

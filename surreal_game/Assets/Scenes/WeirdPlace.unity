@@ -3012,7 +3012,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh25450
+  m_Name: pb_Mesh121254
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -12927,7 +12927,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh170448
+  m_Name: pb_Mesh121298
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -14354,8 +14354,8 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 39a015f97af1e2e498d52c7298528b70, type: 3}
   m_PrefabInternal: {fileID: 1508625897}
---- !u!135 &1508625900
-SphereCollider:
+--- !u!65 &1508625900
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -14364,14 +14364,26 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.062023938
-  m_Center: {x: -0.0076997876, y: -0.009999998, z: 0.0022515059}
+  m_Size: {x: 0.08, y: 0.08, z: 0.08}
+  m_Center: {x: 0.010276273, y: -0.01, z: 0.0022515059}
+--- !u!65 &1508625901
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1508625899}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.05, y: 0.2, z: 0.05}
+  m_Center: {x: 0.010276273, y: 0.07, z: 0.0022515059}
 --- !u!43 &1542592010
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh53134
+  m_Name: pb_Mesh121176
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -16312,7 +16324,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh170388
+  m_Name: pb_Mesh121230
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -16870,7 +16882,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh57506
+  m_Name: pb_Mesh125376
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2

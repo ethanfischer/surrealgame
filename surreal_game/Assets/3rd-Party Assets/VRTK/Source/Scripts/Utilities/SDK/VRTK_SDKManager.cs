@@ -1,4 +1,7 @@
 ﻿// SDK Manager|Utilities|90010
+
+using Assets._3rd_Party_Assets.VRTK.Source.Scripts.Utilities.SDK;
+
 namespace VRTK
 {
     using UnityEngine;
@@ -70,6 +73,8 @@ namespace VRTK
                 this.errorMessage = errorMessage;
             }
         }
+
+
 
         /// <summary>
         /// Event Payload
@@ -341,6 +346,7 @@ namespace VRTK
         public bool autoLoadSetup = true;
         [Tooltip("The list of SDK Setups to choose from.")]
         public VRTK_SDKSetup[] setups = new VRTK_SDKSetup[0];
+
 #if UNITY_EDITOR
         [Tooltip("The list of Build Target Groups to exclude.")]
         public BuildTargetGroup[] excludeTargetGroups = new BuildTargetGroup[] {
@@ -364,7 +370,11 @@ namespace VRTK
         {
             get
             {
-                if (_loadedSetup == null && setups.Length == 1 && setups[0].isValid && setups[0].isActiveAndEnabled)
+                if (ETHAN_UseSimulator.ShouldUseSimulator)//ETHAN ADDED
+                {
+                    _loadedSetup = setups[1];
+                }
+                else if (IsSetupReady())
                 {
                     _loadedSetup = setups[0];
                 }
@@ -372,6 +382,11 @@ namespace VRTK
                 return _loadedSetup;
             }
             private set { _loadedSetup = value; }
+        }
+
+        private bool IsSetupReady()
+        {
+            return _loadedSetup == null && setups.Length == 1 && setups[0].isValid && setups[0].isActiveAndEnabled;
         }
 
         private VRTK_SDKSetup _loadedSetup;

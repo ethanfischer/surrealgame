@@ -4,7 +4,6 @@ using UnityEngine;
 
 class SceneShortcuts : EditorWindow
 {
-
     [MenuItem("Scenes/Application.Launch")]
     public static void Main()
     {

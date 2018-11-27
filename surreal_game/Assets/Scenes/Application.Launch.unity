@@ -12490,7 +12490,6 @@ MonoBehaviour:
   - {fileID: 2072637043}
   - {fileID: 1816159989}
   - {fileID: 1675656594}
-  - {fileID: 1664309382}
   excludeTargetGroups: 1a0000001b000000
   persistOnLoad: 0
 --- !u!1 &2072637041

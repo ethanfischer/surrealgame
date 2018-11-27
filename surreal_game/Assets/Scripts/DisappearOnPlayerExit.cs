@@ -17,7 +17,7 @@ namespace SurrealGame
 
         void Update()
         {
-            if(!GameManager_References._player.GetComponent<Player_Detect_Item>().isItemInRange)
+            if(!GameManager_References._playerGameObject.GetComponent<Player_Detect_Item>().isItemInRange)
             {
                 gameObject.SetActive(false);
                 VD.EndDialogue();

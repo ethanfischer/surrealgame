@@ -3,23 +3,19 @@ using System.Collections;
 
 public class Player : MonoBehaviour
 {
+    private static Player _instance = null;
+    public static Player Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = GameObject.FindObjectOfType<Player>();
+            }
 
-	// Use this for initialization
-	void Start ()
-	{
-	
-	}
-	
-	// Update is called once per frame
-	void Update ()
-	{
-	
-	}
-
-	void SetInitialReferences ()
-	{
-		
-	}
+            return _instance;
+        }
+    }
 
 	public void SetPosition (Vector3 v)
 	{

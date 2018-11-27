@@ -22,7 +22,7 @@ namespace SurrealGame
         public string interactButton;
         public static string _interactButton;
 
-		public static GameObject _player;
+		public static GameObject _playerGameObject;
 		public static GameObject _audio;
         public static GameObject _mainCamera;
 
@@ -87,7 +87,7 @@ namespace SurrealGame
             _sceneManager = sceneManager;
             _gameManager = gameManager;
 
-			_player = GameObject.FindGameObjectWithTag(_playerTag);
+			_playerGameObject = GameObject.FindGameObjectWithTag(_playerTag);
 			_audio = GameObject.FindGameObjectWithTag(_audioTag);
 			_mainCamera= GameObject.FindGameObjectWithTag(_mainCameraTag);
 		}

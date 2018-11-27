@@ -46,9 +46,9 @@ namespace SurrealGame
 		void SetInitialReferences()
 		{
 
-			if(GameManager_References._player != null)
+			if(GameManager_References._playerGameObject != null)
 			{
-				playerMaster = GameManager_References._player.GetComponent<Player_Master>();
+				playerMaster = GameManager_References._playerGameObject.GetComponent<Player_Master>();
 			}
 
 		}

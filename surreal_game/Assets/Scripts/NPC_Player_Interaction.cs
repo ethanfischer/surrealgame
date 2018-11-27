@@ -26,7 +26,7 @@ namespace SurrealGame
 
         private void SetInitialReferences()
         {
-            playerDialogue = GameManager_References._player.GetComponent<Player_Dialogue>();
+            playerDialogue = GameManager_References._playerGameObject.GetComponent<Player_Dialogue>();
         }
     }
 }

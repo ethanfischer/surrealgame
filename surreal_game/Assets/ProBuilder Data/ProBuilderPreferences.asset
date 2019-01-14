@@ -22,6 +22,7 @@ MonoBehaviour:
   - pbDefaultSelectionMode
   - pbExtrudeMethod
   - pb_GIWorkflowMode
+  - pbRectSelectMode
   m_Float_keys:
   - pbEditorScroll.x
   - pbEditorScroll.y
@@ -30,11 +31,11 @@ MonoBehaviour:
   m_Color_keys: []
   m_Material_keys: []
   m_Bool_values: 00000100
-  m_Int_values: 0000000001000000020000000200000000000000
+  m_Int_values: 010000000000000001000000020000000000000001000000
   m_Float_values:
   - 0
   - 0
-  - 4.2
+  - -3
   m_String_values: []
   m_Color_values: []
   m_Material_values: []

@@ -1211,6 +1211,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 171717037}
   m_Script: {fileID: 11500000, guid: eba3cd5456cd79e49948f5ceb58544b4, type: 3}
+--- !u!114 &171717039 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114614079169533678, guid: 97fa7897850701749a23a8d4cefad5e0,
+    type: 2}
+  m_PrefabInternal: {fileID: 171717037}
+  m_Script: {fileID: 11500000, guid: 1c52b3a0d5f4fd744bbbd135b8d647b2, type: 3}
 --- !u!1 &245524415
 GameObject:
   m_ObjectHideFlags: 0
@@ -3560,6 +3566,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ccf54c904405fbb4fb4035260dc2ca45, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &481789267 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114331147592336662, guid: ccf54c904405fbb4fb4035260dc2ca45,
+    type: 2}
+  m_PrefabInternal: {fileID: 481789266}
+  m_Script: {fileID: 11500000, guid: 1c52b3a0d5f4fd744bbbd135b8d647b2, type: 3}
 --- !u!1 &486864899
 GameObject:
   m_ObjectHideFlags: 0
@@ -12385,8 +12397,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54667c010a0dccf4c84b939f91219069, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Right_VRTK_AvatarHandController: {fileID: 0}
-  Left_VRTK_AvatarHandController: {fileID: 0}
+  Right_VRTK_AvatarHandController: {fileID: 481789267}
+  Left_VRTK_AvatarHandController: {fileID: 171717039}
 --- !u!114 &2034240720
 MonoBehaviour:
   m_ObjectHideFlags: 0

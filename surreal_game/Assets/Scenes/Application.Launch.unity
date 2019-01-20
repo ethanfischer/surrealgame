@@ -9614,8 +9614,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b358a03985c8de1408d0d98b716af0a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Prefabs:
-  - {fileID: 1289281111498416, guid: 66bd18e21212b8c4ab51a96f918b3197, type: 2}
+  WeatherMakerPrefab: {fileID: 1289281111498416, guid: 66bd18e21212b8c4ab51a96f918b3197,
+    type: 2}
 --- !u!114 &1622747689
 MonoBehaviour:
   m_ObjectHideFlags: 0

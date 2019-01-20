@@ -10,7 +10,7 @@ namespace VRTK
     /// <remarks>
     /// **Prefab Usage:**
     ///  * Place the `VRTK/Prefabs/PanelMenu/PanelMenu` prefab as a child of the `VRTK_InteractableObject` the panel menu is for.
-    ///  * Optionally remove the panel control menu item child GameObjects if they are not required, e.g. `PanelTopControls`.
+    ///  * Optionally remove the panel control menu item child Prefabs if they are not required, e.g. `PanelTopControls`.
     ///  * Set the panel menu item controllers on the `VRTK_PanelMenuController` script to determine which panel control menu items are available.
     ///  * The available panel control menu items can be activated by pressing the corresponding direction on the touchpad.
     /// </remarks>

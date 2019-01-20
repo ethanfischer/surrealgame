@@ -10,7 +10,7 @@ namespace VRTK.Controllables.ArtificialBased
     /// </summary>
     /// <remarks>
     /// **Required Components:**
-    ///  * `Collider` - A Unity Collider to determine when an interaction has occured. Can be a compound collider set in child GameObjects. Will be automatically added at runtime.
+    ///  * `Collider` - A Unity Collider to determine when an interaction has occured. Can be a compound collider set in child Prefabs. Will be automatically added at runtime.
     /// 
     /// **Script Usage:**
     ///  * Create a rotator container GameObject and set the GameObject that is to become the rotator as a child of the newly created container GameObject.
@@ -70,7 +70,7 @@ namespace VRTK.Controllables.ArtificialBased
         public float grabbedFriction = 1f;
         [Tooltip("The simulated friction when the rotator is released.")]
         public float releasedFriction = 1f;
-        [Tooltip("A collection of GameObjects that will be used as the valid collisions to determine if the rotator can be interacted with.")]
+        [Tooltip("A collection of Prefabs that will be used as the valid collisions to determine if the rotator can be interacted with.")]
         public GameObject[] onlyInteractWith = new GameObject[0];
 
         protected VRTK_InteractableObject controlInteractableObject;

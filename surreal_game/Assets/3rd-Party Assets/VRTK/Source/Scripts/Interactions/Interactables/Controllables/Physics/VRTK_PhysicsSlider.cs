@@ -10,7 +10,7 @@ namespace VRTK.Controllables.PhysicsBased
     /// </summary>
     /// <remarks>
     /// **Required Components:**
-    ///  * `Collider` - A Unity Collider to determine when an interaction has occured. Can be a compound collider set in child GameObjects. Will be automatically added at runtime.
+    ///  * `Collider` - A Unity Collider to determine when an interaction has occured. Can be a compound collider set in child Prefabs. Will be automatically added at runtime.
     ///  * `Rigidbody` - A Unity Rigidbody to allow the GameObject to be affected by the Unity Physics System. Will be automatically added at runtime.
     ///
     /// **Optional Components:**
@@ -65,7 +65,7 @@ namespace VRTK.Controllables.PhysicsBased
         public float detachDistance = 1f;
         [Tooltip("The amount of friction to the slider Rigidbody when it is released.")]
         public float releaseFriction = 10f;
-        [Tooltip("A collection of GameObjects that will be used as the valid collisions to determine if the door can be interacted with.")]
+        [Tooltip("A collection of Prefabs that will be used as the valid collisions to determine if the door can be interacted with.")]
         public GameObject[] onlyInteractWith = new GameObject[0];
 
         protected ConfigurableJoint controlJoint;

@@ -1,4 +1,4 @@
-﻿using Assets.Scripts.Extensions;
+﻿using Assets.Scripts.ExtensionsAndUtilities;
 using UnityEngine;
 
 namespace Assets.Scripts

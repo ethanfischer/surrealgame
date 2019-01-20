@@ -106,9 +106,9 @@ namespace VRTK
         protected Transform cachedPointerAttachPoint = null;
 
         /// <summary>
-        /// The GetPointerObjects returns an array of the auto generated GameObjects associated with the pointer.
+        /// The GetPointerObjects returns an array of the auto generated Prefabs associated with the pointer.
         /// </summary>
-        /// <returns>An array of pointer auto generated GameObjects.</returns>
+        /// <returns>An array of pointer auto generated Prefabs.</returns>
         public abstract GameObject[] GetPointerObjects();
 
         /// <summary>

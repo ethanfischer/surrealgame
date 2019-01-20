@@ -28,7 +28,7 @@ namespace VRTK
     /// </summary>
     /// <remarks>
     /// **Required Components:**
-    ///  * `Collider` - A Unity Collider to determine when an interaction has occured. Can be a compound collider set in child GameObjects.
+    ///  * `Collider` - A Unity Collider to determine when an interaction has occured. Can be a compound collider set in child Prefabs.
     ///
     /// **Optional Components:**
     ///  * `Rigidbody` - A Unity Rigidbody to allow the GameObject to be affected by the Unity Physics System (not required for Climbable Grab Attach Types).
@@ -742,7 +742,7 @@ namespace VRTK
         }
 
         /// <summary>
-        /// The GetNearTouchingObjects method is used to return the collecetion of valid GameObjects that are currently nearly touching this Interactable Object.
+        /// The GetNearTouchingObjects method is used to return the collecetion of valid Prefabs that are currently nearly touching this Interactable Object.
         /// </summary>
         /// <returns>A list of GameObject of that are currently nearly touching the current Interactable Object.</returns>
         public virtual List<GameObject> GetNearTouchingObjects()
@@ -751,7 +751,7 @@ namespace VRTK
         }
 
         /// <summary>
-        /// The GetTouchingObjects method is used to return the collecetion of valid GameObjects that are currently touching this Interactable Object.
+        /// The GetTouchingObjects method is used to return the collecetion of valid Prefabs that are currently touching this Interactable Object.
         /// </summary>
         /// <returns>A list of GameObject of that are currently touching the current Interactable Object.</returns>
         public virtual List<GameObject> GetTouchingObjects()
@@ -843,7 +843,7 @@ namespace VRTK
         }
 
         /// <summary>
-        /// The RegisterTeleporters method is used to find all GameObjects that have a teleporter script and register the Interactable Object on the `OnTeleported` event.
+        /// The RegisterTeleporters method is used to find all Prefabs that have a teleporter script and register the Interactable Object on the `OnTeleported` event.
         /// </summary>
         public virtual void RegisterTeleporters()
         {

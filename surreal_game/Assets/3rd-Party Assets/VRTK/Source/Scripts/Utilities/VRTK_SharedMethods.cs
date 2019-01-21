@@ -149,9 +149,9 @@ namespace VRTK
         /// <summary>
         /// The GetCollidersInGameObjects method iterates through a GameObject array and returns all of the unique found colliders for all GameObejcts.
         /// </summary>
-        /// <param name="gameObjects">An array of GameObjects to get the colliders for.</param>
-        /// <param name="searchChildren">If this is `true` then the given GameObjects will also have their child GameObjects searched for colliders.</param>
-        /// <param name="includeInactive">If this is `true` then the inactive GameObjects in the array will also be checked for Colliders. Only relevant if `searchChildren` is `true`.</param>
+        /// <param name="gameObjects">An array of Prefabs to get the colliders for.</param>
+        /// <param name="searchChildren">If this is `true` then the given Prefabs will also have their child Prefabs searched for colliders.</param>
+        /// <param name="includeInactive">If this is `true` then the inactive Prefabs in the array will also be checked for Colliders. Only relevant if `searchChildren` is `true`.</param>
         /// <returns>An array of Colliders that are found in the given GameObject array.</returns>
         public static Collider[] GetCollidersInGameObjects(GameObject[] gameObjects, bool searchChildren, bool includeInactive)
         {
@@ -251,7 +251,7 @@ namespace VRTK
         /// Finds the first GameObject with a given name and an ancestor that has a specific component.
         /// </summary>
         /// <remarks>
-        /// This method returns active as well as inactive GameObjects in all scenes. It doesn't return assets.
+        /// This method returns active as well as inactive Prefabs in all scenes. It doesn't return assets.
         /// For performance reasons it is recommended to not use this function every frame. Cache the result in a member variable at startup instead.
         /// </remarks>
         /// <typeparam name="T">The component type that needs to be on an ancestor of the wanted GameObject. Must be a subclass of `Component`.</typeparam>
@@ -279,7 +279,7 @@ namespace VRTK
         /// Finds all components of a given type.
         /// </summary>
         /// <remarks>
-        /// This method returns components from active as well as inactive GameObjects in all scenes. It doesn't return assets.
+        /// This method returns components from active as well as inactive Prefabs in all scenes. It doesn't return assets.
         /// For performance reasons it is recommended to not use this function every frame. Cache the result in a member variable at startup instead.
         /// </remarks>
         /// <typeparam name="T">The component type to search for. Must be a subclass of `Component`.</typeparam>
@@ -295,7 +295,7 @@ namespace VRTK
         /// Finds the first component of a given type.
         /// </summary>
         /// <remarks>
-        /// This method returns components from active as well as inactive GameObjects in all scenes. It doesn't return assets.
+        /// This method returns components from active as well as inactive Prefabs in all scenes. It doesn't return assets.
         /// For performance reasons it is recommended to not use this function every frame. Cache the result in a member variable at startup instead.
         /// </remarks>
         /// <typeparam name="T">The component type to search for. Must be a subclass of `Component`.</typeparam>

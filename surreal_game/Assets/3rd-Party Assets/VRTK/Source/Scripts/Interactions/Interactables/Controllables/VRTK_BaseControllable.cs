@@ -58,9 +58,9 @@ namespace VRTK.Controllables
 
         [Tooltip("The local axis in which the Controllable will operate through.")]
         public OperatingAxis operateAxis = OperatingAxis.yAxis;
-        [Tooltip("A collection of GameObjects to ignore collision events with.")]
+        [Tooltip("A collection of Prefabs to ignore collision events with.")]
         public GameObject[] ignoreCollisionsWith = new GameObject[0];
-        [Tooltip("A collection of GameObjects to exclude when determining if a default collider should be created.")]
+        [Tooltip("A collection of Prefabs to exclude when determining if a default collider should be created.")]
         public GameObject[] excludeColliderCheckOn = new GameObject[0];
         [Tooltip("The amount of fidelity when comparing the position of the control with the previous position. Determines if it's equal above a certain decimal place threshold.")]
         public float equalityFidelity = 0.001f;

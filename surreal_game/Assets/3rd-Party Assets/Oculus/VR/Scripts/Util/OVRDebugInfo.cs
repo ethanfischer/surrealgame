@@ -29,7 +29,7 @@ using UnityEngine.UI;
 /// </summary>
 public class OVRDebugInfo : MonoBehaviour
 {
-    #region GameObjects for Debug Information UIs   
+    #region Prefabs for Debug Information UIs   
     GameObject debugUIManager;
     GameObject debugUIObject;
     GameObject riftPresent;    
@@ -148,7 +148,7 @@ public class OVRDebugInfo : MonoBehaviour
 
     #region Private Functions
     /// <summary>
-    /// Initialize UI GameObjects
+    /// Initialize UI Prefabs
     /// </summary>
     void InitUIComponents()
     {

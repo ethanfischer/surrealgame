@@ -1069,7 +1069,7 @@ MonoBehaviour:
   affectOnFalling: 0
   controlOverrideObject: {fileID: 0}
   controller: {fileID: 171717038}
-  bodyPhysics: {fileID: 0}
+  bodyPhysics: {fileID: 2056966755}
   coordinateAxis: 1
   primaryActivationButton: 9
   actionModifierButton: 10
@@ -2814,7 +2814,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &418537966
 Transform:
   m_ObjectHideFlags: 0
@@ -3563,6 +3563,11 @@ Prefab:
       propertyPath: targetListPolicy
       value: 
       objectReference: {fileID: 2056374598}
+    - target: {fileID: 114004413598458172, guid: ccf54c904405fbb4fb4035260dc2ca45,
+        type: 2}
+      propertyPath: bodyPhysics
+      value: 
+      objectReference: {fileID: 2056966755}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ccf54c904405fbb4fb4035260dc2ca45, type: 2}
   m_IsPrefabParent: 0
@@ -5827,7 +5832,6 @@ GameObject:
   m_Component:
   - component: {fileID: 810007871}
   - component: {fileID: 810007873}
-  - component: {fileID: 810007872}
   m_Layer: 0
   m_Name: BlinkTeleporter
   m_TagString: Untagged
@@ -5848,40 +5852,6 @@ Transform:
   m_Father: {fileID: 549201851}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &810007872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 810007870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 174429e04b0388249a137b2dc0050b66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enableTeleport: 1
-  targetListPolicy: {fileID: 0}
-  enableBodyCollisions: 1
-  ignoreGrabbedCollisions: 1
-  ignoreCollisionsWith: []
-  headsetYOffset: 0.2
-  movementThreshold: 0.0015
-  playAreaMovementThreshold: 0.00075
-  standingHistorySamples: 5
-  leanYThreshold: 0.5
-  stepUpYOffset: 0.15
-  stepThicknessMultiplier: 0.5
-  stepDropThreshold: 0.08
-  customRaycast: {fileID: 0}
-  fallRestriction: 0
-  gravityFallYThreshold: 1
-  blinkYThreshold: 0.15
-  floorHeightTolerance: 0.001
-  fallCheckPrecision: 5
-  teleporter: {fileID: 0}
-  customPlayAreaRigidbody: {fileID: 0}
-  customBodyColliderContainer: {fileID: 0}
-  customFootColliderContainer: {fileID: 0}
 --- !u!114 &810007873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13351,6 +13321,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2056966754}
   - component: {fileID: 2056966756}
+  - component: {fileID: 2056966755}
   m_Layer: 2
   m_Name: '[VRTK_SDKManager]'
   m_TagString: Untagged
@@ -13374,6 +13345,40 @@ Transform:
   m_Father: {fileID: 2034240725}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -1.2, y: 270, z: 0}
+--- !u!114 &2056966755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2056966753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 174429e04b0388249a137b2dc0050b66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableTeleport: 1
+  targetListPolicy: {fileID: 0}
+  enableBodyCollisions: 1
+  ignoreGrabbedCollisions: 1
+  ignoreCollisionsWith: []
+  headsetYOffset: 0.2
+  movementThreshold: 0.0015
+  playAreaMovementThreshold: 0.00075
+  standingHistorySamples: 5
+  leanYThreshold: 0.5
+  stepUpYOffset: 0.15
+  stepThicknessMultiplier: 0.5
+  stepDropThreshold: 0.08
+  customRaycast: {fileID: 0}
+  fallRestriction: 0
+  gravityFallYThreshold: 1
+  blinkYThreshold: 0.15
+  floorHeightTolerance: 0.001
+  fallCheckPrecision: 5
+  teleporter: {fileID: 0}
+  customPlayAreaRigidbody: {fileID: 0}
+  customBodyColliderContainer: {fileID: 0}
+  customFootColliderContainer: {fileID: 0}
 --- !u!114 &2056966756
 MonoBehaviour:
   m_ObjectHideFlags: 0

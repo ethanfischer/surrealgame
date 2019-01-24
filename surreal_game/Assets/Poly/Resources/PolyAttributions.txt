@@ -6,6 +6,12 @@ URL: https://poly.google.com/view/5UQVd1Agl11
 License: Creative Commons CC-BY
 https://creativecommons.org/licenses/by/3.0/legalcode
 
+Title: FruitStick
+Author: Ethan Fischer
+URL: https://poly.google.com/view/eCE-nrOTHHG
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
 Title: Remote
 Author: Alex “SAFFY” Safayan
 URL: https://poly.google.com/view/9veo7sZrcBZ

@@ -1202,6 +1202,36 @@ Prefab:
       propertyPath: targetListPolicy
       value: 
       objectReference: {fileID: 2056374598}
+    - target: {fileID: 114752726539801560, guid: 97fa7897850701749a23a8d4cefad5e0,
+        type: 2}
+      propertyPath: activationButton
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114752726539801560, guid: 97fa7897850701749a23a8d4cefad5e0,
+        type: 2}
+      propertyPath: holdButtonToActivate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114752726539801560, guid: 97fa7897850701749a23a8d4cefad5e0,
+        type: 2}
+      propertyPath: activateOnEnable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114752726539801560, guid: 97fa7897850701749a23a8d4cefad5e0,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114752726539801560, guid: 97fa7897850701749a23a8d4cefad5e0,
+        type: 2}
+      propertyPath: selectionButton
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114752726539801560, guid: 97fa7897850701749a23a8d4cefad5e0,
+        type: 2}
+      propertyPath: selectOnPress
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97fa7897850701749a23a8d4cefad5e0, type: 2}
   m_IsPrefabParent: 0
@@ -5863,8 +5893,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 377ced3493c4e1842a5b1c23f56519db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blinkToColor: {r: 0, g: 0, b: 0, a: 1}
-  blinkTransitionSpeed: 0.6
+  blinkToColor: {r: 0, g: 0, b: 0, a: 0}
+  blinkTransitionSpeed: 0
   distanceBlinkDelay: 0
   headsetPositionCompensation: 1
   targetListPolicy: {fileID: 2056374598}
@@ -6156,6 +6186,53 @@ MonoBehaviour:
   gripAxisName: RightGrip
   touchpadHorizontalAxisName: RightTrackpadHorizontal
   touchpadVerticalAxisName: RightTrackpadVertical
+--- !u!1001 &913522344
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4900422773499200, guid: 2e1d796b4fee40b43bcf90c3eec7f53e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -3.694864
+      objectReference: {fileID: 0}
+    - target: {fileID: 4900422773499200, guid: 2e1d796b4fee40b43bcf90c3eec7f53e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.00999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 4900422773499200, guid: 2e1d796b4fee40b43bcf90c3eec7f53e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1.2343414
+      objectReference: {fileID: 0}
+    - target: {fileID: 4900422773499200, guid: 2e1d796b4fee40b43bcf90c3eec7f53e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4900422773499200, guid: 2e1d796b4fee40b43bcf90c3eec7f53e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4900422773499200, guid: 2e1d796b4fee40b43bcf90c3eec7f53e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4900422773499200, guid: 2e1d796b4fee40b43bcf90c3eec7f53e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4900422773499200, guid: 2e1d796b4fee40b43bcf90c3eec7f53e, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 54202517330836968, guid: 2e1d796b4fee40b43bcf90c3eec7f53e,
+        type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2e1d796b4fee40b43bcf90c3eec7f53e, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &917686013
 GameObject:
   m_ObjectHideFlags: 0
@@ -13375,7 +13452,7 @@ MonoBehaviour:
   blinkYThreshold: 0.15
   floorHeightTolerance: 0.001
   fallCheckPrecision: 5
-  teleporter: {fileID: 0}
+  teleporter: {fileID: 810007873}
   customPlayAreaRigidbody: {fileID: 0}
   customBodyColliderContainer: {fileID: 0}
   customFootColliderContainer: {fileID: 0}

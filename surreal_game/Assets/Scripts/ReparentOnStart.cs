@@ -1,29 +1,30 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class ReparentOnStart : MonoBehaviour
+namespace Assets.Scripts
 {
-    void Start()
+    public class ReparentOnStart : MonoBehaviour
     {
-        if (transform.childCount == 0)
+        void Start()
         {
-            Rename();
-            Reparent();
+            if (transform.childCount == 0)
+            {
+                Rename();
+                Reparent();
+            }
+        }
+
+        private void Rename()
+        {
+            this.name = transform.parent.name;
+            transform.parent.name += "_geometry";
+        }
+
+        private void Reparent()
+        {
+            var initialParent = transform.parent;
+            transform.SetParent(transform.parent.parent);
+            initialParent.SetParent(this.transform);
         }
     }
-
-    private void Rename()
-    {
-        this.name = transform.parent.name;
-        transform.parent.name += "_geometry";
-    }
-
-    private void Reparent()
-    {
-        var initialParent = transform.parent;
-        transform.SetParent(transform.parent.parent);
-        initialParent.SetParent(this.transform);
-    }
 }
+

@@ -1,3 +1,0 @@
-Fix lighting with additive scenes
-Add collider to walls?
-Hidehands

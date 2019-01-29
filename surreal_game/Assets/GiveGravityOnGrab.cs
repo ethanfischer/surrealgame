@@ -17,6 +17,8 @@ namespace Assets
         public void GiveGravity()
         {
             RigidBody.useGravity = true;
+
+            Debug.Log(RigidBody.isKinematic);
         }
 
         // Update is called once per frame

@@ -16,6 +16,7 @@ TagManager:
   - IncludeTeleport
   - Collectables
   - FocusReference
+  - Disposable
   layers:
   - Default
   - TransparentFX

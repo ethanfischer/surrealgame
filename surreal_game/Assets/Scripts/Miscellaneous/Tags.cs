@@ -8,5 +8,6 @@ namespace Assets.Scripts.Miscellaneous
     public static class Tags
     {
         public static string COLLECTABLES = "Collectables";
+        public static string DISPOSABLE = "Disposable";
     }
 }

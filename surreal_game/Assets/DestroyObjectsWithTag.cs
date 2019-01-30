@@ -21,9 +21,11 @@ public class DestroyObjectsWithTag : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject.tag == Tags.DISPOSABLE)
+        var go = collider.gameObject;
+        if (go.tag == Tags.DISPOSABLE)
         {
             SystemSounds.Asterisk.Play();
+            GameObject.Destroy(go);
         }
     }
 }

@@ -10320,7 +10320,7 @@ GameObject:
   - component: {fileID: 1652897911}
   - component: {fileID: 1652897910}
   m_Layer: 0
-  m_Name: XAxis = Slide  -  YAxis = Slide
+  m_Name: JoystickMovement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10353,10 +10353,10 @@ MonoBehaviour:
   objectControlScript: {fileID: 170320864}
   listenOnAxisChange: 1
   maximumSpeed: 3
-  deceleration: 0.1
+  deceleration: 3
   fallingDeceleration: 0.01
   speedMultiplier: 1.5
-  bodyPhysics: {fileID: 0}
+  bodyPhysics: {fileID: 2056966755}
 --- !u!114 &1652897911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10371,10 +10371,10 @@ MonoBehaviour:
   objectControlScript: {fileID: 170320864}
   listenOnAxisChange: 0
   maximumSpeed: 3
-  deceleration: 0.1
+  deceleration: 3
   fallingDeceleration: 0.01
   speedMultiplier: 1.5
-  bodyPhysics: {fileID: 0}
+  bodyPhysics: {fileID: 2056966755}
 --- !u!1 &1661595548
 GameObject:
   m_ObjectHideFlags: 0

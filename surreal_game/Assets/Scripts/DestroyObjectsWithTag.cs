@@ -19,7 +19,7 @@ namespace Assets.Scripts
 
         }
 
-        void OnTriggerEnter(Collider collider)
+        void OnColliderEnter(Collider collider)
         {
             var go = collider.gameObject;
             if (go.tag == Tags.DISPOSABLE)

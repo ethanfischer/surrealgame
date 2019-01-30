@@ -1,8 +1,6 @@
-﻿using Assets.Scripts.ExtensionsAndUtilities;
-using UnityEngine;
-using VRTK.UnityEventHelper;
+﻿using UnityEngine;
 
-namespace Assets
+namespace Assets.Scripts
 {
     public class GiveGravityOnGrab : MonoBehaviour
     {

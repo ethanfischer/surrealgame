@@ -11,5 +11,15 @@ namespace Assets.Scripts.ExtensionsAndUtilities
                 Debug.LogError("GameObject not assigned in editor:" + gameObject.name);
             }
         }
+
+        public static bool IsPlayer(this Collider collider)
+        {
+            if (collider.gameObject.GetComponentInParent<Player>())
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }

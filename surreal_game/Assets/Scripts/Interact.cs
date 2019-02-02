@@ -1,17 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Media;
+﻿using System.Media;
+using Assets.Scripts.ExtensionsAndUtilities;
 using UnityEngine;
 
-public class Interact : MonoBehaviour {
+namespace Assets.Scripts
+{
+    public class Interact : MonoBehaviour {
 
-    void OnTriggerEnter(Collider collider)
-    {
-        if (collider.gameObject.GetComponentInParent<Player>())
+        private void OnTriggerEnter(Collider collider)
         {
-            SystemSounds.Asterisk.Play();
-            Debug.Log("!!!!!");
+            if (collider.IsPlayer())
+            {
+                SystemSounds.Asterisk.Play();
+                Debug.Log("!!!!!");
+            }
         }
-
     }
 }

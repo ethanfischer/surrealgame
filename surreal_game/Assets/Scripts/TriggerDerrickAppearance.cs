@@ -4,16 +4,15 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
-    public class DestroyObjectsWithTag : MonoBehaviour
+    public class TriggerDerrickAppearance : MonoBehaviour
     {
         void OnTriggerEnter(Collider collider)
         {
             var go = collider.gameObject;
             if (go.tag != Tags.DISPOSABLE) return;
 
-            Debug.Log("!!!!!");
-            SystemSounds.Asterisk.Play();
-            GameObject.Destroy(go);
+            Debug.Log("derick!!!!!");
+            SystemSounds.Exclamation.Play();
         }
     }
 }

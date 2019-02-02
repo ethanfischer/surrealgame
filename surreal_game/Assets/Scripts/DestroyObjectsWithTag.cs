@@ -11,7 +11,7 @@ namespace Assets.Scripts
             var go = collider.gameObject;
             if (go.tag != Tags.DISPOSABLE) return;
 
-            Debug.Log("!!!!!");
+            Debug.Log(gameObject.name + "destroyed");
             SystemSounds.Asterisk.Play();
             GameObject.Destroy(go);
         }

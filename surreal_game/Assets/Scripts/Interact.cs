@@ -1,28 +1,23 @@
 ﻿using System.Media;
 using Assets.Scripts.ExtensionsAndUtilities;
+using Assets.Scripts.PlayerScripts;
+using SurrealGame;
 using UnityEngine;
 
 namespace Assets.Scripts
 {
     public class Interact : MonoBehaviour
     {
-        public event PlayerInteractionEvent PlayerInteractionEvent;
+        public GameObject DialogueUI;
 
         private void OnTriggerEnter(Collider collider)
         {
             if (collider.IsPlayer())
             {
-                OnPlayerInteraction(new OnPlayerInteractionArgs());
+                DialogueUI.SetActive(true);
                 SystemSounds.Asterisk.Play();
                 Debug.Log("!!!!!");
             }
         }
-
-        protected virtual void OnPlayerInteraction(OnPlayerInteractionArgs args)
-        {
-            PlayerInteractionEvent?.Invoke(this, args);
-        }
     }
-
-    public delegate void PlayerInteractionEvent(object sender, OnPlayerInteractionArgs args);
 }

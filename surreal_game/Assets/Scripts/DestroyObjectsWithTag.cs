@@ -12,7 +12,6 @@ namespace Assets.Scripts
             if (go.tag != Tags.DISPOSABLE) return;
 
             Debug.Log(gameObject.name + "destroyed");
-            SystemSounds.Asterisk.Play();
             GameObject.Destroy(go);
         }
     }

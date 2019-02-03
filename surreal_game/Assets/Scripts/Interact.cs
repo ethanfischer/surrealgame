@@ -15,8 +15,6 @@ namespace Assets.Scripts
             if (collider.IsPlayer())
             {
                 DialogueUI.SetActive(true);
-                SystemSounds.Asterisk.Play();
-                Debug.Log("!!!!!");
             }
         }
     }

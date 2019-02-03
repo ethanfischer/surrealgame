@@ -14,6 +14,7 @@ namespace Assets.Scripts
             if (go.tag != Tags.DISPOSABLE) return;
 
             Derrick.SetActive(true);
+            Derrick.GetComponentInChildren<AudioSource>().Play();
         }
     }
 }

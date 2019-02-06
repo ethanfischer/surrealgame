@@ -9378,7 +9378,7 @@ MonoBehaviour:
   audioTag: Audio
   mainCameraTag: MainCamera
   interactButton: Interact
-  playerInventory: {fileID: 0}
+  playerInventory: {fileID: 528650663}
   sceneManager: {fileID: 1001357803}
   gameManager: {fileID: 1622747674}
 --- !u!114 &1622747682

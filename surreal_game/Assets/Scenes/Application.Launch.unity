@@ -12869,7 +12869,7 @@ MonoBehaviour:
   fallRestriction: 0
   gravityFallYThreshold: 1
   blinkYThreshold: 0.15
-  floorHeightTolerance: 0.001
+  floorHeightTolerance: 1
   fallCheckPrecision: 5
   teleporter: {fileID: 810007873}
   customPlayAreaRigidbody: {fileID: 0}

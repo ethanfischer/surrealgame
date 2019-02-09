@@ -40,6 +40,7 @@ namespace Assets.Scripts
         private void GiveKey()
         {
             Player.Instance.GetComponentInChildren<PlayerInventoryVR>().Add(new GameObject("key"));
+            SFX.Instance.PlaySoundEffect(SFX.SoundEffectType.AddToInventory);
         }
     }
 }

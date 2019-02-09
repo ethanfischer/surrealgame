@@ -12611,12 +12611,12 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2034240725}
-  - component: {fileID: 2034240724}
   - component: {fileID: 2034240723}
   - component: {fileID: 2034240722}
   - component: {fileID: 2034240721}
   - component: {fileID: 2034240720}
   - component: {fileID: 2034240719}
+  - component: {fileID: 2034240718}
   m_Layer: 2
   m_Name: Player
   m_TagString: Player
@@ -12624,6 +12624,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2034240718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2034240717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94f470130ed2f4095823b0dab77244d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Inventory: {fileID: 528650664}
 --- !u!114 &2034240719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12691,17 +12703,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 34a1754238e504048a66c8f5cc59b4c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2034240724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2034240717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94f470130ed2f4095823b0dab77244d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &2034240725
@@ -12854,8 +12855,8 @@ MonoBehaviour:
   autoManageVRSettings: 1
   autoLoadSetup: 1
   setups:
-  - {fileID: 2072637043}
   - {fileID: 1370143985}
+  - {fileID: 2072637043}
   - {fileID: 1816159989}
   - {fileID: 1675656594}
   - {fileID: 1664309382}

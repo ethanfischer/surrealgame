@@ -28,6 +28,16 @@ namespace Assets.Scripts.PlayerScripts
             throw new NotImplementedException();
         }
 
+        public bool HasItem(string itemName)
+        {
+            if (transform.Find(itemName))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
         private void AddItemAsChildAndResetTransform(GameObject gameObject)
         {
             gameObject.transform.parent = InventoryGameObject.transform;

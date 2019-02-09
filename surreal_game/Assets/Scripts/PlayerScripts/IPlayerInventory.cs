@@ -6,5 +6,6 @@ namespace Assets.Scripts.PlayerScripts
     {
         void Add(GameObject itemToAdd);
         void SelectItem(GameObject itemToSelect);
+        bool HasItem(string itemName);
     }
 }

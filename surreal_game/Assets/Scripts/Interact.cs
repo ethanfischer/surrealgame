@@ -39,7 +39,7 @@ namespace Assets.Scripts
 
         private void GiveKey()
         {
-            Debug.Log("!!!!!");
+            Player.Instance.GetComponentInChildren<PlayerInventoryVR>().Add(new GameObject("key"));
         }
     }
 }

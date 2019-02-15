@@ -15352,7 +15352,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1096055263
 Transform:
   m_ObjectHideFlags: 0
@@ -38470,7 +38470,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 16384
-  visualizeRoom: 1
+  visualizeRoom: 0
   raysPerSecond: 256
   roomInterpSpeed: 0.9
   maxWallDistance: 50

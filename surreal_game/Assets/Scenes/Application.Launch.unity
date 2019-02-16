@@ -12617,6 +12617,7 @@ GameObject:
   - component: {fileID: 2034240720}
   - component: {fileID: 2034240719}
   - component: {fileID: 2034240718}
+  - component: {fileID: 2034240724}
   m_Layer: 2
   m_Name: Player
   m_TagString: Player
@@ -12705,6 +12706,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34a1754238e504048a66c8f5cc59b4c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2034240724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2034240717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5837af0260a118e4d808bfe0405429a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoManageScriptDefines: 1
+  activeScriptingDefineSymbolsWithoutSDKClasses:
+  - symbol: VRTK_DEFINE_SDK_OCULUS_AVATAR
+    buildTargetGroupName: Standalone
+  scriptAliasLeftController: {fileID: 170320862}
+  scriptAliasRightController: {fileID: 936151543}
+  autoManageVRSettings: 1
+  autoLoadSetup: 1
+  setups:
+  - {fileID: 2072637043}
+  - {fileID: 1370143985}
+  - {fileID: 1816159989}
+  - {fileID: 1675656594}
+  - {fileID: 1664309382}
+  excludeTargetGroups: 1a0000001b000000
+  persistOnLoad: 0
 --- !u!4 &2034240725
 Transform:
   m_ObjectHideFlags: 0
@@ -12775,7 +12803,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2056966754}
-  - component: {fileID: 2056966756}
   - component: {fileID: 2056966755}
   m_Layer: 2
   m_Name: '[VRTK_SDKManager]'
@@ -12834,34 +12861,6 @@ MonoBehaviour:
   customPlayAreaRigidbody: {fileID: 0}
   customBodyColliderContainer: {fileID: 0}
   customFootColliderContainer: {fileID: 0}
---- !u!114 &2056966756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114830853864008150, guid: eb6748575a8fce346b19dff6cb1471ec,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2056966753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5837af0260a118e4d808bfe0405429a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoManageScriptDefines: 1
-  activeScriptingDefineSymbolsWithoutSDKClasses:
-  - symbol: VRTK_DEFINE_SDK_OCULUS_AVATAR
-    buildTargetGroupName: Standalone
-  scriptAliasLeftController: {fileID: 170320862}
-  scriptAliasRightController: {fileID: 936151543}
-  autoManageVRSettings: 1
-  autoLoadSetup: 1
-  setups:
-  - {fileID: 2072637043}
-  - {fileID: 1370143985}
-  - {fileID: 1816159989}
-  - {fileID: 1675656594}
-  - {fileID: 1664309382}
-  excludeTargetGroups: 1a0000001b000000
-  persistOnLoad: 0
 --- !u!1 &2072637041
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ namespace Assets.Scripts
 
         void OnTriggerEnter(Collider collider)
         {
-            if (collider.IsPlayer())
+            if (collider.IsPlayer() && !Floor1Roomtone.isPlaying)
             {
                 Floor1Roomtone.Play();
             }

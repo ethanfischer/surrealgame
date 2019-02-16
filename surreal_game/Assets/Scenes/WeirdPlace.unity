@@ -6627,9 +6627,9 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243326027132988040, guid: 1dd706bb85d8aef4e83a6229dbd62c36,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 4ea663a8caf020b44938926b246b0459, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9d4d13fd95cc5e447af43b783beeecbb, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.495
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6673,7 +6673,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.724
+      value: 0.681
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -6726,7 +6726,7 @@ GameObject:
   - component: {fileID: 587087367}
   - component: {fileID: 587087366}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

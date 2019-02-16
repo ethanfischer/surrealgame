@@ -1227,7 +1227,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh111180
+  m_Name: pb_Mesh220648
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -1876,7 +1876,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 1
+  m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -1901,7 +1901,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0, y: 3, z: 2}
+  m_Size: {x: 3, y: 3, z: 2}
   m_Center: {x: 0, y: 0, z: 1}
 --- !u!43 &269175740
 Mesh:

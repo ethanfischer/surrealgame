@@ -1,0 +1,200 @@
+fileFormatVersion: 2
+guid: 163082aed90df284aa9532e62435f38e
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: default
+    400000: //RootNode
+    400002: default
+    2100000: material_10___4225.063
+    2100002: material_10___4225
+    2100004: material_23___4225.001
+    2100006: material_10___4225.002
+    2100008: material_10___4225.003
+    2100010: material_10___4225.004
+    2100012: material_10___4225.005
+    2100014: material_10___4225.006
+    2100016: material_10___4225.007
+    2100018: material_10___4225.008
+    2100020: material_10___4225.009
+    2100022: material_10___4225.010
+    2100024: material_10___4225.011
+    2100026: material_10___4225.012
+    2100028: material_10___4225.013
+    2100030: material_10___4225.014
+    2100032: material_10___4225.015
+    2100034: material_10___4225.016
+    2100036: material_10___4225.017
+    2100038: material_10___4225.018
+    2100040: material_10___4225.019
+    2100042: material_10___4225.020
+    2100044: material_10___4225.021
+    2100046: material_10___4225.022
+    2100048: material_10___4225.023
+    2100050: material_10___4225.024
+    2100052: material_10___4225.025
+    2100054: material_10___4225.026
+    2100056: material_10___4225.027
+    2100058: material_10___4225.028
+    2100060: material_10___4225.029
+    2100062: material_10___4225.030
+    2100064: material_10___4225.031
+    2100066: material_10___4225.032
+    2100068: material_10___4225.033
+    2100070: material_10___4225.034
+    2100072: material_10___4225.035
+    2100074: material_10___4225.036
+    2100076: material_23___4225.037
+    2100078: material_10___4225.038
+    2100080: material_10___4225.039
+    2100082: material_10___4225.040
+    2100084: material_10___4225.041
+    2100086: material_10___4225.042
+    2100088: material_10___4225.043
+    2100090: material_10___4225.044
+    2100092: material_10___4225.045
+    2100094: material_10___4225.046
+    2100096: material_10___4225.047
+    2100098: material_10___4225.048
+    2100100: material_10___4225.049
+    2100102: material_10___4225.050
+    2100104: material_10___4225.051
+    2100106: material_10___4225.052
+    2100108: material_10___4225.053
+    2100110: material_10___4225.054
+    2100112: material_23___4225.055
+    2100114: material_10___4225.056
+    2100116: material_10___4225.057
+    2100118: material_10___4225.058
+    2100120: material_10___4225.059
+    2100122: material_10___4225.060
+    2100124: material_10___4225.061
+    2100126: material_10___4225.062
+    2100128: material_10___4225.064
+    2100130: material_10___4225.065
+    2100132: material_10___4225.066
+    2100134: material_10___4225.067
+    2100136: material_10___4225.068
+    2100138: material_10___4225.069
+    2100140: material_10___4225.070
+    2100142: material_10___4225.071
+    2100144: material_10___4225.072
+    2100146: material_10___4225.073
+    2100148: material_10___4225.074
+    2100150: material_10___4225.075
+    2100152: material_10___4225.076
+    2100154: material_10___4225.077
+    2100156: material_10___4225.078
+    2100158: material_10___4225.079
+    2100160: material_10___4225.080
+    2100162: material_10___4225.081
+    2100164: material_23___4225.082
+    2100166: material_10___4225.083
+    2100168: material_10___4225.084
+    2100170: material_10___4225.085
+    2100172: material_10___4225.086
+    2100174: material_10___4225.087
+    2100176: material_10___4225.088
+    2100178: material_10___4225.089
+    2100180: material_10___4225.090
+    2100182: material_10___4225.091
+    2100184: material_10___4225.092
+    2100186: material_10___4225.093
+    2100188: material_10___4225.094
+    2100190: material_10___4225.095
+    2100192: material_10___4225.096
+    2100194: material_10___4225.097
+    2100196: material_10___4225.098
+    2100198: material_10___4225.099
+    2100200: material_10___4225.100
+    2100202: material_10___4225.101
+    2100204: material_10___4225.102
+    2100206: material_10___4225.103
+    2100208: material_10___4225.104
+    2100210: material_10___4225.105
+    2100212: material_10___4225.106
+    2300000: default
+    3300000: default
+    4300000: default
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

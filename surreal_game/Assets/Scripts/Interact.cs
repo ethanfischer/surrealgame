@@ -10,22 +10,22 @@ namespace Assets.Scripts
 {
     public class Interact : MonoBehaviour
     {
-        public GameObject DialogueUI;
-        public Text Text;
+        public GameObject DialogueObject;
+        public TextMesh TextMesh;
 
         private int _dialogueCounter = 0;
 
         public void AdvanceDialogue()
         {
-            DialogueUI.SetActive(true);
+            DialogueObject.SetActive(true);
 
             switch (_dialogueCounter)
             {
                 case 0:
-                    Text.text = "You dropped something.";
+                    TextMesh.text = "You dropped something.";
                     break;
                 case 1:
-                    Text.text = "Enjoy";
+                    TextMesh.text = "Enjoy";
                     break;
                 case 2:
                     GiveKey();

@@ -21,8 +21,11 @@ EditorBuildSettings:
     path: Assets/Scenes/House/House_DavidGreeting.unity
     guid: 72b897cad2654134b9361720b22bcfcd
   - enabled: 1
-    path: Assets/Scenes/House/House_Kitchen2.unity
-    guid: d262e35990b04b94c885e2da1dfb69f2
+    path: Assets/Scenes/GasStation.unity
+    guid: 7dde9677a544ef348b44f0864333d3e6
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

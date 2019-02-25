@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts.Miscellaneous;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,15 +9,10 @@ namespace SurrealGame
 {
     public class Initialize_Scenes : MonoBehaviour
     {
-        public string scene;
-
         void Awake()
         {
-            if(scene == null)
-            {
-                throw new Exception("No scene to initialize");
-            }
-            LoadSceneAdditively(scene);
+            LoadSceneAdditively(Scenes.WEIRD_PLACE);
+            LoadSceneAdditively(Scenes.GAS_STATION);
         }
 
         private static void LoadSceneAdditively(string sceneName)

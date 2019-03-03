@@ -34,19 +34,19 @@ Material:
     - _AmbientLightMultiplier: 1
     - _DirectionalLightMultiplier: 1
     - _DitherLevel: 0.005
-    - _FogDensity: 0.066
-    - _FogMode: 3
+    - _FogDensity: 0.241
+    - _FogMode: 1
     - _FogNoiseHeightMultiplier: 50
     - _FogNoiseHeightScale: 0.002
     - _FogNoiseHeightVariance: 10
     - _FogNoiseMultiplier: 1.15
-    - _FogNoiseScale: 0.02
+    - _FogNoiseScale: 0.003
     - _FogPercentage: 0.9
     - _MaxFogFactor: 1
     - _PointSpotLightMultiplier: 1
     m_Colors:
-    - _FogBoxMax: {r: 29, g: 25.000004, b: 93, a: 0}
-    - _FogBoxMin: {r: -3, g: -7.000004, b: 77, a: 0}
+    - _FogBoxMax: {r: 17, g: 7.9600005, b: 89, a: 0}
+    - _FogBoxMin: {r: 9, g: -0.040001392, b: 81, a: 0}
     - _FogColor: {r: 1, g: 1, b: 1, a: 1}
     - _FogNoiseVelocity: {r: 0, g: 0, b: 0, a: 0}
     - _SunColor: {r: 1, g: 1, b: 1, a: 1}

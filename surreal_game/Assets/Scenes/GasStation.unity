@@ -3695,7 +3695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcdd9eedbccec95448b931821fb1a4c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FogProfile: {fileID: 0}
+  FogProfile: {fileID: 11400000, guid: c8a5799257aa3da4ca16567dc8499cb2, type: 2}
   FogMaterial: {fileID: 2100000, guid: fc2f021993b472248b18aad0b599fb93, type: 2}
 --- !u!23 &581674322
 MeshRenderer:

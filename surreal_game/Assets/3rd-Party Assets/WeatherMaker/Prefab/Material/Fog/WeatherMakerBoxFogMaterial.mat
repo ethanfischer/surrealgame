@@ -45,8 +45,8 @@ Material:
     - _MaxFogFactor: 1
     - _PointSpotLightMultiplier: 1
     m_Colors:
-    - _FogBoxMax: {r: 197.5, g: 8.000025, b: 291.50003, a: 0}
-    - _FogBoxMin: {r: -202.5, g: -0.000024318695, b: -108.50003, a: 0}
+    - _FogBoxMax: {r: 15, g: 8.620001, b: 110, a: 0}
+    - _FogBoxMin: {r: -15, g: 7.619999, b: 95, a: 0}
     - _FogColor: {r: 1, g: 1, b: 1, a: 1}
     - _FogNoiseVelocity: {r: 0, g: 0, b: 0, a: 0}
     - _SunColor: {r: 1, g: 1, b: 1, a: 1}

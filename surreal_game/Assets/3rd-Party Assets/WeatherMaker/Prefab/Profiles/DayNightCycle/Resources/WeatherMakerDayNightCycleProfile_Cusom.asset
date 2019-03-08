@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d4dbdbf04c6ebf4ab9bbaaea3ca6638, type: 3}
   m_Name: WeatherMakerDayNightCycleProfile_Cusom
   m_EditorClassIdentifier: 
-  Speed: -100000
-  NightSpeed: 10
-  UpdateInterval: 0.03
-  TimeOfDay: 43000
+  Speed: 0
+  NightSpeed: 0
+  UpdateInterval: 0
+  TimeOfDay: 86400
   TimeOfDayLabel: 11:56 AM
   Year: 2017
   Month: 3
@@ -325,7 +325,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  NightAmbientColorIntensity: 0
+  NightAmbientColorIntensity: 0.53
   NightAmbientColorSky:
     serializedVersion: 2
     key0: {r: 0.5808823, g: 0.5837729, b: 1, a: 1}
@@ -358,7 +358,7 @@ MonoBehaviour:
   NightAmbientColorSkyIntensity: 0.02
   NightAmbientColorGround:
     serializedVersion: 2
-    key0: {r: 0.5808823, g: 0.5837729, b: 1, a: 1}
+    key0: {r: 0, g: 0.0053782263, b: 0.5754717, a: 1}
     key1: {r: 0.5808823, g: 0.5837729, b: 1, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
@@ -385,7 +385,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  NightAmbientColorGroundIntensity: 0.02
+  NightAmbientColorGroundIntensity: 0.28
   NightAmbientColorEquator:
     serializedVersion: 2
     key0: {r: 0.5808823, g: 0.5837729, b: 1, a: 1}
@@ -415,7 +415,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  NightAmbientColorEquatorIntensity: 0.02
+  NightAmbientColorEquatorIntensity: 0.43
   SunTintColorGradient:
     serializedVersion: 2
     key0: {r: 1, g: 1, b: 1, a: 1}

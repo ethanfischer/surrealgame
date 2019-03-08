@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: WeatherMakerFullScreenFogProfile_Smoky_Custom
   m_EditorClassIdentifier: 
   FogMode: 3
-  FogDensity: 0.014
+  FogDensity: 0.001
   FogFactorMultiplier: 1
   FogColor: {r: 0, g: 0, b: 0, a: 1}
   FogEmissionColor: {r: 0, g: 0, b: 0, a: 1}

@@ -1,10 +1,12 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.ExtensionsAndUtilities;
+using UnityEngine;
 
 namespace Assets.Scripts.PlayerScripts
 {
     public class Player : MonoBehaviour
     {
-        public PlayerInventoryVR Inventory; 
+        public PlayerInventoryVR Inventory;
+        public GameObject Avatar;
 
         private static Player _instance = null;
         public static Player Instance
@@ -20,9 +22,14 @@ namespace Assets.Scripts.PlayerScripts
             }
         }
 
-        public void SetPosition (Vector3 v)
+        public void SetPosition(Vector3 v)
         {
             this.transform.position = v;
+        }
+
+        private void Start()
+        {
+            Avatar.ComplainIfNull();
         }
     }
 }

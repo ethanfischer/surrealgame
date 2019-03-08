@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.16491634, g: 0.3207547, b: 0.23417783, a: 1}
+  m_AmbientSkyColor: {r: 0.14293341, g: 0.166414, b: 0.41509432, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -383,7 +383,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh297224
+  m_Name: pb_Mesh314972
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -10159,6 +10159,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1160517672}
+  - component: {fileID: 1160517673}
   m_Layer: 0
   m_Name: head
   m_TagString: Untagged
@@ -10180,6 +10181,17 @@ Transform:
   m_Father: {fileID: 731386507}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1160517673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1160517671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32dcfbda9d6e52e448f2436d9c9cf828, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1164351422
 GameObject:
   m_ObjectHideFlags: 0
@@ -20521,7 +20533,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh296742
+  m_Name: pb_Mesh314498
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2

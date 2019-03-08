@@ -22,7 +22,7 @@ RenderSettings:
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.06960889, g: 0.06921411, b: 0.08096816, a: 0.1}
   m_AmbientEquatorColor: {r: 0.09521041, g: 0.096823275, b: 0.079894945, a: 0.1}
-  m_AmbientGroundColor: {r: 0.09521041, g: 0.096823275, b: 0.079894945, a: 0.1}
+  m_AmbientGroundColor: {r: 0.078431375, g: 0.094144545, b: 0.09803922, a: 0.1}
   m_AmbientIntensity: 0
   m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
@@ -11689,36 +11689,31 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 114915451742744900, guid: 0aad3b02b77dd4140a505a6a037e1675,
-        type: 2}
-      propertyPath: AutoAddLights.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 33438033773191118, guid: 0aad3b02b77dd4140a505a6a037e1675,
-        type: 2}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1753726650}
-    - target: {fileID: 33411116416943108, guid: 0aad3b02b77dd4140a505a6a037e1675,
-        type: 2}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1664635650}
-    - target: {fileID: 33401103051416178, guid: 0aad3b02b77dd4140a505a6a037e1675,
-        type: 2}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1736878290}
-    - target: {fileID: 33129870607736778, guid: 0aad3b02b77dd4140a505a6a037e1675,
-        type: 2}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1103668901}
     - target: {fileID: 33126925066286578, guid: 0aad3b02b77dd4140a505a6a037e1675,
         type: 2}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1293778608}
+    - target: {fileID: 33129870607736778, guid: 0aad3b02b77dd4140a505a6a037e1675,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1103668901}
+    - target: {fileID: 33401103051416178, guid: 0aad3b02b77dd4140a505a6a037e1675,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1736878290}
+    - target: {fileID: 33411116416943108, guid: 0aad3b02b77dd4140a505a6a037e1675,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1664635650}
+    - target: {fileID: 33438033773191118, guid: 0aad3b02b77dd4140a505a6a037e1675,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1753726650}
     - target: {fileID: 1289281111498416, guid: 0aad3b02b77dd4140a505a6a037e1675, type: 2}
       propertyPath: m_IsActive
       value: 0

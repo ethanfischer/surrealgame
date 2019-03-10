@@ -1,0 +1,296 @@
+fileFormatVersion: 2
+guid: 5e76a97a511c1be4d8d0abcd305db048
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: ball_l
+    100002: ball_l_end
+    100004: ball_r
+    100006: ball_r_end
+    100008: calf_l
+    100010: calf_r
+    100012: clavicle_l
+    100014: clavicle_r
+    100016: foot_l
+    100018: foot_r
+    100020: hand_l
+    100022: hand_r
+    100024: head
+    100026: head_end
+    100028: index_01_l
+    100030: index_01_r
+    100032: index_02_l
+    100034: index_02_r
+    100036: index_03_l
+    100038: index_03_l_end
+    100040: index_03_r
+    100042: index_03_r_end
+    100044: lowerarm_l
+    100046: lowerarm_r
+    100048: //RootNode
+    100050: Mau_kwo
+    100052: Mau_kwo:Body
+    100054: Mau_kwo:Eyebrow001
+    100056: Mau_kwo:Eyelashes01
+    100058: Mau_kwo:Low-poly
+    100060: Mau_kwo:Male_casualsuit05
+    100062: Mau_kwo:Short04
+    100064: Mau_kwo:Tongue01
+    100066: middle_01_l
+    100068: middle_01_r
+    100070: middle_02_l
+    100072: middle_02_r
+    100074: middle_03_l
+    100076: middle_03_l_end
+    100078: middle_03_r
+    100080: middle_03_r_end
+    100082: neck_01
+    100084: pelvis
+    100086: pinky_01_l
+    100088: pinky_01_r
+    100090: pinky_02_l
+    100092: pinky_02_r
+    100094: pinky_03_l
+    100096: pinky_03_l_end
+    100098: pinky_03_r
+    100100: pinky_03_r_end
+    100102: ring_01_l
+    100104: ring_01_r
+    100106: ring_02_l
+    100108: ring_02_r
+    100110: ring_03_l
+    100112: ring_03_l_end
+    100114: ring_03_r
+    100116: ring_03_r_end
+    100118: Root
+    100120: spine_01
+    100122: spine_02
+    100124: spine_03
+    100126: Sun
+    100128: thigh_l
+    100130: thigh_r
+    100132: thumb_01_l
+    100134: thumb_01_r
+    100136: thumb_02_l
+    100138: thumb_02_r
+    100140: thumb_03_l
+    100142: thumb_03_l_end
+    100144: thumb_03_r
+    100146: thumb_03_r_end
+    100148: upperarm_l
+    100150: upperarm_r
+    400000: ball_l
+    400002: ball_l_end
+    400004: ball_r
+    400006: ball_r_end
+    400008: calf_l
+    400010: calf_r
+    400012: clavicle_l
+    400014: clavicle_r
+    400016: foot_l
+    400018: foot_r
+    400020: hand_l
+    400022: hand_r
+    400024: head
+    400026: head_end
+    400028: index_01_l
+    400030: index_01_r
+    400032: index_02_l
+    400034: index_02_r
+    400036: index_03_l
+    400038: index_03_l_end
+    400040: index_03_r
+    400042: index_03_r_end
+    400044: lowerarm_l
+    400046: lowerarm_r
+    400048: //RootNode
+    400050: Mau_kwo
+    400052: Mau_kwo:Body
+    400054: Mau_kwo:Eyebrow001
+    400056: Mau_kwo:Eyelashes01
+    400058: Mau_kwo:Low-poly
+    400060: Mau_kwo:Male_casualsuit05
+    400062: Mau_kwo:Short04
+    400064: Mau_kwo:Tongue01
+    400066: middle_01_l
+    400068: middle_01_r
+    400070: middle_02_l
+    400072: middle_02_r
+    400074: middle_03_l
+    400076: middle_03_l_end
+    400078: middle_03_r
+    400080: middle_03_r_end
+    400082: neck_01
+    400084: pelvis
+    400086: pinky_01_l
+    400088: pinky_01_r
+    400090: pinky_02_l
+    400092: pinky_02_r
+    400094: pinky_03_l
+    400096: pinky_03_l_end
+    400098: pinky_03_r
+    400100: pinky_03_r_end
+    400102: ring_01_l
+    400104: ring_01_r
+    400106: ring_02_l
+    400108: ring_02_r
+    400110: ring_03_l
+    400112: ring_03_l_end
+    400114: ring_03_r
+    400116: ring_03_r_end
+    400118: Root
+    400120: spine_01
+    400122: spine_02
+    400124: spine_03
+    400126: Sun
+    400128: thigh_l
+    400130: thigh_r
+    400132: thumb_01_l
+    400134: thumb_01_r
+    400136: thumb_02_l
+    400138: thumb_02_r
+    400140: thumb_03_l
+    400142: thumb_03_l_end
+    400144: thumb_03_r
+    400146: thumb_03_r_end
+    400148: upperarm_l
+    400150: upperarm_r
+    2100000: Mau_kwo_Male_casualsuit05_Male_casualsuit05
+    2100002: Mau_kwo_Tongue01_Tongue01material
+    2100004: Mau_kwo_Eyelashes01_Bodymaterial
+    2100006: Mau_kwo_Eyebrow001_Eyebrow001
+    2100008: Mau_kwo_Low-poly_Eye_brown
+    2100010: Mau_kwo_Short04_Short04
+    2100012: Mau_kwo_Body_Defaultskin
+    4300000: Mau_kwo:Male_casualsuit05
+    4300002: Mau_kwo:Tongue01
+    4300004: Mau_kwo:Eyelashes01
+    4300006: Mau_kwo:Eyebrow001
+    4300008: Mau_kwo:Low-poly
+    4300010: Mau_kwo:Short04
+    4300012: Mau_kwo:Body
+    9500000: //RootNode
+    10800000: Sun
+    13700000: Mau_kwo:Body
+    13700002: Mau_kwo:Eyebrow001
+    13700004: Mau_kwo:Eyelashes01
+    13700006: Mau_kwo:Low-poly
+    13700008: Mau_kwo:Male_casualsuit05
+    13700010: Mau_kwo:Short04
+    13700012: Mau_kwo:Tongue01
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mau_kwo_Body_Defaultskin
+    second: {fileID: 2100000, guid: 3ae0061371f2bb046a89ab1e3a3eb3ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mau_kwo_Eyebrow001_Eyebrow001
+    second: {fileID: 2100000, guid: 05f863a68713660439cad68f9586e774, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mau_kwo_Eyelashes01_Bodymaterial
+    second: {fileID: 2100000, guid: 21f927674df7e7346ac7e66486c4f970, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mau_kwo_Low-poly_Eye_brown
+    second: {fileID: 2100000, guid: 9045126a2a7252c46b8bcccdeb397a61, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mau_kwo_Male_casualsuit05_Male_casualsuit05
+    second: {fileID: 2100000, guid: 99f46facde8761345ad4ef8be39df6c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mau_kwo_Short04_Short04
+    second: {fileID: 2100000, guid: 38e7a604dd3335449b3ad90a16d95d49, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mau_kwo_Tongue01_Tongue01material
+    second: {fileID: 2100000, guid: 7a9da7255d75728499dc3f8717dcc1ff, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.75
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

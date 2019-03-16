@@ -11,6 +11,7 @@ namespace Assets.Scripts.ExtensionsAndUtilities
     {
         public static bool IsVisibleFrom(this Renderer renderer, Camera camera)
         {
+            if (camera == null) return false;
             Plane[] planes = GeometryUtility.CalculateFrustumPlanes(camera);
             return GeometryUtility.TestPlanesAABB(planes, renderer.bounds);
         }

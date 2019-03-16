@@ -5,7 +5,7 @@ namespace Assets.Scripts
 {
     public class IsVisbleEvents : MonoBehaviour
     {
-        public event VisibilityChangedEvent VisibilityChangedEvent;
+        public event VisibilityChangedEvent VisibilityChangedEvent; 
         public bool IsVisible { get; set; }
         private Renderer _renderer;
 
@@ -21,7 +21,7 @@ namespace Assets.Scripts
             var isVisible = _renderer.IsVisibleFrom(Camera.main);
             if (isVisible != IsVisible)
             {
-                VisibilityChangedEvent.Invoke(this, new VisibilityChangedEventArgs(isVisible));
+                VisibilityChangedEvent?.Invoke(this, new VisibilityChangedEventArgs(isVisible));
                 IsVisible = isVisible;
                 Debug.Log("Visibility changed to" + IsVisible);
             }

@@ -9,7 +9,7 @@ namespace VRTK.Controllables.ArtificialBased
     /// </summary>
     /// <remarks>
     /// **Required Components:**
-    ///  * `Collider` - A Unity Collider to determine when an interaction has occured. Can be a compound collider set in child Prefabs. Will be automatically added at runtime.
+    ///  * `Collider` - A Unity Collider to determine when an interaction has occured. Can be a compound collider set in child GameObjects. Will be automatically added at runtime.
     ///
     /// **Script Usage:**
     ///  * Place the `VRTK_ArtificialPusher` script onto the GameObject that is to become the pusher.

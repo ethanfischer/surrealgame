@@ -76,7 +76,7 @@ namespace VRTK
         public bool enableBodyCollisions = true;
         [Tooltip("If this is checked then any items that are grabbed with the controller will not collide with the body collider. This is very useful if the user is required to grab and wield objects because if the collider was active they would bounce off the collider.")]
         public bool ignoreGrabbedCollisions = true;
-        [Tooltip("An array of Prefabs that will not collide with the body collider.")]
+        [Tooltip("An array of GameObjects that will not collide with the body collider.")]
         public GameObject[] ignoreCollisionsWith;
         [Tooltip("The collider which is created for the user is set at a height from the user's headset position. If the collider is required to be lower to allow for room between the play area collider and the headset then this offset value will shorten the height of the generated collider.")]
         public float headsetYOffset = 0.2f;

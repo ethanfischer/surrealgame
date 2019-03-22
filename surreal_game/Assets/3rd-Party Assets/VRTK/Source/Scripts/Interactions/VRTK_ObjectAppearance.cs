@@ -7,7 +7,7 @@ namespace VRTK
     using Highlighters;
 
     /// <summary>
-    /// A collection of static methods for calling controlling the appearance of Prefabs such as opacity, render state and highlighter state.
+    /// A collection of static methods for calling controlling the appearance of GameObjects such as opacity, render state and highlighter state.
     /// </summary>
     /// <remarks>
     /// **Script Usage:**

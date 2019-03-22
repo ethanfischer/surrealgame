@@ -106,9 +106,9 @@ namespace VRTK
         protected Transform cachedPointerAttachPoint = null;
 
         /// <summary>
-        /// The GetPointerObjects returns an array of the auto generated Prefabs associated with the pointer.
+        /// The GetPointerObjects returns an array of the auto generated GameObjects associated with the pointer.
         /// </summary>
-        /// <returns>An array of pointer auto generated Prefabs.</returns>
+        /// <returns>An array of pointer auto generated GameObjects.</returns>
         public abstract GameObject[] GetPointerObjects();
 
         /// <summary>
@@ -594,7 +594,11 @@ namespace VRTK
                 Rigidbody objectInteratorRigidBody = objectInteractorAttachPoint.AddComponent<Rigidbody>();
                 objectInteratorRigidBody.isKinematic = true;
                 objectInteratorRigidBody.freezeRotation = true;
+#if UNITY_2018_3_OR_NEWER
+                objectInteratorRigidBody.collisionDetectionMode = CollisionDetectionMode.ContinuousSpeculative;
+#else
                 objectInteratorRigidBody.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
+#endif
                 VRTK_PlayerObject.SetPlayerObject(objectInteractorAttachPoint, VRTK_PlayerObject.ObjectTypes.Pointer);
             }
 

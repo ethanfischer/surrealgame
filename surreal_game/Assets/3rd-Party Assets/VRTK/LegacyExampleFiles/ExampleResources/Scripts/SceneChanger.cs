@@ -61,27 +61,25 @@
             int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
             int nextSceneIndex = currentSceneIndex;
 
-            //if (IsForwardPressed() || Input.GetKeyUp(KeyCode.Space))
-            //{
-            //    nextSceneIndex++;
-            //    if (nextSceneIndex >= SceneManager.sceneCountInBuildSettings)
-            //        nextSceneIndex = 0;
-            //}
-            //else if (IsBackPressed() || Input.GetKeyUp(KeyCode.Backspace))
-            //{
-            //    nextSceneIndex--;
-            //    if (nextSceneIndex < 0)
-            //        nextSceneIndex = SceneManager.sceneCountInBuildSettings - 1;
-            //}
+            if (IsForwardPressed() || Input.GetKeyUp(KeyCode.Space))
+            {
+                nextSceneIndex++;
+                if (nextSceneIndex >= SceneManager.sceneCountInBuildSettings)
+                    nextSceneIndex = 0;
+            }
+            else if (IsBackPressed() || Input.GetKeyUp(KeyCode.Backspace))
+            {
+                nextSceneIndex--;
+                if (nextSceneIndex < 0)
+                    nextSceneIndex = SceneManager.sceneCountInBuildSettings - 1;
+            }
 
-            //if (nextSceneIndex == currentSceneIndex)
-            //{
-            //    return;
-            //}
+            if (nextSceneIndex == currentSceneIndex)
+            {
+                return;
+            }
 
-            //SceneManager.LoadScene(nextSceneIndex);
-
-            //TODO scene switcher isn't working. Just don't use it for now
+            SceneManager.LoadScene(nextSceneIndex);
         }
     }
 }

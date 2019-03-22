@@ -499,8 +499,6 @@ namespace VRTK
         /// </summary>
         public event ControllerInteractionEventHandler TouchpadTouchEnd;
 
-        public event ControllerInteractionEventHandler TouchpadAxisZero;
-
         /// <summary>
         /// Emitted when the touchpad is being touched in a different location.
         /// </summary>
@@ -846,14 +844,6 @@ namespace VRTK
             if (TouchpadTouchEnd != null)
             {
                 TouchpadTouchEnd(this, e);
-            }
-        }
-
-        public virtual void OnTouchPadAxisZero(ControllerInteractionEventArgs e)
-        {
-            if (TouchpadAxisZero != null)
-            {
-                TouchpadAxisZero(this, e);
             }
         }
 

@@ -94,7 +94,7 @@ namespace VRTK
         public event HapticPulseEventHandler FireHapticPulse;
 
         //Has to be public to keep state from editor -> play mode?
-        [Tooltip("The actual Prefabs that make up the radial menu.")]
+        [Tooltip("The actual GameObjects that make up the radial menu.")]
         public List<GameObject> menuButtons = new List<GameObject>();
 
         protected int currentHover = -1;

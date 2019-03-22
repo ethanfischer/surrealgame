@@ -85,9 +85,9 @@ namespace VRTK
         }
 
         /// <summary>
-        /// The GetPointerObjects returns an array of the auto generated Prefabs associated with the pointer.
+        /// The GetPointerObjects returns an array of the auto generated GameObjects associated with the pointer.
         /// </summary>
-        /// <returns>An array of pointer auto generated Prefabs.</returns>
+        /// <returns>An array of pointer auto generated GameObjects.</returns>
         public override GameObject[] GetPointerObjects()
         {
             return new GameObject[] { actualContainer, actualCursor };

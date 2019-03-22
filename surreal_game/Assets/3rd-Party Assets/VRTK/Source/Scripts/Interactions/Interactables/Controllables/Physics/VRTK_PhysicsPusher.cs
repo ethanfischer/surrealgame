@@ -8,7 +8,7 @@ namespace VRTK.Controllables.PhysicsBased
     /// </summary>
     /// <remarks>
     /// **Required Components:**
-    ///  * `Collider` - A Unity Collider to determine when an interaction has occured. Can be a compound collider set in child Prefabs. Will be automatically added at runtime.
+    ///  * `Collider` - A Unity Collider to determine when an interaction has occured. Can be a compound collider set in child GameObjects. Will be automatically added at runtime.
     ///  * `Rigidbody` - A Unity Rigidbody to allow the GameObject to be affected by the Unity Physics System. Will be automatically added at runtime.
     ///
     /// **Optional Components:**
@@ -148,7 +148,11 @@ namespace VRTK.Controllables.PhysicsBased
         protected override void ConfigueRigidbody()
         {
             SetRigidbodyGravity(false);
+#if UNITY_2018_3_OR_NEWER
+            SetRigidbodyCollisionDetectionMode(CollisionDetectionMode.ContinuousSpeculative);
+#else
             SetRigidbodyCollisionDetectionMode(CollisionDetectionMode.ContinuousDynamic);
+#endif
             SetRigidbodyConstraints(RigidbodyConstraints.FreezeRotation);
         }
 

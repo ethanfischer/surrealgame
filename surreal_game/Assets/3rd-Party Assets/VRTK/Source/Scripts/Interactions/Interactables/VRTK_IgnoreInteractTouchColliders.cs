@@ -11,18 +11,18 @@ namespace VRTK
     /// </summary>
     /// <remarks>
     /// **Required Components:**
-    ///  * `Collider` - Unity Colliders on the current GameObject or child Prefabs to ignore collisions from the given Interact Touch colliders.
+    ///  * `Collider` - Unity Colliders on the current GameObject or child GameObjects to ignore collisions from the given Interact Touch colliders.
     ///
     /// **Script Usage:**
     ///  * Place the `VRTK_IgnoreInteractTouchColliders` script on the GameObject with colliders to ignore collisions from the given Interact Touch colliders.
     ///  * Increase the size of the `Interact Touch To Ignore` element list.
-    ///  * Add the appropriate Prefabs that have the `VRTK_InteractTouch` script attached to use when ignoring collisions with the colliders on GameObject the script is attached to.
+    ///  * Add the appropriate GameObjects that have the `VRTK_InteractTouch` script attached to use when ignoring collisions with the colliders on GameObject the script is attached to.
     /// </remarks>
     public class VRTK_IgnoreInteractTouchColliders : VRTK_SDKControllerReady
     {
         [Tooltip("The Interact Touch scripts to ignore collisions with.")]
         public List<VRTK_InteractTouch> interactTouchToIgnore = new List<VRTK_InteractTouch>();
-        [Tooltip("A collection of Prefabs to not include when ignoring collisions with the provided Interact Touch colliders.")]
+        [Tooltip("A collection of GameObjects to not include when ignoring collisions with the provided Interact Touch colliders.")]
         public List<GameObject> skipIgnore = new List<GameObject>();
 
         protected Collider[] localColliders = new Collider[0];

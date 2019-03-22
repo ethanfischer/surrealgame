@@ -28,7 +28,7 @@ namespace VRTK.Highlighters
     {
         [Tooltip("The thickness of the outline effect")]
         public float thickness = 1f;
-        [Tooltip("The Prefabs to use as the model to outline. If one isn't provided then the first GameObject with a valid Renderer in the current GameObject hierarchy will be used.")]
+        [Tooltip("The GameObjects to use as the model to outline. If one isn't provided then the first GameObject with a valid Renderer in the current GameObject hierarchy will be used.")]
         public GameObject[] customOutlineModels;
         [Tooltip("A path to a GameObject to find at runtime, if the GameObject doesn't exist at edit time.")]
         public string[] customOutlineModelPaths;

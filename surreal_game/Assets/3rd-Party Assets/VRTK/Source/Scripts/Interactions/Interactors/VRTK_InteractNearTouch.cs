@@ -60,9 +60,9 @@ namespace VRTK
         }
 
         /// <summary>
-        /// The GetNearTouchedObjects method returns all of the Prefabs that are currently being near touched.
+        /// The GetNearTouchedObjects method returns all of the GameObjects that are currently being near touched.
         /// </summary>
-        /// <returns>A list of Prefabs that are being near touched.</returns>
+        /// <returns>A list of GameObjects that are being near touched.</returns>
         public virtual List<GameObject> GetNearTouchedObjects()
         {
             return nearTouchedObjects;
@@ -84,7 +84,7 @@ namespace VRTK
         /// <summary>
         /// The ForceStopNearTouching method will stop the Interact Touch GameObject from near touching an Interactable Object even if the Interact Touch GameObject is physically touching the Interactable Object still.
         /// </summary>
-        /// <param name="obj">An optional GameObject to only include in the force stop. If this is null then all near touched Prefabs will be force stopped.</param>
+        /// <param name="obj">An optional GameObject to only include in the force stop. If this is null then all near touched GameObjects will be force stopped.</param>
         public virtual void ForceStopNearTouching(GameObject obj = null)
         {
             if (obj != null)

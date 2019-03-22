@@ -278,9 +278,9 @@ namespace VRTK
         }
 
         /// <summary>
-        /// The GetHoveringObjects method returns a List of valid Prefabs that are currently hovering (but not snapped) in the snap drop zone area.
+        /// The GetHoveringObjects method returns a List of valid GameObjects that are currently hovering (but not snapped) in the snap drop zone area.
         /// </summary>
-        /// <returns>The List of valid Prefabs that are hovering (but not snapped) in the snap drop zone area.</returns>
+        /// <returns>The List of valid GameObjects that are hovering (but not snapped) in the snap drop zone area.</returns>
         public virtual List<GameObject> GetHoveringObjects()
         {
             List<GameObject> returnList = new List<GameObject>();

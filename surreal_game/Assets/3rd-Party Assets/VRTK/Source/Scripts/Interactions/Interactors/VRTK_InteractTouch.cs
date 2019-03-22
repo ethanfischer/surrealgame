@@ -186,7 +186,7 @@ namespace VRTK
         }
 
         /// <summary>
-        /// The ToggleControllerRigidBody method toggles the Interact Touch rigidbody's ability to detect collisions. If it is true then the controller rigidbody will collide with other collidable Prefabs.
+        /// The ToggleControllerRigidBody method toggles the Interact Touch rigidbody's ability to detect collisions. If it is true then the controller rigidbody will collide with other collidable GameObjects.
         /// </summary>
         /// <param name="state">The state of whether the rigidbody is on or off. `true` toggles the rigidbody on and `false` turns it off.</param>
         /// <param name="forceToggle">Determines if the rigidbody has been forced into it's new state by another script. This can be used to override other non-force settings. Defaults to `false`</param>
@@ -534,7 +534,11 @@ namespace VRTK
             touchRigidBody.isKinematic = true;
             touchRigidBody.useGravity = false;
             touchRigidBody.constraints = RigidbodyConstraints.FreezeAll;
+#if UNITY_2018_3_OR_NEWER
+            touchRigidBody.collisionDetectionMode = CollisionDetectionMode.ContinuousSpeculative;
+#else
             touchRigidBody.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
+#endif
         }
 
         protected virtual void EmitControllerRigidbodyEvent(bool state)

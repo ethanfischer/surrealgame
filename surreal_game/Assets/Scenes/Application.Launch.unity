@@ -10156,11 +10156,11 @@ MonoBehaviour:
   holdButtonToActivate: 0
   activateOnEnable: 1
   activationDelay: 0
-  selectionButton: 10
-  selectOnPress: 0
+  selectionButton: 14
+  selectOnPress: 1
   selectionDelay: 0
   selectAfterHoverDuration: 0
-  interactWithObjects: 0
+  interactWithObjects: 1
   grabToPointerTip: 0
   attachedTo: {fileID: 0}
   controllerEvents: {fileID: 0}
@@ -10189,7 +10189,7 @@ MonoBehaviour:
     maxAllowedPerFrameAngleDifference: 1.5
   validCollisionColor: {r: 0, g: 1, b: 0, a: 1}
   invalidCollisionColor: {r: 1, g: 0, b: 0, a: 1}
-  tracerVisibility: 1
+  tracerVisibility: 2
   cursorVisibility: 1
   maximumLength: 300
   scaleFactor: 0.002

@@ -22,13 +22,13 @@ namespace Assets.Scripts
             switch (_dialogueCounter)
             {
                 case 0:
-                    TextMesh.text = "You dropped something.";
+                    TextMesh.text = "Hurry up. We're closing.";
                     break;
                 case 1:
-                    TextMesh.text = "Enjoy";
+                    TextMesh.text = "Buy something or beat it.";
                     break;
                 case 2:
-                    GiveKey();
+                    TextMesh.text = "Take something, I don't care.";
                     break;
                 default:
                     break;

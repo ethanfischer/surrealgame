@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts.ExtensionsAndUtilities;
 using UnityEngine;
+using VRTK;
 
 namespace Assets.Scripts.PlayerScripts
 {
@@ -7,6 +8,7 @@ namespace Assets.Scripts.PlayerScripts
     {
         public PlayerInventoryVR Inventory;
         public GameObject Avatar;
+        public VRTK_SDKManager VRTK_SDKManager;
 
         private static Player _instance = null;
         public static Player Instance

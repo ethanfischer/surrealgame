@@ -3398,6 +3398,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c52b3a0d5f4fd744bbbd135b8d647b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &481789268 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114420450764430950, guid: ccf54c904405fbb4fb4035260dc2ca45,
+    type: 3}
+  m_PrefabInstance: {fileID: 481789266}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936151543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eba3cd5456cd79e49948f5ceb58544b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &491956848
 GameObject:
   m_ObjectHideFlags: 0
@@ -10152,9 +10164,9 @@ MonoBehaviour:
   enableTeleport: 0
   targetListPolicy: {fileID: 0}
   pointerRenderer: {fileID: 1746569768}
-  activationButton: 0
-  holdButtonToActivate: 0
-  activateOnEnable: 1
+  activationButton: 14
+  holdButtonToActivate: 1
+  activateOnEnable: 0
   activationDelay: 0
   selectionButton: 14
   selectOnPress: 1
@@ -10163,10 +10175,10 @@ MonoBehaviour:
   interactWithObjects: 1
   grabToPointerTip: 0
   attachedTo: {fileID: 0}
-  controllerEvents: {fileID: 1746569770}
+  controllerEvents: {fileID: 481789268}
   interactUse: {fileID: 0}
   customOrigin: {fileID: 0}
-  controller: {fileID: 1746569770}
+  controller: {fileID: 0}
 --- !u!114 &1746569768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10190,7 +10202,7 @@ MonoBehaviour:
   validCollisionColor: {r: 1, g: 1, b: 1, a: 0.5372549}
   invalidCollisionColor: {r: 1, g: 0, b: 0, a: 0.5372549}
   tracerVisibility: 2
-  cursorVisibility: 1
+  cursorVisibility: 0
   maximumLength: 300
   scaleFactor: 0.002
   cursorScaleMultiplier: 25
@@ -10219,7 +10231,7 @@ MonoBehaviour:
   clickAfterHoverDuration: 0
   maximumLength: Infinity
   attachedTo: {fileID: 0}
-  controllerEvents: {fileID: 1746569770}
+  controllerEvents: {fileID: 481789268}
   customOrigin: {fileID: 0}
   controller: {fileID: 0}
   pointerOriginTransform: {fileID: 0}
@@ -10229,56 +10241,6 @@ MonoBehaviour:
   canClickOnHover: 0
   autoActivatingCanvas: {fileID: 0}
   collisionClick: 0
---- !u!114 &1746569770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1746569766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eba3cd5456cd79e49948f5ceb58544b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  axisFidelity: 1
-  senseAxisForceZeroThreshold: 0.15
-  senseAxisPressThreshold: 0.95
-  triggerClickThreshold: 1
-  triggerForceZeroThreshold: 0.01
-  triggerAxisZeroOnUntouch: 0
-  gripClickThreshold: 1
-  gripForceZeroThreshold: 0.01
-  gripAxisZeroOnUntouch: 0
-  triggerPressed: 0
-  triggerTouched: 0
-  triggerHairlinePressed: 0
-  triggerClicked: 0
-  triggerAxisChanged: 0
-  triggerSenseAxisChanged: 0
-  gripPressed: 0
-  gripTouched: 0
-  gripHairlinePressed: 0
-  gripClicked: 0
-  gripAxisChanged: 0
-  touchpadPressed: 0
-  touchpadTouched: 0
-  touchpadAxisChanged: 0
-  touchpadSenseAxisChanged: 0
-  touchpadTwoTouched: 0
-  touchpadTwoPressed: 0
-  touchpadTwoAxisChanged: 0
-  buttonOnePressed: 0
-  buttonOneTouched: 0
-  buttonTwoPressed: 0
-  buttonTwoTouched: 0
-  startMenuPressed: 0
-  middleFingerSenseAxisChanged: 0
-  ringFingerSenseAxisChanged: 0
-  pinkyFingerSenseAxisChanged: 0
-  gripSenseAxisChanged: 0
-  gripSensePressed: 0
-  controllerVisible: 1
 --- !u!1 &1749098681
 GameObject:
   m_ObjectHideFlags: 0

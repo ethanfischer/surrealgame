@@ -10225,8 +10225,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activationButton: 0
   activationMode: 2
-  selectionButton: 3
-  clickMethod: 1
+  selectionButton: 14
+  clickMethod: 0
   attemptClickOnDeactivate: 0
   clickAfterHoverDuration: 0
   maximumLength: Infinity

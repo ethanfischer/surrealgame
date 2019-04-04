@@ -15,20 +15,19 @@ namespace Assets.Scripts
         public GameObject DialogueObject;
         public TextMesh TextMesh;
 
-        private VRTK_ControllerEvents ControllerEvents;
+        //private VRTK_ControllerEvents ControllerEvents;
 
         private int _dialogueCounter = 0;
 
         private void Awake()
         {
-            ControllerEvents = Player.Instance.VRTK_SDKManager.scriptAliasRightController.GetComponent<VRTK_ControllerEvents>();
-            ControllerEvents.ButtonOnePressed += AdvanceDialogue;
+            //ControllerEvents = Player.Instance.VRTK_SDKManager.scriptAliasRightController.GetComponent<VRTK_ControllerEvents>();
+            //ControllerEvents.ButtonOnePressed += AdvanceDialogue;
         }
 
-        public void AdvanceDialogue(object sender, ControllerInteractionEventArgs e)
+        public void AdvanceDialogue()
         {
             DialogueObject.SetActive(true);
-            Debug.Log("CLICKED");
             EditorApplication.Beep();
 
             switch (_dialogueCounter)

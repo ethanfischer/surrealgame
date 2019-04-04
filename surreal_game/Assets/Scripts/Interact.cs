@@ -41,6 +41,10 @@ namespace Assets.Scripts
                 case 2:
                     TextMesh.text = "Take something, I don't care.";
                     break;
+                case 3:
+                    TextMesh.text = "";
+                    _dialogueCounter = -1;
+                    break;
                 default:
                     break;
             }

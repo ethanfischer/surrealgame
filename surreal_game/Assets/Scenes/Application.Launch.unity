@@ -10199,13 +10199,13 @@ MonoBehaviour:
     maxAllowedPerFrameDistanceDifference: 0.003
     smoothsRotation: 0
     maxAllowedPerFrameAngleDifference: 1.5
-  validCollisionColor: {r: 1, g: 1, b: 1, a: 0.5372549}
+  validCollisionColor: {r: 1, g: 1, b: 1, a: 0.13333334}
   invalidCollisionColor: {r: 1, g: 0, b: 0, a: 0.5372549}
   tracerVisibility: 2
   cursorVisibility: 0
-  maximumLength: 300
+  maximumLength: 50
   scaleFactor: 0.002
-  cursorScaleMultiplier: 25
+  cursorScaleMultiplier: 15
   cursorMatchTargetRotation: 0
   cursorDistanceRescale: 0
   maximumCursorScale: {x: Infinity, y: Infinity, z: Infinity}

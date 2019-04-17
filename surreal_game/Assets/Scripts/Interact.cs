@@ -19,16 +19,9 @@ namespace Assets.Scripts
 
         private int _dialogueCounter = 0;
 
-        private void Awake()
-        {
-            //ControllerEvents = Player.Instance.VRTK_SDKManager.scriptAliasRightController.GetComponent<VRTK_ControllerEvents>();
-            //ControllerEvents.ButtonOnePressed += AdvanceDialogue;
-        }
-
         public void AdvanceDialogue()
         {
             DialogueObject.SetActive(true);
-            EditorApplication.Beep();
 
             switch (_dialogueCounter)
             {

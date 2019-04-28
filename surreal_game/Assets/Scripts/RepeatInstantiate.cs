@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Assets.Scripts
 {
@@ -9,6 +11,7 @@ namespace Assets.Scripts
         public GameObject Template;
         public Transform InstanceParent;
         public Axis AxisToRepeatOn;
+        public EventTrigger.TriggerEvent CallBack;
 
         public enum Axis
         {
@@ -25,6 +28,8 @@ namespace Assets.Scripts
                 var templatePosition = Template.transform.localPosition;
                 Tweak(i, clone, templatePosition);
             }
+
+            CallBack.Invoke(null);
         }
 
         private void Tweak(int i, GameObject clone, Vector3 templatePos)

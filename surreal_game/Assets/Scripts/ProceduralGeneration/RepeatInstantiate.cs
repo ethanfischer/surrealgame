@@ -33,7 +33,6 @@ namespace Assets.Scripts.ProceduralGeneration
         protected virtual void Tweak(int i, GameObject clone)
         {
             clone.transform.SetParent(InstanceParent, false);
-            clone.transform.rotation = Template.transform.rotation;
 
             var templatePos = Template.transform.localPosition;
 

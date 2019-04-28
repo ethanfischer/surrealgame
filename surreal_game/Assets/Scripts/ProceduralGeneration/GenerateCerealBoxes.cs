@@ -8,6 +8,7 @@ namespace Assets.Scripts.ProceduralGeneration
         {
             if (RandomlyPlacePancakeMix.Instance.TryGetPancakeMix(out GameObject go))
             {
+                go.transform.GetChild(0).localRotation = Template.transform.GetChild(0).localRotation;
                 return go;
             }
 

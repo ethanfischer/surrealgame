@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ReferenceFocuser : MonoBehaviour
 {
-    [MenuItem("GameObject/FocusOnReference _%0")]
+    [MenuItem("GameObject/FocusOnReference _%;")]
     public static void FocusOnReference()
     {
         Selection.activeGameObject = GameObject.FindGameObjectWithTag("FocusReference");

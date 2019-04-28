@@ -1,8 +1,6 @@
-﻿using Assets.Scripts.ProceduralGeneration;
-using UnityEngine;
-using Random = System.Random;
+﻿using UnityEngine;
 
-namespace Assets.Scripts
+namespace Assets.Scripts.ProceduralGeneration
 {
     public class RepeatInstantiate : MonoBehaviour
     {
@@ -17,27 +15,28 @@ namespace Assets.Scripts
             X, Y, Z
         }
 
-        void Start()
+        protected void Start()
         {
             for (var i = 1; i < RepeatCount; i++)
             {
-                var clone = Instantiate(Template);
-                clone.transform.SetParent(InstanceParent, false);
-
-                var templatePosition = Template.transform.localPosition;
-                Tweak(i, clone, templatePosition);
-
-                var gen = GetComponent<GenerateGroupBoxArt>();
-                if(gen)
-                {
-                    gen.Generate(ref clone);
-                }
+                var clone = MakeClone(i);
+                Tweak(i, clone);
             }
-
         }
 
-        private void Tweak(int i, GameObject clone, Vector3 templatePos)
+        protected virtual GameObject MakeClone(int i)
         {
+            var clone = Instantiate(Template);
+            return clone;
+        }
+
+        protected virtual void Tweak(int i, GameObject clone)
+        {
+            clone.transform.SetParent(InstanceParent, false);
+            clone.transform.rotation = Template.transform.rotation;
+
+            var templatePos = Template.transform.localPosition;
+
             switch (AxisToRepeatOn)
             {
                 case Axis.X:

@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Assets.Scripts.ProceduralGeneration;
 using UnityEngine;
-using UnityEngine.EventSystems;
+using Random = System.Random;
 
 namespace Assets.Scripts
 {
@@ -11,7 +11,6 @@ namespace Assets.Scripts
         public GameObject Template;
         public Transform InstanceParent;
         public Axis AxisToRepeatOn;
-        public EventTrigger.TriggerEvent CallBack;
 
         public enum Axis
         {
@@ -23,13 +22,18 @@ namespace Assets.Scripts
             for (var i = 1; i < RepeatCount; i++)
             {
                 var clone = Instantiate(Template);
-                clone.transform.SetParent(InstanceParent, false); 
+                clone.transform.SetParent(InstanceParent, false);
 
                 var templatePosition = Template.transform.localPosition;
                 Tweak(i, clone, templatePosition);
+
+                var gen = GetComponent<GenerateGroupBoxArt>();
+                if(gen)
+                {
+                    gen.Generate(ref clone);
+                }
             }
 
-            CallBack.Invoke(null);
         }
 
         private void Tweak(int i, GameObject clone, Vector3 templatePos)

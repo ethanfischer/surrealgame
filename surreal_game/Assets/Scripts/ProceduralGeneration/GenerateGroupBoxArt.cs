@@ -8,19 +8,22 @@ namespace Assets.Scripts.ProceduralGeneration
     {
         public List<Sprite> Sprites;
         public List<Material> Materials;
+        
 
-        public void Generate()
+        public void Generate(ref GameObject go)
         {
-            var i = new Random().Next(0, Materials.Count);
+            var i = BoxArtRandomNumberGenerator.Next(0, Materials.Count);
             var material = Materials[i];
 
-            var j = new Random().Next(0, Sprites.Count);
+            var j = BoxArtRandomNumberGenerator.Next(0, Sprites.Count);
             var sprite = Sprites[j];
 
-            foreach (Transform t in transform)
+            foreach (Transform t in go.transform)
             {
                 t.gameObject.GetComponent<GenerateBoxArt>().Generate(sprite, material);
             }
+
+            Debug.Log(material.name + " " + sprite);
         }
     }
 }

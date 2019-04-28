@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,7 +30,7 @@ namespace Assets.Scripts
 
         private static readonly int _totalBoxes = PRODUCTS_PER_SHELF * SHELVES_PER_AISLE * AISLES; //TODO figure out a less hardcoded way of doing this
         private int _boxesCloned;
-        private int _pancakeNumber = new Random().Next(0, _totalBoxes);
+        private int _pancakeNumber = new Random(DateTime.Now.GetHashCode()).Next(0, _totalBoxes);
         private GameObject _pancakeMix = GameObject.Find("PancakeMix");
 
         public bool TryGetPancakeMix(out GameObject go)

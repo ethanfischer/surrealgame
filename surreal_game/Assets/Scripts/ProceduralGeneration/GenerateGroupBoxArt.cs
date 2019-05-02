@@ -22,8 +22,6 @@ namespace Assets.Scripts.ProceduralGeneration
             {
                 t.gameObject.GetComponent<GenerateBoxArt>().Generate(sprite, material);
             }
-
-            Debug.Log(material.name + " " + sprite);
         }
     }
 }

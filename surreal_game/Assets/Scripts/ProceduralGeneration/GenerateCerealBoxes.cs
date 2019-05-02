@@ -19,7 +19,12 @@ namespace Assets.Scripts.ProceduralGeneration
         {
             base.Tweak(i, clone);
 
-            if (clone.name == "PancakeMix") return;
+            if (clone.name == "PancakeMix")
+            {
+                Debug.Log("clone position: " + clone.transform.position + " index: " + i);
+                return;
+            }
+
             GetComponent<GenerateGroupBoxArt>().Generate(ref clone);
         }
     }

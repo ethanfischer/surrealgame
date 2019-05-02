@@ -24,8 +24,8 @@ namespace Assets.Scripts
             }
         }
 
-        private const int PRODUCTS_PER_SHELF = 32;
-        private const int SHELVES_PER_AISLE = 10;
+        private const int PRODUCTS_PER_SHELF = 24;
+        private const int SHELVES_PER_AISLE = 6;
         private const int AISLES = 4;
 
         private static readonly int _totalBoxes = PRODUCTS_PER_SHELF * SHELVES_PER_AISLE * AISLES; //TODO figure out a less hardcoded way of doing this

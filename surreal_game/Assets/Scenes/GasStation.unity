@@ -6047,7 +6047,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SoundEffect: 1
-  IsOneShot: 0
+  IsOneShot: 1
 --- !u!114 &621658387
 MonoBehaviour:
   m_ObjectHideFlags: 0

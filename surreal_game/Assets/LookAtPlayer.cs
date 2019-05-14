@@ -8,6 +8,6 @@ public class LookAtPlayer : MonoBehaviour
 {
     void Update()
     {
-        transform.LookAt(Camera.main?.transform);
+        transform.LookAt(Camera.main?.transform, Vector3.up);
     }
 }

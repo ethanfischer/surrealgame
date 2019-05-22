@@ -1,13 +1,16 @@
-﻿using System.IO;
-using Assets.Scripts.PlayerScripts;
+﻿using Assets.Scripts.PlayerScripts;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 namespace Assets.Scripts
 {
     public class DialogueService : MonoBehaviour
     {
         public string[] Lines;
+        public UnityEvent PostLinesCallback; 
         public string[] Lines1;
+        public UnityEvent PostLines1Callback; 
 
         public GameObject DialogueObject;
         public TextMesh TextMesh;
@@ -41,6 +44,7 @@ namespace Assets.Scripts
             {
                 TextMesh.text = "";
                 _interactCount = -1;
+                PostLinesCallback.Invoke();
             }
 
             TextMesh.text = lines[_interactCount];

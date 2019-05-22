@@ -8491,20 +8491,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Lines:
   - Hey man
-  - I gotta tell you something
-  - I had some turbulence our friend the other day
-  - '...'
-  - He expressed some concerns about Frank
-  - And that incident in particular
-  - '...'
-  - I know what you're thinking
-  - I didn't tell him about her
-  - I thought about it
-  - Anyway. Pancakes.
-  - I have an idea where we can find them
-  - It's not close
-  - But I think Serena will understand
-  - '...'
+  - You seen Frank lately?
+  - He's gone missing again
+  - I have an idea where
+  - ..it's not close.
+  - But I think they'll have your pancakes
+  - I'm gonna get some gas
+  - You mind going in to pay?
+  - And grab me something tasty
   Lines1: []
   DialogueObject: {fileID: 690868255}
   TextMesh: {fileID: 690868258}

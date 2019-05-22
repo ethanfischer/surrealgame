@@ -8124,6 +8124,7 @@ GameObject:
   - component: {fileID: 690868259}
   - component: {fileID: 690868258}
   - component: {fileID: 690868257}
+  - component: {fileID: 690868260}
   m_Layer: 10
   m_Name: TextMesh
   m_TagString: Untagged
@@ -8172,6 +8173,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1722061903}
         m_MethodName: Teleport
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 690868260}
+        m_MethodName: Do
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8250,6 +8262,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &690868260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690868255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48f40ffd93fd8ca46b3a3ba7a463a9f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &705051786
 GameObject:
   m_ObjectHideFlags: 0

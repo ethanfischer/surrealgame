@@ -12404,6 +12404,7 @@ MonoBehaviour:
   Inventory: {fileID: 528650664}
   Avatar: {fileID: 1998817315}
   VRTK_SDKManager: {fileID: 2034240724}
+  BodyPhysics: {fileID: 2056966755}
 --- !u!114 &2034240719
 MonoBehaviour:
   m_ObjectHideFlags: 0

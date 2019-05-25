@@ -10230,9 +10230,9 @@ MonoBehaviour:
   enableTeleport: 0
   targetListPolicy: {fileID: 0}
   pointerRenderer: {fileID: 1746569768}
-  activationButton: 14
-  holdButtonToActivate: 1
-  activateOnEnable: 0
+  activationButton: 0
+  holdButtonToActivate: 0
+  activateOnEnable: 1
   activationDelay: 0
   selectionButton: 14
   selectOnPress: 1
@@ -10265,10 +10265,10 @@ MonoBehaviour:
     maxAllowedPerFrameDistanceDifference: 0.003
     smoothsRotation: 0
     maxAllowedPerFrameAngleDifference: 1.5
-  validCollisionColor: {r: 1, g: 1, b: 1, a: 0.13333334}
+  validCollisionColor: {r: 1, g: 1, b: 1, a: 0.5647059}
   invalidCollisionColor: {r: 1, g: 0, b: 0, a: 0.5372549}
   tracerVisibility: 2
-  cursorVisibility: 0
+  cursorVisibility: 2
   maximumLength: 50
   scaleFactor: 0.002
   cursorScaleMultiplier: 15

@@ -39,20 +39,22 @@ namespace Assets.Scripts
 
         private void Dialogue(string[] lines)
         {
-            bool hasReachedEnd = _interactCount >= Lines.Length;
+            bool hasReachedEnd = _interactCount >= lines.Length;
             if (hasReachedEnd)
             {
                 TextMesh.text = "";
-                _interactCount = -1;
+                _interactCount = 0;
                 PostLinesCallback.Invoke();
             }
 
             TextMesh.text = lines[_interactCount];
         }
 
-        public void Snap()
+        public void NextDialogue()
         {
-            _dialogueCount = 1;
+            Debug.Log("nextdialog");
+            _dialogueCount++;
+            _interactCount = 0;
             AdvanceDialogue();
         }
 

@@ -8,9 +8,12 @@ namespace Assets.Scripts
     public class DialogueService : MonoBehaviour
     {
         public string[] Lines;
-        public UnityEvent PostLinesCallback; 
+        public UnityEvent PostLinesCallback;
+        public bool ShouldLoopLines = false;
+
         public string[] Lines1;
-        public UnityEvent PostLines1Callback; 
+        public UnityEvent PostLines1Callback;
+        public bool ShouldLoopLines1 = false;
 
         public GameObject DialogueObject;
         public TextMesh TextMesh;
@@ -39,12 +42,18 @@ namespace Assets.Scripts
 
         private void Dialogue(string[] lines)
         {
-            bool hasReachedEnd = _interactCount >= lines.Length;
+            var hasReachedEnd = _interactCount >= lines.Length;
             if (hasReachedEnd)
             {
                 TextMesh.text = "";
-                _interactCount = 0;
                 PostLinesCallback.Invoke();
+
+                if (ShouldLoopLines)
+                {
+                    _interactCount = 0;
+                }
+
+                return;
             }
 
             TextMesh.text = lines[_interactCount];

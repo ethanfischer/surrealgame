@@ -3295,6 +3295,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: jeep
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 1bb736726edeed34abbc3929e248df91, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1bb736726edeed34abbc3929e248df91, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.61668

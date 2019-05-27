@@ -6918,7 +6918,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh499424
+  m_Name: pb_Mesh520946
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -29703,6 +29703,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 90ab9a87a06442a4992ab0dde803a936,
         type: 2}
+    - target: {fileID: 114000011108854712, guid: 555e340c147832a4caeeb3e0dffc49af,
+        type: 3}
+      propertyPath: FogMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: fc2f021993b472248b18aad0b599fb93, type: 2}
+    - target: {fileID: 65000013481403476, guid: 555e340c147832a4caeeb3e0dffc49af,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 555e340c147832a4caeeb3e0dffc49af, type: 3}
 --- !u!4 &1386472888 stripped

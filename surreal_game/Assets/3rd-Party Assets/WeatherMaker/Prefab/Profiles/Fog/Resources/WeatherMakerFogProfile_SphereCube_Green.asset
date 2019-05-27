@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1dbf99d734a1324d9d0da47c5d0d9d6, type: 3}
-  m_Name: WeatherMakerFogProfile_CubeGreen
+  m_Name: WeatherMakerFogProfile_SphereCube_Green
   m_EditorClassIdentifier: 
   FogMode: 1
-  FogDensity: 0.105
+  FogDensity: 0.094
   FogFactorMultiplier: 2.2
-  FogColor: {r: 0.021979213, g: 1, b: 0, a: 1}
-  FogEmissionColor: {r: 0.08511702, g: 0.9150943, b: 0, a: 1}
-  FogLightAbsorption: 0.3
-  MaxFogFactor: 0.052
+  FogColor: {r: 0.3034916, g: 1, b: 0, a: 1}
+  FogEmissionColor: {r: 0.3198574, g: 0.99215686, b: 0, a: 1}
+  FogLightAbsorption: 10
+  MaxFogFactor: 1
   FogNoiseScale: 0.02
-  FogNoiseAdder: -0.882
-  FogNoiseMultiplier: 0.22
+  FogNoiseAdder: -0.34
+  FogNoiseMultiplier: 1.84
   FogNoiseVelocity: {x: 0, y: 0, z: 0}
   FogNoiseVelocityRotation: {x: 0, y: 0, z: 0, w: 0}
   WindEffectsFogNoiseVelocity: 0
-  FogNoiseSampleCount: 11
+  FogNoiseSampleCount: 40
   DitherLevel: 0.0015
   FogShadowSampleCount: 0
   FogShadowMaxRayLength: 300
@@ -35,6 +35,6 @@ MonoBehaviour:
   FogShadowDecay: 0.95
   FogShadowDither: 0.4
   FogShadowDitherMagic: {x: 0.73, y: 1.665, z: 1024, w: 1024}
-  FogEdgeSmoothFactor: 0.024
-  FogHeightFalloffPower: 0.089
-  FogEdgeFalloffPower: 18.2
+  FogEdgeSmoothFactor: 0.095
+  FogHeightFalloffPower: 0.75
+  FogEdgeFalloffPower: 22.5

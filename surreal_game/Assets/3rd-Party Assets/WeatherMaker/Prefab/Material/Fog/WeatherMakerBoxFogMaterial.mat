@@ -36,7 +36,7 @@ Material:
     - _DirectionalLightMultiplier: 1
     - _DitherLevel: 0.005
     - _FogDensity: 0.261
-    - _FogMode: 1
+    - _FogMode: 2
     - _FogNoiseHeightMultiplier: 50
     - _FogNoiseHeightScale: 0.002
     - _FogNoiseHeightVariance: 10

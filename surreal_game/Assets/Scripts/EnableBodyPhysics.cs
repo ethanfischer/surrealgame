@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.PlayerScripts;
+﻿using System;
+using Assets.Scripts.PlayerScripts;
 using UnityEngine;
 
 namespace Assets.Scripts
@@ -7,7 +8,8 @@ namespace Assets.Scripts
     {
         public void Do()
         {
-            Player.Instance.BodyPhysics.enabled = true;
+            throw new NotImplementedException();
+            //Player.Instance.BodyPhysics.enabled = true;
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using Assets.Scripts.ExtensionsAndUtilities;
 using UnityEngine;
-using VRTK;
+//using VRTK;
 
 namespace Assets.Scripts.PlayerScripts
 {
@@ -8,8 +8,8 @@ namespace Assets.Scripts.PlayerScripts
     {
         public PlayerInventoryVR Inventory;
         public GameObject Avatar;
-        public VRTK_SDKManager VRTK_SDKManager;
-        public VRTK_BodyPhysics BodyPhysics;
+        //public VRTK_SDKManager VRTK_SDKManager;
+        //public VRTK_BodyPhysics BodyPhysics;
 
         private static Player _instance = null;
         public static Player Instance
@@ -37,12 +37,12 @@ namespace Assets.Scripts.PlayerScripts
 
         public void EnableBodyPhysics()
         {
-            VRTK_SDKManager.GetComponent<VRTK_BodyPhysics>().enabled = true;
+            //VRTK_SDKManager.GetComponent<VRTK_BodyPhysics>().enabled = true;
         }
 
         public void DisableBodyPhysics()
         {
-            VRTK_SDKManager.GetComponent<VRTK_BodyPhysics>().enabled = false;
+            //VRTK_SDKManager.GetComponent<VRTK_BodyPhysics>().enabled = false;
         }
     }
 }

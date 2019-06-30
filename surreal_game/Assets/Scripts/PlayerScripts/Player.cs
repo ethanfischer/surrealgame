@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.ExtensionsAndUtilities;
+﻿using System;
+using Assets.Scripts.ExtensionsAndUtilities;
 using UnityEngine;
 //using VRTK;
 
@@ -37,11 +38,13 @@ namespace Assets.Scripts.PlayerScripts
 
         public void EnableBodyPhysics()
         {
+            throw new NotImplementedException();
             //VRTK_SDKManager.GetComponent<VRTK_BodyPhysics>().enabled = true;
         }
 
         public void DisableBodyPhysics()
         {
+            throw new NotImplementedException();
             //VRTK_SDKManager.GetComponent<VRTK_BodyPhysics>().enabled = false;
         }
     }

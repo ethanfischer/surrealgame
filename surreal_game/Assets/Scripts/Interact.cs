@@ -6,8 +6,8 @@ using SurrealGame;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
-using VRTK;
-using VRTK.UnityEventHelper;
+//using VRTK;
+//using VRTK.UnityEventHelper;
 using Object = UnityEngine.Object;
 
 namespace Assets.Scripts

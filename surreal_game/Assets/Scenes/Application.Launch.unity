@@ -5703,7 +5703,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &838684957
 Transform:
   m_ObjectHideFlags: 0
@@ -12593,8 +12593,8 @@ MonoBehaviour:
   autoManageVRSettings: 0
   autoLoadSetup: 1
   setups:
-  - {fileID: 2072637043}
   - {fileID: 1370143985}
+  - {fileID: 2072637043}
   excludeTargetGroups: 1a0000001b000000
   persistOnLoad: 0
 --- !u!4 &2034240725
@@ -12705,7 +12705,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2056966753}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 174429e04b0388249a137b2dc0050b66, type: 3}
   m_Name: 

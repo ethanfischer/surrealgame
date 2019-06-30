@@ -11,7 +11,7 @@ namespace SurrealGame
     {
         void Awake()
         {
-            LoadSceneAdditively(Scenes.WEIRD_PLACE);
+            //LoadSceneAdditively(Scenes.WEIRD_PLACE);
             LoadSceneAdditively(Scenes.GAS_STATION);
         }
 

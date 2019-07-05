@@ -8,7 +8,7 @@ namespace Assets.Scripts.ProceduralGeneration
     {
         public List<Sprite> Sprites;
         public List<Material> Materials;
-        
+
 
         public void Generate(ref GameObject go)
         {
@@ -20,7 +20,11 @@ namespace Assets.Scripts.ProceduralGeneration
 
             foreach (Transform t in go.transform)
             {
-                t.gameObject.GetComponent<GenerateBoxArt>().Generate(sprite, material);
+                var gen = t.gameObject.GetComponent<GenerateBoxArt>();
+                if (gen != null)
+                {
+                    gen.Generate(sprite, material);
+                }
             }
         }
     }

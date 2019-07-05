@@ -23,7 +23,6 @@ namespace Assets.Scripts.PlayerScripts
 
             if (Inventory == null) Debug.LogError("Inventory is null");
 
-            throw new NotImplementedException();
             //if (Right_VRTK_AvatarHandController == null) Debug.LogError("Right_VRTK_AvatarHandController  is null");
             //if (Left_VRTK_AvatarHandController == null) Debug.LogError("Left_VRTK_AvatarHandController is null");
 

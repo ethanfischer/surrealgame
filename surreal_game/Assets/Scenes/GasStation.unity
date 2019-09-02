@@ -33140,7 +33140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1000010384954048, guid: 555e340c147832a4caeeb3e0dffc49af, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1000010384954048, guid: 555e340c147832a4caeeb3e0dffc49af, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -33213,6 +33213,11 @@ PrefabInstance:
       propertyPath: FogMaterial
       value: 
       objectReference: {fileID: 2100000, guid: fc2f021993b472248b18aad0b599fb93, type: 2}
+    - target: {fileID: 114000011108854712, guid: 555e340c147832a4caeeb3e0dffc49af,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 65000013481403476, guid: 555e340c147832a4caeeb3e0dffc49af,
         type: 3}
       propertyPath: m_Enabled

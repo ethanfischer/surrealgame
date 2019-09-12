@@ -34,7 +34,6 @@ namespace SurrealGame
 
         }
 
-
         void SetInitialReferences()
         {
             gameManagerMaster = GetComponent<GameManager_Master>();

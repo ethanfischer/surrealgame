@@ -15,6 +15,7 @@ namespace SurrealGame
         public event GameManagerEventHandler GameOverEvent;
         public event GameManagerEventHandler CutsceneTerminatedEvent;
         public event GameManagerEventHandler ExamineObjectEvent;
+        public event GameManagerEventHandler StopExamineObjectEvent;
 
         public bool isGameOver;
         public bool isInventoryUIOn;
@@ -76,6 +77,14 @@ namespace SurrealGame
             if (ExamineObjectEvent != null)
             {
                 ExamineObjectEvent();
+            }
+        }
+
+        public void CallStopExamineObjectEvent()
+        {
+            if (StopExamineObjectEvent != null)
+            {
+                StopExamineObjectEvent();
             }
         }
     }

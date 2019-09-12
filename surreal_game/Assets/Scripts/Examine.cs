@@ -15,7 +15,7 @@ namespace SurrealGame
         public static float ROTATION_SPEED = 500;
         private bool isExamining = false;
 
-        private Transform _objectBeingExamined;
+        private Transform _item;
 
         GameManager_Master gameManagerMaster;
 
@@ -53,7 +53,7 @@ namespace SurrealGame
         {
             if (Utilities.WasItemClicked(out Transform item))
             {
-                _objectBeingExamined = item;
+                _item = item;
                 ToggleExamine();
             }
 
@@ -78,28 +78,34 @@ namespace SurrealGame
         private void PickUp()
         {
             gameManagerMaster.CallExamineObjectEvent(); //freezes player
+            TurnOffGravityOnItem();
             MoveToExamineZone();
             isExamining = true;
+        }
+
+        private void TurnOffGravityOnItem()
+        {
+            _item.GetComponent<Rigidbody>().useGravity = false;
         }
 
         private void RotateObjectWithMouse()
         {
             var horizontal = Input.GetAxis("Mouse X");
             var rotateFactor = ROTATION_SPEED * Time.deltaTime;
-            _objectBeingExamined.Rotate(new Vector3(0, horizontal, 0) * rotateFactor, Space.World);
+            _item.Rotate(new Vector3(0, horizontal, 0) * rotateFactor, Space.World);
         }
 
         private void MoveToExamineZone()
         {
-            _objectBeingExamined.parent = GameManager_References._mainCamera.transform;
-            _objectBeingExamined.localPosition = new Vector3(0, 0, DISTANCE_FROM_CAMERA);
+            _item.parent = GameManager_References._mainCamera.transform;
+            _item.localPosition = new Vector3(0, 0, DISTANCE_FROM_CAMERA);
         }
 
         private void PutBack()
         {
-            _objectBeingExamined.parent = initialParent;
-            _objectBeingExamined.localPosition = initialPosition;
-            _objectBeingExamined.rotation = initialRotation;
+            _item.parent = initialParent;
+            _item.localPosition = initialPosition;
+            _item.rotation = initialRotation;
 
             isExamining = false;
             gameManagerMaster.CallExamineObjectEvent(); //unfreezes player

@@ -15,6 +15,8 @@ namespace SurrealGame
         public static float ROTATION_SPEED = 500;
         private bool isExamining = false;
 
+        private Transform _objectBeingExamined;
+
         GameManager_Master gameManagerMaster;
 
         void Start()
@@ -25,33 +27,33 @@ namespace SurrealGame
             }
 
             gameManagerMaster = GameManager_References._gameManager.GetComponent<GameManager_Master>();
-            initialPosition = transform.localPosition;
-            initialRotation = transform.rotation;
+            //initialPosition = transform.localPosition;
+            //initialRotation = transform.rotation;
 
-            SetLayerToItem();
-            AddCollider();
-            var size = GetComponent<Collider>().bounds.size;
-
+            //SetLayerToItem();
+            //AddCollider();
+            //var size = GetComponent<Collider>().bounds.size;
         }
 
-        private void AddCollider()
-        {
-            var collider = GetComponent<Collider>();
-            if(collider == null)
-            {
-                gameObject.AddComponent<BoxCollider>();
-            }
-        }
+        //private void AddCollider()
+        //{
+        //    var collider = GetComponent<Collider>();
+        //    if(collider == null)
+        //    {
+        //        gameObject.AddComponent<BoxCollider>();
+        //    }
+        //}
 
-        private void SetLayerToItem()
-        {
-                gameObject.layer = LayerMask.NameToLayer("Item");
-        }
+        //private void SetLayerToItem()
+        //{
+        //        gameObject.layer = LayerMask.NameToLayer("Item");
+        //}
 
         void Update()
         {
-            if (Utilities.WasItemClicked(gameObject))
+            if (Utilities.WasItemClicked(out Transform item))
             {
+                _objectBeingExamined = item;
                 ToggleExamine();
             }
 
@@ -84,20 +86,20 @@ namespace SurrealGame
         {
             var horizontal = Input.GetAxis("Mouse X");
             var rotateFactor = ROTATION_SPEED * Time.deltaTime;
-            transform.Rotate(new Vector3(0, horizontal, 0) * rotateFactor, Space.World);
+            _objectBeingExamined.Rotate(new Vector3(0, horizontal, 0) * rotateFactor, Space.World);
         }
 
         private void MoveToExamineZone()
         {
-            transform.parent = GameManager_References._mainCamera.transform;
-            transform.localPosition = new Vector3(0, 0, DISTANCE_FROM_CAMERA);
+            _objectBeingExamined.parent = GameManager_References._mainCamera.transform;
+            _objectBeingExamined.localPosition = new Vector3(0, 0, DISTANCE_FROM_CAMERA);
         }
 
         private void PutBack()
         {
-            transform.parent = initialParent;
-            transform.localPosition = initialPosition;
-            transform.rotation = initialRotation;
+            _objectBeingExamined.parent = initialParent;
+            _objectBeingExamined.localPosition = initialPosition;
+            _objectBeingExamined.rotation = initialRotation;
 
             isExamining = false;
             gameManagerMaster.CallExamineObjectEvent(); //unfreezes player

@@ -45,9 +45,16 @@ namespace SurrealGame
             return detectedItem.gameObject;
         }
 
-        public bool IsItemDetected(GameObject item)
+        public bool IsItemDetected(out Transform item)
         {
-            return item.name == detectedItemName;
+            item = null;
+            if(isItemInRange)
+            {
+                item = detectedItem;
+                return true;
+            }
+
+            return false;
         }
     }
 

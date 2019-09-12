@@ -15,10 +15,10 @@ namespace SurrealGame
 
         void Update()
         {
-            if(Utilities.WasItemClicked(gameObject))
-            {
-                gameObject.SetActive(false);
-            }
+            //if(Utilities.WasItemClicked(gameObject))
+            //{
+            //    gameObject.SetActive(false);
+            //}
 			
         }
 

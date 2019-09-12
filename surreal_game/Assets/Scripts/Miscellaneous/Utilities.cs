@@ -4,15 +4,12 @@ namespace SurrealGame
 {
     public static class Utilities
     {
-        public static bool WasItemClicked(GameObject item)
+        public static bool WasItemClicked(out Transform item)
         {
-            return IsItemDetected(item) && WasClicked();
+            return IsItemDetected(out item) && WasClicked();
         }
 
-        private static bool IsItemDetected(GameObject item)
-        {
-            return GameManager_References._playerGameObject.GetComponent<Player_Detect_Item>().IsItemDetected(item);
-        }
+        public static bool IsItemDetected(out Transform item) => GameManager_References._playerGameObject.GetComponent<Player_Detect_Item>().IsItemDetected(out item);
 
         private static bool WasClicked()
         {

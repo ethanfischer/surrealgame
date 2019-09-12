@@ -17,10 +17,10 @@ namespace SurrealGame
 
         void Update()
         {
-            if (Utilities.WasItemClicked(gameObject))
-            {
-                playerDialogue.TryInteract(gameObject);
-            }
+            //if (Utilities.WasItemClicked(gameObject))
+            //{
+            //    playerDialogue.TryInteract(gameObject);
+            //}
 
         }
 

@@ -20,10 +20,10 @@ namespace SurrealGame
 
         void Update()
         {
-            if (Utilities.WasItemClicked(gameObject))
-            {
-                TrySwitchScene();
-            }
+            //if (Utilities.WasItemClicked(gameObject))
+            //{
+            //    TrySwitchScene();
+            //}
         }
 
         private void TrySwitchScene()

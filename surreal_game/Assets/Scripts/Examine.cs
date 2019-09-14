@@ -7,11 +7,7 @@ namespace SurrealGame
 {
     public class Examine : MonoBehaviour
     {
-        //Transform initialParent;
-        //Vector3 initialPosition;
-        //Quaternion initialRotation;
-
-        public static float DISTANCE_FROM_CAMERA = 1;
+        public static float DISTANCE_FROM_CAMERA = .3f;
         public static float ROTATION_SPEED = 500;
         private bool isExamining = false;
 
@@ -22,18 +18,7 @@ namespace SurrealGame
 
         void Start()
         {
-            //if (transform.parent)
-            //{
-            //    initialParent = transform.parent.gameObject.transform;
-            //}
-
             gameManagerMaster = GameManager_References._gameManager.GetComponent<GameManager_Master>();
-            //initialPosition = transform.localPosition;
-            //initialRotation = transform.rotation;
-
-            //SetLayerToItem();
-            //AddCollider();
-            //var size = GetComponent<Collider>().bounds.size;
         }
 
         void Update()

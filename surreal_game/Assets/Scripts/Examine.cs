@@ -75,8 +75,11 @@ namespace SurrealGame
 
         private void MoveToExamineZone()
         {
-            _itemCopy.transform.parent = GameManager_References._mainCamera.transform;
+            var cam = GameManager_References._mainCamera.transform;
+            _itemCopy.transform.parent = cam;
             _itemCopy.transform.localPosition = new Vector3(0, 0, DISTANCE_FROM_CAMERA);
+            var targetPosition = new Vector3(cam.position.x, _itemCopy.transform.position.y, cam.position.z);
+            _itemCopy.transform.LookAt(targetPosition);
         }
 
         private void PutBack()

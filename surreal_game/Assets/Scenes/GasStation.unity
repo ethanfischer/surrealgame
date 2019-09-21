@@ -13518,10 +13518,6 @@ PrefabInstance:
       propertyPath: validDrop
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 135917274, guid: ac48a568327cfa34a9a8717df3a13505, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 135ee602aa888bd42b0a4bf6c5926895, type: 2}
     m_RemovedComponents:
     - {fileID: 135917270, guid: ac48a568327cfa34a9a8717df3a13505, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ac48a568327cfa34a9a8717df3a13505, type: 3}

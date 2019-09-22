@@ -17,6 +17,7 @@ TagManager:
   - Collectables
   - FocusReference
   - Disposable
+  - SnapCube
   layers:
   - Default
   - TransparentFX

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Assets.Scripts.PlayerScripts
 {
@@ -13,12 +14,8 @@ namespace Assets.Scripts.PlayerScripts
         public LayerMask layerToDetect;
         [Tooltip("What transform will the ray be fired from?")]
         public Transform rayTransformPivot;
-        [Tooltip("The editor input button that will be used for picking up items")]
 
-        private Transform detectedItem;
-        private RaycastHit hit;
-        public float detectRange = 100f;
-        //public float detectRadius = 0.1f;
+        private GameObject detectedItem;
         public bool isUIInRange;
         public string detectedItemName;
 
@@ -30,17 +27,37 @@ namespace Assets.Scripts.PlayerScripts
         void CastRayForDetectingItems()
         {
             Debug.DrawRay(rayTransformPivot.position, rayTransformPivot.forward, Color.blue, .01f, depthTest: false);
-            if (Physics.Raycast(rayTransformPivot.position, rayTransformPivot.forward, out hit, detectRange, layerToDetect))
+            var pointerEventData = new PointerEventData(EventSystem.current)
             {
-                detectedItem = hit.transform;
-                detectedItemName = detectedItem.name;
-                Debug.Log("Detected " + detectedItemName);
-                isUIInRange = true;
+                position = Input.mousePosition
+            };
+
+            var results = new List<RaycastResult>();
+            EventSystem.current.RaycastAll(pointerEventData, results);
+
+            if (results.Count > 0)
+            {
+                CheckResultsForUIElement(results);
             }
             else
             {
                 isUIInRange = false;
                 detectedItemName = "";
+            }
+        }
+
+        private void CheckResultsForUIElement(List<RaycastResult> results)
+        {
+            foreach (var result in results)
+            {
+                if (result.gameObject.layer == LayerMask.NameToLayer("UI"))
+                {
+                    detectedItem = result.gameObject;
+                    detectedItemName = detectedItem.name;
+                    Debug.Log("Detected " + detectedItemName);
+                    isUIInRange = true;
+                    break;
+                }
             }
         }
     }

@@ -1,5 +1,4 @@
 ﻿using System;
-using Assets.Scripts.Constants;
 using UnityEngine;
 using UnityEngine.EventSystems;
 

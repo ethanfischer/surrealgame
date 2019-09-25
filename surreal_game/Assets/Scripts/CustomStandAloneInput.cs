@@ -38,11 +38,11 @@ namespace SurrealGame
         {
             if (Input.GetMouseButtonDown(0))
             {
-                ProcessPress();
+                ProcessPress(_pointerEventData);
             }
             if (Input.GetMouseButtonUp(0))
             {
-                ProcessRelease();
+                ProcessRelease(_pointerEventData);
             }
         }
 
@@ -64,12 +64,45 @@ namespace SurrealGame
             _currentGameObject = _pointerEventData.pointerCurrentRaycast.gameObject;
         }
 
-        private void ProcessPress()
+        private void ProcessPress(PointerEventData data)
         {
+            data.pointerPressRaycast = data.pointerCurrentRaycast;
+
+            var newPointerPress = ExecuteEvents.ExecuteHierarchy(_currentGameObject, data, ExecuteEvents.pointerDownHandler);
+
+            if(newPointerPress == null)
+            {
+                newPointerPress = ExecuteEvents.GetEventHandler<IPointerClickHandler>(_currentGameObject);
+            }
+
+            //SetData
+            data.pressPosition = data.position;
+            data.pointerPress = newPointerPress;
+            data.rawPointerPress = _currentGameObject;
+
         }
 
-        private void ProcessRelease()
+        private void ProcessRelease(PointerEventData data)
         {
+            //Execute pointer up
+            ExecuteEvents.Execute(data.pointerPress, data, ExecuteEvents.pointerUpHandler);
+
+            //Check for click handler
+            var pointerUpHandler = ExecuteEvents.GetEventHandler<IPointerClickHandler>(_currentGameObject);
+
+            //Check if actual
+            if(data.pointerPress == pointerUpHandler)
+            {
+                ExecuteEvents.Execute(data.pointerPress, data, ExecuteEvents.pointerUpHandler);
+            }
+
+            //Clear selected
+            eventSystem.SetSelectedGameObject(null);
+
+            //Reset data
+            data.pressPosition = Vector2.zero;
+            data.pointerPress = null;
+            data.rawPointerPress = null;
         }
 
         //void Update()

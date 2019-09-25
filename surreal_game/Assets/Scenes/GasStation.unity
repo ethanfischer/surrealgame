@@ -3468,7 +3468,43 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 475730377340294151, guid: 149a67380350b81408532f03aaf46e01,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 475730377340294151, guid: 149a67380350b81408532f03aaf46e01,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 475730377340294146, guid: 149a67380350b81408532f03aaf46e01,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.32941177
+      objectReference: {fileID: 0}
+    - target: {fileID: 475730377340294146, guid: 149a67380350b81408532f03aaf46e01,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 475730377340294146, guid: 149a67380350b81408532f03aaf46e01,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 475730377340294146, guid: 149a67380350b81408532f03aaf46e01,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 475730377340294146, guid: 149a67380350b81408532f03aaf46e01,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 475730377340294145, guid: 149a67380350b81408532f03aaf46e01, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 149a67380350b81408532f03aaf46e01, type: 3}
 --- !u!4 &200953411 stripped
 Transform:
@@ -3476,6 +3512,33 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 200953410}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &200953412 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 475730377340294150, guid: 149a67380350b81408532f03aaf46e01,
+    type: 3}
+  m_PrefabInstance: {fileID: 200953410}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &200953413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200953412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f58a7bdc19afbbd45b2e7167037b726c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NormalColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  HoverColor:
+    serializedVersion: 2
+    rgba: 4278190335
+  DownColor:
+    serializedVersion: 2
+    rgba: 4286545791
 --- !u!1001 &204803628
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28263,6 +28326,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 838372250}
     m_Modifications:
+    - target: {fileID: 929674165247617146, guid: caa435a632139cc42ba8f2ff90a792da,
+        type: 3}
+      propertyPath: m_Name
+      value: InteractableSnapZone
+      objectReference: {fileID: 0}
     - target: {fileID: 929674165247617149, guid: caa435a632139cc42ba8f2ff90a792da,
         type: 3}
       propertyPath: Snapped.m_PersistentCalls.m_Calls.Array.size
@@ -28377,11 +28445,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 929674165247617146, guid: caa435a632139cc42ba8f2ff90a792da,
-        type: 3}
-      propertyPath: m_Name
-      value: InteractableSnapZone
       objectReference: {fileID: 0}
     - target: {fileID: 929674164215565716, guid: caa435a632139cc42ba8f2ff90a792da,
         type: 3}

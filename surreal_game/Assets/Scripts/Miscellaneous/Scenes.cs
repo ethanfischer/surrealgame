@@ -7,7 +7,7 @@ namespace Assets.Scripts.Miscellaneous
 {
     public static class Scenes
     {
-        public static string WEIRD_PLACE = "WeirdPlace";
-        public static string GAS_STATION = "GasStation";
+        public const string WEIRD_PLACE = "WeirdPlace";
+        public const string GAS_STATION = "GasStation";
     }
 }

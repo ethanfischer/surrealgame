@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using Assets.Scripts.Miscellaneous;
+﻿using Assets.Scripts.Miscellaneous;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,8 +8,8 @@ namespace SurrealGame
     {
         void Awake()
         {
-            //LoadSceneAdditively(Scenes.WEIRD_PLACE);
-            LoadSceneAdditively(Scenes.GAS_STATION);
+            LoadSceneAdditively(Scenes.WEIRD_PLACE);
+            //LoadSceneAdditively(Scenes.GAS_STATION);
         }
 
         private static void LoadSceneAdditively(string sceneName)

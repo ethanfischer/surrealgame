@@ -17,11 +17,11 @@ class SceneShortcuts : EditorWindow
                 SwitchToScene("Assets/Scenes/WeirdPlace.unity");
                 caseSwitch++;
                 break;
+            //case 1:
+            //    SwitchToScene("Assets/Scenes/GasStation.unity");
+            //    caseSwitch++;
+            //    break;
             case 1:
-                SwitchToScene("Assets/Scenes/GasStation.unity");
-                caseSwitch++;
-                break;
-            case 2:
                 SwitchToScene("Assets/Scenes/Application.Launch.unity");
                 caseSwitch = 0;
                 break;

@@ -1,6 +1,6 @@
 This a work-in-progress game based on a bunch of different ideas
 
-https://www.youtube.com/watch?v=L-7GbxmtfpU&t=7s
+https://youtu.be/L-7GbxmtfpU?t=41
 
 **Setting**
 

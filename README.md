@@ -1,5 +1,7 @@
 This a work-in-progress game based on a bunch of different ideas
 
+https://www.youtube.com/watch?v=L-7GbxmtfpU&t=7s
+
 **Setting**
 
 There are numerous, seemingly unconnected scenes the player explores. Each one has a surreal feel to it. The scenes 
